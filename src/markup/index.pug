@@ -1,5 +1,81 @@
 extends layout-blocks/layout
 block content
-  .content
-    h2 A simple gulp boilerplate that gets you up and running with popular tasks.
-    p Fork the repo and create your own.
+	section.header
+		.container
+			.header-column
+				.header-logo 
+					img(src="images/header_logo.png", alt="LOGOTYPE")
+				.header-location 
+					img(src="images/header_pin.png", alt="Location") 
+					span Jamaica
+			.header-column.menu
+				ul.header-top_menu
+					li 
+						a(href='#') About
+					li 
+						a(href='#') Products
+					li 
+						a(href='#') Help
+					li 
+						a(href='#') Contacts
+			.header-column
+				.header-top_cart 
+					img(src="images/header_cart.png", alt="Cart") 
+					span Cart
+
+
+	section.goal01
+		.container
+			.screener
+				h1 Best security <br> services for home <br> and business. 
+				.button.red View products
+
+	section.goal02
+		.container
+			h1 What we provide?
+			.columns
+				.left We work hard to<br>make you get the<br>best quality.
+				.right
+					ul
+						li
+							header 1Guardsman alarms
+							.inner Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, quia?
+						li
+							header 2Guardsman alarms
+							.inner Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, quia?
+						li
+							header 3Guardsman alarms
+							.inner Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, quia?
+						li
+							header 4Guardsman alarms
+							.inner Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, quia?
+						li
+							header 5Guardsman alarms
+							.inner Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, quia?
+
+	section.goal03
+		.container
+			h1 How we make<br>the world safer.
+			.button.red View products
+
+	section.footer
+		.container
+			.footer-slogan 
+				h1 Best security<br>service for home<br> and business. 
+
+			.footer-menu
+				ul 
+					li About
+					li Products
+					li Help
+					li Contact
+				ul 
+					li Youtube
+					li Facebook
+					li Twitter
+					li Google Plus
+		.container
+			.footer-copy
+				.footer-column 2017 All rights reserved
+				.footer-column 
+					.button.red View products
