@@ -53,7 +53,7 @@ module.exports = {
       markup   : 'src/markup/**/*.pug',
       overwatch: env + '**/*.{html,js,css}',
       scripts  : 'src/script/**/*.js',
-      styles   : 'src/style/**/*.styl'
+      styles   : 'src/style/style.styl'
     },
     destinations: {
       dist: './dist',

@@ -19,7 +19,6 @@ var gulp      = require('gulp'),
   compile = function() {
     return gulp.src(src.styles)
       .pipe(plugins.plumber())
-      .pipe(plugins.concat(gConfig.pkg.name + '.stylus'))
       .pipe(plugins.stylus({
             "use": [koutoSwiss(), typographic()]
         }))
