@@ -1,0 +1,47 @@
+.goal03 {
+  background-color: $darkbg;
+}
+.goal03 .container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 32rem;
+  padding: 0 7rem;
+}
+.goal03 .container:before {
+  content: '03';
+  color: #242424;
+  font-weight: bold;
+  position: absolute;
+  top: 2rem;
+  left: -3rem;
+  font-size: 32rem;
+  letter-spacing: 4rem;
+}
+.goal03 .container:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 6rem;
+  background: url("../images/index_back.png") no-repeat;
+  background-size: contain;
+  background-position: 100% 50%;
+  height: 100%;
+  width: 100%;
+}
+@media screen and (max-width: 620px) {
+  .goal03 .container:after {
+    right: -6rem;
+  }
+}
+.goal03 .container h1 {
+  color: #fff;
+  font-weight: 600;
+  line-height: 160%;
+  letter-spacing: 0.1rem;
+  margin: 12rem 0 0 0;
+}
+.goal03 .container .button {
+  margin: 2.5rem 0 auto 0;
+}
