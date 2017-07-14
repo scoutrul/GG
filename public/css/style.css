@@ -325,10 +325,10 @@ html {
 }
 @media (min-width: 320px) {
   html {
-    font-size: calc( 12px + (18 - 12) * ((100vw - 320px) / (1200 - 320)) );
+    font-size: calc( 12px + (18 - 12) * ((100vw - 320px) / (1300 - 320)) );
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1300px) {
   html {
     font-size: 18px;
   }
@@ -419,10 +419,10 @@ h1 {
 }
 @media (min-width: 320px) {
   h1 {
-    font-size: calc( 27.85438995234061px + (41.78158492851092 - 27.85438995234061) * ((100vw - 320px) / (1200 - 320)) );
+    font-size: calc( 27.85438995234061px + (41.78158492851092 - 27.85438995234061) * ((100vw - 320px) / (1300 - 320)) );
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1300px) {
   h1 {
     font-size: 41.78158492851092px;
     margin-top: 0.942400822452556px ks-em;
@@ -438,10 +438,10 @@ h2 {
 }
 @media (min-width: 320px) {
   h2 {
-    font-size: calc( 23.53700340860508px + (35.305505112907625 - 23.53700340860508) * ((100vw - 320px) / (1200 - 320)) );
+    font-size: calc( 23.53700340860508px + (35.305505112907625 - 23.53700340860508) * ((100vw - 320px) / (1300 - 320)) );
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1300px) {
   h2 {
     font-size: 35.305505112907625px;
     margin-top: 1.115265165420465px ks-em;
@@ -457,10 +457,10 @@ h3 {
 }
 @media (min-width: 320px) {
   h3 {
-    font-size: calc( 19.888804974891777px + (29.833207462337665 - 19.888804974891777) * ((100vw - 320px) / (1200 - 320)) );
+    font-size: calc( 19.888804974891777px + (29.833207462337665 - 19.888804974891777) * ((100vw - 320px) / (1300 - 320)) );
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1300px) {
   h3 {
     font-size: 29.833207462337665px;
     margin-top: 1.319837970815179px ks-em;
@@ -476,10 +476,10 @@ h4 {
 }
 @media (min-width: 320px) {
   h4 {
-    font-size: calc( 16.806071548796314px + (25.209107323194473 - 16.806071548796314) * ((100vw - 320px) / (1200 - 320)) );
+    font-size: calc( 16.806071548796314px + (25.209107323194473 - 16.806071548796314) * ((100vw - 320px) / (1300 - 320)) );
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1300px) {
   h4 {
     font-size: 25.209107323194473px;
     margin-top: 1.561935513828041px ks-em;
@@ -495,10 +495,10 @@ h5 {
 }
 @media (min-width: 320px) {
   h5 {
-    font-size: calc( 14.201156945318074px + (21.30173541797711 - 14.201156945318074) * ((100vw - 320px) / (1200 - 320)) );
+    font-size: calc( 14.201156945318074px + (21.30173541797711 - 14.201156945318074) * ((100vw - 320px) / (1300 - 320)) );
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1300px) {
   h5 {
     font-size: 21.30173541797711px;
     margin-top: 1.848440947528171px ks-em;
@@ -514,10 +514,10 @@ h6 {
 }
 @media (min-width: 320px) {
   h6 {
-    font-size: calc( 12px + (18 - 12) * ((100vw - 320px) / (1200 - 320)) );
+    font-size: calc( 12px + (18 - 12) * ((100vw - 320px) / (1300 - 320)) );
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1300px) {
   h6 {
     font-size: 18px;
     margin-top: 2.1875px ks-em;
@@ -575,7 +575,7 @@ fieldset {
   max-width: 100%;
   margin-bottom: 1.847222222222222px ks-em;
 }
-@media (min-width: 1200px) {
+@media (min-width: 1300px) {
   fieldset {
     margin-bottom: 2.065972222222222px ks-em;
   }
@@ -608,10 +608,10 @@ textarea {
   input[type="email"],
   input[type="password"],
   textarea {
-    font-size: calc( 12px + (18 - 12) * ((100vw - 320px) / (1200 - 320)) );
+    font-size: calc( 12px + (18 - 12) * ((100vw - 320px) / (1300 - 320)) );
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1300px) {
   input[type="text"],
   input[type="email"],
   input[type="password"],
@@ -631,10 +631,10 @@ button {
 @media (min-width: 320px) {
   input[type="submit"],
   button {
-    font-size: calc( 12px + (18 - 12) * ((100vw - 320px) / (1200 - 320)) );
+    font-size: calc( 12px + (18 - 12) * ((100vw - 320px) / (1300 - 320)) );
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1300px) {
   input[type="submit"],
   button {
     font-size: 18px;
@@ -647,7 +647,7 @@ table {
   border-collapse: collapse;
   margin-bottom: 2.236111111111111px ks-em;
 }
-@media (min-width: 1200px) {
+@media (min-width: 1300px) {
   table {
     margin-bottom: 2.090277777777778px ks-em;
   }
@@ -657,7 +657,7 @@ th {
   color: #111;
   padding: 0.21875px ks-em 0.875px ks-em;
 }
-@media (min-width: 1200px) {
+@media (min-width: 1300px) {
   th {
     padding: 0.4375px ks-em 0.875px ks-em;
   }
@@ -665,7 +665,7 @@ th {
 td {
   padding: 0.21875px ks-em 0.875px ks-em;
 }
-@media (min-width: 1200px) {
+@media (min-width: 1300px) {
   td {
     padding: 0.4375px ks-em 0.875px ks-em;
   }
@@ -674,7 +674,6 @@ td {
   color: inherit;
   z-index: 5;
   position: relative;
-  font-family: 'Poppins', sans-serif !important;
 }
 #app {
   display: -webkit-box;
@@ -684,6 +683,11 @@ td {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+}
+@media screen and (max-width: 1600px) {
+  #app {
+    overflow: hidden;
+  }
 }
 #app h1 {
   color: #fff;
@@ -698,7 +702,7 @@ td {
 }
 #app .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: $siteWidth;
   padding: 0 10px;
   margin: auto;
   display: -webkit-box;
@@ -708,11 +712,7 @@ td {
   -ms-align-items: flex-start;
   -ms-flex-align: start;
       align-items: flex-start;
-}
-@media screen and (max-width: 1200px) {
-  #app .container {
-    overflow: hidden;
-  }
+  max-width: 1300px;
 }
 #app .button {
   display: -webkit-box;
@@ -960,7 +960,7 @@ td {
   position: absolute;
   top: 1rem;
   right: -8rem;
-  background: url("/images/index_hat.png") no-repeat;
+  background: url("../images/index_hat.png") no-repeat;
   background-size: contain;
   background-position: 100% 50%;
   height: 100%;

@@ -7,13 +7,11 @@ box-sizing-reset()
 
 edit()
 
-
-
-$siteWidth = 1200px
 $min-font = 12px
 $max-font = 18px
 $min-width = 320px
-$max-width = $siteWidth
+$max-width = 1300px
+$max-width-plus = 1600px
 
 $mainfont = 'Poppins', 'Roboto', 'Halvetica', 'sans-serif'
 $line-height-ratio = 1.75
@@ -40,12 +38,12 @@ $goal03 = '../images/index_back.png'
 	color inherit
 	z-index 5
 	position relative
-	font-family: 'Poppins', sans-serif !important
 
 #app
 	display flex 
 	flex-direction column
-
+	@media screen and (max-width: $max-width-plus)
+		overflow hidden
 	h1
 		color $white 
 		font-weight: bold;
@@ -62,9 +60,9 @@ $goal03 = '../images/index_back.png'
 		margin auto
 		display: flex;
 		align-items: flex-start;
-		@media screen and (max-width: $siteWidth)
-			overflow hidden
-
+		max-width: $max-width
+		
+		
 
 	@import 'button.styl'
 
