@@ -1083,7 +1083,7 @@ td {
   -ms-justify-content: space-around;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  background: url("/images/index_back.png") no-repeat;
+  background: url("../images/index_back.png") no-repeat;
   background-size: contain;
   background-position: 100% 50%;
   min-height: 640px;
