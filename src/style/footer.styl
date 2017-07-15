@@ -1,26 +1,50 @@
 .footer
 	background-color: $footerbg;
+	padding-top 6rem
+	padding-bottom 6rem
 	.container
 		display flex 
-		margin: 7rem auto;
-		
 		.footer-slogan
-			flex 1 0 50%
+			width: 59rem;
+			.logo
+				max-height: 3rem;
+				height: 100%;
+				img
+					height 100%
+			header
+				font-size: 210%;
+				margin-top: 2.6rem;
+				line-height: 140%;
+				font-weight: 500;
+				color: $white;
 		.footer-menu
 			display flex
-			align-self: center;
-			flex 1 0 50%
+			width 100%
+			@media screen and (max-width: 620px)
+				flex-wrap: wrap;
+			
 			ul
-				padding: 0 3rem 0 0;
-				
+				min-width: 13.3rem;
+				margin: 1.5rem 0 0 4.3rem;
+				padding 0
+				li
+					line-height: 160%;
+					font-size: 140%;
+					font-weight: 500;
+					color: $white;
 		.footer-copy
 			display flex
 			width: 100%;
-			.footer-column:first-child
+			align-items: flex-end;
+			margin-top: 4rem;
+			.footer-column
 				margin 0 auto 0 0 
 				flex: 1 0 50%;	
-			.footer-column:last-child
-				margin 0 auto 0 auto
-				flex: 1 0 50%;
-				display: flex;	
+				font-weight 500
+				&:last-child
+					margin 0 auto 0 auto
+					flex: 1 0 50%;
+					display: flex;	
+				.button
+					margin: 0 2rem;
 		

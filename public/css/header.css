@@ -99,7 +99,10 @@
           justify-content: center;
 }
 .header .container .header-column .header-location img {
-  margin: 0 5px;
+  margin: 0 0.5rem;
+}
+.header .container .header-column .header-location span.name {
+  font-size: 75%;
 }
 .header .container .header-column .header-top_cart {
   text-align: center;
@@ -116,6 +119,13 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.header .container .header-column .header-top_cart img {
-  margin: 0 15px 5px 15px;
+.header .container .header-column .header-top_cart .cart-img {
+  background-color: $specialRed;
+  border-radius: 50%;
+  padding: 0.8rem;
+  margin: 0.5rem;
+}
+.header .container .header-column .header-top_cart .cart-img img {
+  -webkit-filter: brightness(10);
+          filter: brightness(10);
 }

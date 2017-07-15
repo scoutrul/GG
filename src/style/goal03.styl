@@ -2,8 +2,11 @@
 	background-color $darkbg
 	.container
 		flex-direction: column;
-		height: 32rem;
-		padding: 0 7rem;
+		min-height: 32rem;
+		padding: 0 6.5rem;
+		@media screen and (max-width: 620px)
+			padding: 0
+		
 		&:before
 			content: '03';
 			color: #242424;

@@ -81,7 +81,7 @@
 }
 .goal01 .container .screener h1 {
   font-weight: 600;
-  font-size: 435%;
+  font-size: 445%;
   line-height: 123%;
   letter-spacing: -0.13rem;
   margin: auto;
@@ -98,5 +98,5 @@
   }
 }
 .goal01 .container .screener .button {
-  margin: 0 0 5rem 0;
+  margin: 4rem 0 5rem 0;
 }

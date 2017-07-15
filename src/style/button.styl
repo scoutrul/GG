@@ -6,18 +6,21 @@
 	text-transform: uppercase;
 	font-size: 0.7rem;
 	line-height: 550%;
-	height: 60px;
+	min-height: 3.5rem;
 	justify-content: center;
 	color: #fff;
-	letter-spacing: 0.16rem;
+	letter-spacing: 0.18rem;
 	font-size: 60%;
 	font-weight: 300;
-	min-width: 245px;
-	margin: 2em 0;
-	&:after
-		content '>'
-		padding: 0 0 0 0.4rem;
+	max-width: 13.5rem;
+	width: 100%;
 	&.red
 		background-color $specialRed
+	span
+		padding: 0 1rem;
+		white-space: nowrap;
+		&:after
+			content '>'
+			padding: 0 0 0 0.4rem;
 	
 

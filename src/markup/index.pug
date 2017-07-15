@@ -7,7 +7,7 @@ block content
 					img(src="images/header_logo.png", alt="LOGOTYPE")
 				.header-location 
 					img(src="images/header_pin.png", alt="Location") 
-					span Jamaica
+					span.name Jamaica
 			.header-column.menu
 				ul.header-top_menu
 					li 
@@ -17,10 +17,11 @@ block content
 					li 
 						a(href='#') Help
 					li 
-						a(href='#') Contacts
+						a(href='#') Contact
 			.header-column
 				.header-top_cart 
-					img(src="images/header_cart.png", alt="Cart") 
+					.cart-img
+						img(src="images/header_cart.png", alt="Cart") 
 					span Cart
 
 
@@ -28,7 +29,8 @@ block content
 		.container
 			.screener
 				h1 Best security <br> services for home <br> and business. 
-				.button.red View products
+				.button.red 
+					span View products
 
 	section.goal02
 		.container
@@ -94,12 +96,15 @@ block content
 	section.goal03
 		.container
 			h1 How we make<br>the world safer.
-			.button.red Our story
+			.button.red 
+				span Our story
 
 	section.footer
 		.container
 			.footer-slogan 
-				h1 Best security<br>service for home<br> and business. 
+				.logo
+					img(src="images/header_logo.png", alt="LOGOTYPE")
+				header Best security<br>for home and <br>business. 
 
 			.footer-menu
 				ul 
@@ -114,6 +119,7 @@ block content
 					li Google Plus
 		.container
 			.footer-copy
-				.footer-column 2017 All rights reserved
+				.footer-column &copy;2017 Copyright. All rights reserved
 				.footer-column 
-					.button.red View products
+					.button.red 
+						span View products

@@ -11,21 +11,25 @@
   text-transform: uppercase;
   font-size: 0.7rem;
   line-height: 550%;
-  height: 60px;
+  min-height: 3.5rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   color: #fff;
-  letter-spacing: 0.16rem;
+  letter-spacing: 0.18rem;
   font-size: 60%;
   font-weight: 300;
-  min-width: 245px;
-  margin: 2em 0;
-}
-.button:after {
-  content: '>';
-  padding: 0 0 0 0.4rem;
+  max-width: 13.5rem;
+  width: 100%;
 }
 .button.red {
   background-color: $specialRed;
+}
+.button span {
+  padding: 0 1rem;
+  white-space: nowrap;
+}
+.button span:after {
+  content: '>';
+  padding: 0 0 0 0.4rem;
 }
