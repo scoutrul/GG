@@ -686,10 +686,9 @@ td {
   -ms-flex: 1;
   -webkit-box-flex: 1;
           flex: 1;
-  height: 100%;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  overflow: hidden;
+  overflow-y: hidden;
 }
 #app h1 {
   color: #fff;
@@ -708,7 +707,6 @@ td {
   -ms-flex: 1;
   -webkit-box-flex: 1;
           flex: 1;
-  max-width: $siteWidth;
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
