@@ -1,0 +1,1 @@
+!function(){"use strict";Console.log("wow")}();

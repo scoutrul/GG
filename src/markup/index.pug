@@ -1,6 +1,6 @@
 extends layout-blocks/layout
 block content
-	section.header
+	section.header.active
 		.container
 			.header-column
 				.header-logo 
@@ -8,18 +8,17 @@ block content
 				.header-location 
 					img(src="images/header_pin.png", alt="Location") 
 					span.name Jamaica
+				button.hamburger.hamburger--minus.is-active
+					span.hamburger-box
+						span.hamburger-inner
 			.header-column.menu
-				ul.header-top_menu
-					li 
-						a(href='#') About
-					li 
-						a(href='#') Products
-					li 
-						a(href='#') Help
-					li 
-						a(href='#') Contact
+				ul.top_menu
+					li About
+					li Products
+					li Help
+					li Contact
 			.header-column
-				.header-top_cart 
+				.top_cart 
 					.cart-img
 						img(src="images/header_cart.png", alt="Cart") 
 					span Cart

@@ -44,6 +44,8 @@ $goal03 = '../images/index_back.png'
 #app
 	display flex 
 	flex-direction column
+	flex 1
+	height 100%
 	flex-wrap: wrap;
 	overflow hidden
 		
@@ -59,6 +61,7 @@ $goal03 = '../images/index_back.png'
 
 	.container 
 		width 100%
+		flex 1
 		max-width $siteWidth
 		margin auto
 		display: flex;
@@ -68,6 +71,7 @@ $goal03 = '../images/index_back.png'
 		
 
 	@import 'button.styl'
+	@import 'hamburger.styl'
 
 	@import 'header.styl'
 	@import 'footer.styl'

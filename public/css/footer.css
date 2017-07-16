@@ -30,6 +30,9 @@
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 @media screen and (max-width: 620px) {
   .footer .container .footer-menu {
@@ -39,7 +42,7 @@
 }
 .footer .container .footer-menu ul {
   min-width: 13.3rem;
-  margin: 1.5rem 0 0 4.3rem;
+  margin: 1.5rem 0 0 auto;
   padding: 0;
 }
 .footer .container .footer-menu ul li {
