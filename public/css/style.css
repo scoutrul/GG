@@ -76,6 +76,7 @@ textarea {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   cursor: default;
+  font: 100%/1.5 sans-serif;
   text-rendering: optimizeLegibility;
 }
 html {

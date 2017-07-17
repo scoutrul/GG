@@ -868,7 +868,7 @@ caniuse-api@^1.5.2:
     lodash.memoize "^4.1.2"
     lodash.uniq "^4.5.0"
 
-caniuse-db@^1.0.30000529, caniuse-db@^1.0.30000634, caniuse-db@^1.0.30000639:
+caniuse-db@^1.0, caniuse-db@^1.0.30000529, caniuse-db@^1.0.30000634, caniuse-db@^1.0.30000639:
   version "1.0.30000697"
   resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000697.tgz#20ce6a9ceeef4ef4a15dc8e80f2e8fb9049e8d77"
 
@@ -2869,6 +2869,10 @@ isstream@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
 
+jeet@^7.1.0:
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/jeet/-/jeet-7.1.0.tgz#4aeaa0a939306b29607de8fcfa96967d9305a752"
+
 js-base64@^2.1.9:
   version "2.1.9"
   resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.1.9.tgz#f0e80ae039a4bd654b5f281fc93f04a914a7fcce"
@@ -2981,6 +2985,13 @@ kind-of@^4.0.0:
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-4.0.0.tgz#20813df3d712928b207378691a45066fae72dd57"
   dependencies:
     is-buffer "^1.1.5"
+
+kouto-swiss@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/kouto-swiss/-/kouto-swiss-1.1.0.tgz#cdff6bc38322bf0e0ed149d73b97b8439cc4a939"
+  dependencies:
+    prefiks "^0.3"
+    stylus "0.54.5"
 
 lazy-cache@^1.0.3:
   version "1.0.4"
@@ -3238,6 +3249,10 @@ lodash.uniq@^4.3.0, lodash.uniq@^4.5.0:
 lodash@3.10.1, lodash@^3.0.1, lodash@^3.10.1:
   version "3.10.1"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
+
+lodash@^2.4.1:
+  version "2.4.2"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-2.4.2.tgz#fadd834b9683073da179b3eae6d9c0d15053f73e"
 
 lodash@^4.0.0, lodash@^4.11.1, lodash@^4.2.0, lodash@^4.3.0:
   version "4.17.4"
@@ -3988,6 +4003,14 @@ postcss@^5.0.10, postcss@^5.0.11, postcss@^5.0.12, postcss@^5.0.13, postcss@^5.0
     source-map "^0.5.6"
     supports-color "^3.2.3"
 
+prefiks@^0.3:
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/prefiks/-/prefiks-0.3.3.tgz#9ac263ae6177eebb44cf143b2ff1178051c966e1"
+  dependencies:
+    caniuse-db "^1.0"
+    lodash "^2.4.1"
+    semver "^4.0.3"
+
 prelude-ls@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.1.2.tgz#21932a549f5e52ffd9a827f570e04be62a97da54"
@@ -4608,6 +4631,20 @@ safe-buffer@^5.0.1, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.1.1.tgz#893312af69b2123def71f57889001671eeb2c853"
 
+sanitize.css@3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/sanitize.css/-/sanitize.css-3.3.0.tgz#c41f53305c8069a12c7673b3e8beb2cba4bd3788"
+
+sanitize.styl@^3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/sanitize.styl/-/sanitize.styl-3.3.0.tgz#3f065e44b4bdc17e6cd245487f0ebd5ad4570f4b"
+  dependencies:
+    sanitize.css "3.3.0"
+
+sanitize.stylus@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/sanitize.stylus/-/sanitize.stylus-2.0.0.tgz#41cb8c75eba69ced149c41106863360dab9f22f2"
+
 sax@0.5.x:
   version "0.5.8"
   resolved "https://registry.yarnpkg.com/sax/-/sax-0.5.8.tgz#d472db228eb331c2506b0e8c15524adb939d12c1"
@@ -4620,7 +4657,7 @@ sax@~1.2.1:
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.3.0.tgz#9b2ce5d3de02d17c6012ad326aa6b4d0cf54f94f"
 
-semver@^4.1.0:
+semver@^4.0.3, semver@^4.1.0:
   version "4.3.6"
   resolved "https://registry.yarnpkg.com/semver/-/semver-4.3.6.tgz#300bc6e0e86374f7ba61068b5b1ecd57fc6532da"
 
@@ -4983,7 +5020,7 @@ stylint@^1.0.11, stylint@^1.5.6:
     user-home "2.0.0"
     yargs "4.7.1"
 
-stylus@^0.54.0:
+stylus@0.54.5, stylus@^0.54.0:
   version "0.54.5"
   resolved "https://registry.yarnpkg.com/stylus/-/stylus-0.54.5.tgz#42b9560931ca7090ce8515a798ba9e6aa3d6dc79"
   dependencies:
@@ -5164,6 +5201,10 @@ type-check@~0.3.2:
 typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
+
+typographic@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/typographic/-/typographic-3.0.0.tgz#f0b94966cc8891dd55fe1dfffc06e44d549e3fa5"
 
 ua-parser-js@0.7.12:
   version "0.7.12"
