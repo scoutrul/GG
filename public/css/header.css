@@ -23,6 +23,9 @@
       -ms-flex-pack: center;
           justify-content: center;
 }
+.header .container .top_social {
+  display: none;
+}
 .header .container .header-column {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -33,10 +36,22 @@
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
-  margin: 20px 0;
+  margin: 1rem 0;
+  min-height: 61px;
 }
-.header .container .header-column .hamburger {
-  display: none;
+@media screen and (min-width: 580px) {
+  .header .container .header-column .hamburger {
+    display: none;
+  }
+}
+@media screen and (max-width: 580px) {
+  .header .container .header-column .hamburger .hamburger-inner {
+    background-color: #fff;
+  }
+  .header .container .header-column .hamburger .hamburger-inner:before,
+  .header .container .header-column .hamburger .hamburger-inner:after {
+    background-color: #fff;
+  }
 }
 @media screen and (max-width: 620px) {
   .header .container .header-column.menu {
@@ -63,14 +78,6 @@
             justify-content: center;
   }
 }
-@media screen and (max-width: 640px) {
-  .header .container .header-column:last-child,
-  .header .container .header-column:first-child {
-    -webkit-box-flex: 0;
-        -ms-flex: 0;
-            flex: 0;
-  }
-}
 .header .container .header-column .top_menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -81,9 +88,6 @@
   -ms-flex-pack: distribute;
       justify-content: space-around;
   margin: 0 2em;
-}
-.header .container .header-column .top_menu li {
-  padding: 0 5px;
 }
 .header .container .header-column .header-location {
   margin: 0 2em 0 15%;
@@ -106,6 +110,14 @@
 }
 .header .container .header-column .header-location span.name {
   font-size: 75%;
+}
+@media screen and (max-width: 580px) {
+  .header .container .header-column .header-location {
+    margin: 0 auto 0 1rem;
+  }
+  .header .container .header-column .header-location img {
+    display: none;
+  }
 }
 .header .container .header-column .top_cart {
   text-align: center;
@@ -132,58 +144,139 @@
   -webkit-filter: brightness(10);
           filter: brightness(10);
 }
-@media screen and (max-width: 480px) {
-  .header.active {
-    position: absolute;
+@media screen and (max-width: 580px) {
+  .header .container {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-top: 1rem;
+    overflow: auto;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    height: 100%;
+  }
+  .header .container .header-column.menu,
+  .header .container .header-column.cart {
+    display: none;
+  }
+  .header .container .header-column:first-child {
+    margin: 0;
+    min-width: 100%;
+  }
+  .header.mobile-menu-active {
+    position: fixed;
     width: 100%;
     height: 100%;
     background-color: #d7d7d7;
     z-index: 100;
-    padding: 2rem 4rem;
-    font-size: 345%;
+    padding: 0 3rem;
+    font-size: 145%;
+    overflow: auto;
   }
-  .header.active * {
+  .header.mobile-menu-active * {
     text-transform: none;
   }
-  .header.active .header-column {
+  .header.mobile-menu-active .top_social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+    font-size: 100%;
+    font-weight: 600;
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+    padding: 0;
+    margin: auto 0 3rem 0;
+    color: #000;
+  }
+  .header.mobile-menu-active .top_social li:hover {
+    color: #fff;
+  }
+  .header.mobile-menu-active .header-column {
     max-width: 100%;
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
   }
-  .header.active .header-column .hamburger {
+  .header.mobile-menu-active .header-column.menu,
+  .header.mobile-menu-active .header-column.cart {
     display: block;
   }
-  .header.active .header-column:first-child {
+  .header.mobile-menu-active .header-column .hamburger {
+    display: block;
+  }
+  .header.mobile-menu-active .header-column .hamburger .hamburger-inner {
+    background-color: #333;
+  }
+  .header.mobile-menu-active .header-column .hamburger .hamburger-inner:before,
+  .header.mobile-menu-active .header-column .hamburger .hamburger-inner:after {
+    background-color: #333;
+  }
+  .header.mobile-menu-active .header-column:first-child {
     max-width: 100%;
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
   }
-  .header.active .header-column:last-child {
+  .header.mobile-menu-active .header-column:last-child {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
     margin: 3rem 0;
   }
-  .header.active .header-column.menu {
+  .header.mobile-menu-active .header-column.menu {
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: auto 0;
   }
-  .header.active .header-column .top_menu {
+  .header.mobile-menu-active .header-column .top_menu {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     margin: 0;
   }
-  .header.active .header-column .top_menu li {
+  .header.mobile-menu-active .header-column .top_menu li {
     width: 100%;
+    line-height: 120%;
   }
-  .header.active .header-column .header-logo {
+  .header.mobile-menu-active .header-column .top_menu li:hover {
+    color: #fff;
+  }
+  .header.mobile-menu-active .header-column .top_cart {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .header.mobile-menu-active .header-column .top_cart span:hover {
+    color: #fff;
+  }
+  .header.mobile-menu-active .header-column .header-logo {
     display: none;
   }
-  .header.active .header-column .header-location {
+  .header.mobile-menu-active .header-column .header-location {
     margin-right: auto;
     margin-left: 0;
+  }
+  .header.mobile-menu-active .header-column .header-location img {
+    display: block;
+  }
+  .header.mobile-menu-active .header-column.menu *,
+  .header.mobile-menu-active .header-column.cart * {
+    color: #000;
+  }
+  .header.mobile-menu-active .header-column.menu .top_menu {
+    font-size: 200%;
+  }
+  .header.mobile-menu-active .header-column.cart {
+    font-size: 130%;
+    margin: 0;
   }
 }

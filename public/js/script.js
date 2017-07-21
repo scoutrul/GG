@@ -1,1 +1,1 @@
-!function(){"use strict";Console.log("wow")}();
+!function(){"use strict";$(document).ready(function(){var e=!1;$("#hamburger").click(function(){e?(console.log(e),e=!e,$(this).removeClass("is-active"),$("section.header").removeClass("mobile-menu-active")):(console.log(e),e=!e,$(this).addClass("is-active"),$("section.header").addClass("mobile-menu-active"))})})}();

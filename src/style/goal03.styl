@@ -10,12 +10,15 @@
 		&:before
 			content: '03';
 			color: #242424;
+			font-family: $mainfont
 			font-weight: bold;
 			position: absolute;
 			top: 2rem;
 			left: -3rem;
 			font-size: 32rem;
 			letter-spacing: 4rem;
+			@media screen and (max-width: 620px)
+				left -29rem
 		&:after
 			content: '';
 			position: absolute;

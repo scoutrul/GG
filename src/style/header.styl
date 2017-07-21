@@ -12,13 +12,23 @@
 		min-height 10em
 		flex-wrap wrap
 		justify-content center
+		.top_social
+			display none
 		.header-column
 			display flex
 			align-items center
 			flex: 1 0 auto;
-			margin: 20px 0;
+			margin: 1rem 0;
+			min-height 61px
 			.hamburger
-				display none
+				@media screen and (min-width: 580px)
+					display none
+				@media screen and (max-width: 580px)	
+					.hamburger-inner
+						background-color #FFF
+						&:before,&:after
+							background-color #FFF
+							
 			&.menu
 				@media screen and (max-width: 620px)
 					min-width: 100%;
@@ -31,20 +41,16 @@
 					min-width: 100%;
 					justify-content: center;
 				
-			&:last-child, &:first-child
-				@media screen and (max-width: 640px)
-					flex 0
+			// &:last-child, &:first-child
+			// 	@media screen and (max-width: 640px)
+			// 		flex 0
 			.top_menu
 				display flex 
 				padding 0
 				text-transform uppercase
 				width: 100%;
 				justify-content: space-around
-				margin: 0 2em;
-				li
-					padding: 0 5px
-				
-					
+				margin: 0 2em;				
 			.header-location
 				margin: 0 2em 0 15%
 				color #626262
@@ -57,6 +63,11 @@
 					margin: 0 .5rem
 				span.name
 					font-size 75%
+				@media screen and (max-width: 580px)
+					margin 0 auto 0 1rem
+					img
+						display none
+					
 			.top_cart
 				text-align: center;
 				text-transform uppercase
@@ -72,40 +83,93 @@
 					img
 						filter: brightness(10);
 
-	@media screen and (max-width: 480px)
-		&.active
-			position absolute
+	@media screen and (max-width: 580px)
+		.container
+			align-items: flex-start;
+			margin-top: 1rem;
+			overflow auto
+			justify-content flex-start
+			height: 100%;
+			.header-column
+				&.menu,&.cart 
+					display none
+				&:first-child
+					margin 0
+					min-width: 100%;
+		&.mobile-menu-active
+			position fixed
 			width 100%
 			height 100%
 			background-color #d7d7d7
 			z-index 100
-			padding: 2rem 4rem;
-			font-size 345%
+			padding: 0 3rem
+			font-size 145%
+			overflow auto
 			* 
 				text-transform: none;
-			// .container
-			// 	flex-direction column
+				
+			.top_social
+				display flex
+				flex-direction column
+				padding 0
+				font-size 100%
+				font-weight 600
+				order 4
+				padding 0
+				margin auto 0 3rem 0
+				color #000
+				li
+					&:hover
+						color #FFF
 			.header-column
 				max-width: 100%;
 				flex 1
+				&.menu,&.cart 
+					display block
 				.hamburger
 					display block
+					.hamburger-inner
+						background-color #333
+						&:before,&:after
+							background-color #333
+							
 				&:first-child
 					max-width 100%
 					flex 1
 				&:last-child
 					justify-content: flex-start;
 					margin: 3rem 0;
-					
 				&.menu
 					order 3
+					flex-wrap: wrap;
+					margin auto 0
 				.top_menu
 					flex-wrap wrap
 					margin 0
 					li
 						width 100%
+						line-height 120%
+						&:hover
+							color #FFF
+				.top_cart
+					justify-content: flex-start;
+					span:hover
+						color #FFF
 				.header-logo
 					display none
 				.header-location
 					margin-right: auto;
 					margin-left: 0;
+					img
+						display block
+				&.menu,&.cart
+					*
+						color #000
+				&.menu .top_menu
+					font-size 200%
+
+				&.cart 
+					font-size 130%
+					margin 0
+
+		

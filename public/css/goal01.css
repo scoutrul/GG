@@ -15,9 +15,15 @@
     height: 100vh;
   }
 }
+@media screen and (max-width: 580px) {
+  .goal01 .container {
+    min-height: 480px;
+  }
+}
 .goal01 .container:before {
   content: '01';
   color: #1a1a1a;
+  font-family: $mainfont;
   font-weight: bold;
   position: absolute;
   top: 7rem;
@@ -27,7 +33,8 @@
 }
 @media screen and (max-width: 620px) {
   .goal01 .container:before {
-    top: 20%;
+    left: -7rem;
+    font-size: 17rem;
   }
 }
 .goal01 .container:after {
@@ -88,15 +95,16 @@
 }
 @media screen and (max-width: 620px) {
   .goal01 .container .screener h1 {
-    margin: auto;
-  }
-}
-@media screen and (max-width: 340px) {
-  .goal01 .container .screener h1 {
-    max-width: 100%;
-    margin: 12rem 0 0 0;
+    margin: auto 0 0 0;
+    font-size: 270%;
+    font-weight: 500;
   }
 }
 .goal01 .container .screener .button {
   margin: 4rem 0 5rem 0;
+}
+@media screen and (max-width: 620px) {
+  .goal01 .container .screener .button {
+    margin: auto 0 2rem;
+  }
 }

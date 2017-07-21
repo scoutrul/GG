@@ -36,7 +36,7 @@ var gulp      = require('gulp'),
   };
 
 module.exports = {
-  lint   : lint,
+  // lint   : lint,
   compile: compile,
   watch  : watch
 };

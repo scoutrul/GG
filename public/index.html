@@ -6,7 +6,8 @@
     <title>gulp-boilerplate</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, maximum-scale=1.0"/>
     <meta name="description" content="a starting point for using gulp"/>
-    <script href="js/script.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/script.js"></script>
     <link rel="stylesheet" href="css/style.css"/>
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&amp;amp;subset=devanagari" rel="stylesheet"/>
   </head>
@@ -17,7 +18,7 @@
           <div class="header-column">
             <div class="header-logo"> <img src="images/header_logo.png" alt="LOGOTYPE"/></div>
             <div class="header-location"> <img src="images/header_pin.png" alt="Location"/><span class="name">Jamaica</span></div>
-            <button class="hamburger hamburger--minus is-active"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
+            <button class="hamburger hamburger--minus" id="hamburger"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
           </div>
           <div class="header-column menu">
             <ul class="top_menu">
@@ -27,11 +28,17 @@
               <li>Contact</li>
             </ul>
           </div>
-          <div class="header-column">
+          <div class="header-column cart">
             <div class="top_cart"> 
               <div class="cart-img"><img src="images/header_cart.png" alt="Cart"/></div><span>Cart</span>
             </div>
           </div>
+          <ul class="top_social">
+            <li>Facebook</li>
+            <li>Google+</li>
+            <li>Odnoklassniki</li>
+            <li>somelse</li>
+          </ul>
         </div>
       </section>
       <section class="goal01">

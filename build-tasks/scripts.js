@@ -8,11 +8,11 @@ var gulp      = require('gulp'),
   dest        = gConfig.paths.destinations,
   plugins     = require('gulp-load-plugins')(opts.load),
   /* scripts:lint */
-  lint = function() {
-    return gulp.src(src.scripts)
-      .pipe(plugins.eslint())
-      .pipe(plugins.eslint.format());
-  },
+  // lint = function() {
+  //   return gulp.src(src.scripts)
+  //     .pipe(plugins.eslint())
+  //     .pipe(plugins.eslint.format());
+  // },
   /* scripts:compile */
   compile = function() {
     return gulp.src(src.scripts)
@@ -34,7 +34,7 @@ var gulp      = require('gulp'),
   };
 
 module.exports = {
-  lint   : lint,
+  // lint   : lint,
   compile: compile,
   watch  : watch
 };
