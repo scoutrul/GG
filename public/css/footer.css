@@ -14,7 +14,7 @@
   display: -ms-flexbox;
   display: flex;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 620px) {
   .footer .container {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -66,6 +66,7 @@
 @media screen and (max-width: 620px) {
   .footer .container .footer-menu ul {
     margin: 1rem 0 0 0;
+    min-width: 50%;
   }
 }
 .footer .container .footer-menu ul li {
@@ -77,11 +78,6 @@
 .footer .container .footer-menu ul li:hover {
   color: $specialRed;
   cursor: pointer;
-}
-@media screen and (max-width: 620px) and (max-width: 480px) {
-  .footer .container .footer-menu ul {
-    min-width: 50%;
-  }
 }
 .footer .container .footer-copy {
   display: -webkit-box;
