@@ -1262,7 +1262,7 @@ td {
       align-items: flex-end;
   margin-top: 4rem;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 620px) {
   #app .footer .container .footer-copy {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
@@ -1294,7 +1294,7 @@ td {
 #app .footer .container .footer-copy .footer-column .button {
   margin: 0 2rem;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 620px) {
   #app .footer .container .footer-copy .footer-column .button {
     margin: 0;
   }
