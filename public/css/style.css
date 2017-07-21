@@ -756,6 +756,9 @@ td {
   content: '>';
   padding: 0 0 0 0.4rem;
 }
+#app .button:hover {
+  cursor: pointer;
+}
 #app .hamburger {
   padding: 15px 15px;
   display: inline-block;
@@ -920,6 +923,10 @@ td {
   #app .header .container .header-column.menu {
     min-width: 100%;
   }
+}
+#app .header .container .header-column.menu li:hover {
+  color: #cb1d00;
+  cursor: pointer;
 }
 #app .header .container .header-column:first-child,
 #app .header .container .header-column:last-child {
@@ -1234,6 +1241,10 @@ td {
   font-size: 140%;
   font-weight: 500;
   color: #fff;
+}
+#app .footer .container .footer-menu ul li:hover {
+  color: #cb1d00;
+  cursor: pointer;
 }
 @media screen and (max-width: 620px) and (max-width: 480px) {
   #app .footer .container .footer-menu ul {

@@ -74,6 +74,10 @@
   font-weight: 500;
   color: $white;
 }
+.footer .container .footer-menu ul li:hover {
+  color: $specialRed;
+  cursor: pointer;
+}
 @media screen and (max-width: 620px) and (max-width: 480px) {
   .footer .container .footer-menu ul {
     min-width: 50%;

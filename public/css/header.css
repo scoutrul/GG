@@ -58,6 +58,10 @@
     min-width: 100%;
   }
 }
+.header .container .header-column.menu li:hover {
+  color: $specialRed;
+  cursor: pointer;
+}
 .header .container .header-column:first-child,
 .header .container .header-column:last-child {
   -webkit-box-flex: 1;
