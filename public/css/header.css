@@ -123,7 +123,12 @@
     display: none;
   }
 }
-.header .container .header-column .top_cart {
+.header .container .header-column.cart {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.header .container .header-column.cart .top_cart {
   text-align: center;
   text-transform: uppercase;
   display: -webkit-box;
@@ -132,19 +137,16 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.header .container .header-column .top_cart .cart-img {
+.header .container .header-column.cart .top_cart .cart-img {
   background-color: $specialRed;
   border-radius: 50%;
   padding: 0.8rem;
   margin: 0.5rem;
 }
-.header .container .header-column .top_cart .cart-img img {
+.header .container .header-column.cart .top_cart .cart-img img {
   -webkit-filter: brightness(10);
           filter: brightness(10);
 }
@@ -238,20 +240,21 @@
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
     margin: auto 0;
   }
-  .header.mobile-menu-active .header-column .top_menu {
+  .header.mobile-menu-active .header-column.cart .top_menu {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     margin: 0;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
-  .header.mobile-menu-active .header-column .top_menu li {
+  .header.mobile-menu-active .header-column.cart .top_menu li {
     width: 100%;
     line-height: 120%;
   }
-  .header.mobile-menu-active .header-column .top_menu li:hover {
+  .header.mobile-menu-active .header-column.cart .top_menu li:hover {
     color: #fff;
   }
   .header.mobile-menu-active .header-column .top_cart {
@@ -278,6 +281,15 @@
   }
   .header.mobile-menu-active .header-column.menu .top_menu {
     font-size: 200%;
+    margin: 0;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .header.mobile-menu-active .header-column.menu .top_menu li {
+    width: 100%;
   }
   .header.mobile-menu-active .header-column.cart {
     font-size: 130%;

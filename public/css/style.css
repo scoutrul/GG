@@ -857,8 +857,8 @@ td {
 #app .hamburger-inner,
 #app .hamburger-inner:after,
 #app .hamburger-inner:before {
-  -webkit-box-shadow: 1px 3px 0px rgba(18,18,18,0.2);
-          box-shadow: 1px 3px 0px rgba(18,18,18,0.2);
+  -webkit-box-shadow: 0px 2px 0px rgba(0,0,0,0.1);
+          box-shadow: 0px 2px 0px rgba(0,0,0,0.1);
 }
 #app .header {
   position: absolute;
@@ -994,7 +994,13 @@ td {
     display: none;
   }
 }
-#app .header .container .header-column .top_cart {
+#app .header .container .header-column.cart {
+  -ms-justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+#app .header .container .header-column.cart .top_cart {
   text-align: center;
   text-transform: uppercase;
   display: -webkit-box;
@@ -1004,20 +1010,16 @@ td {
   -ms-align-items: center;
   -ms-flex-align: center;
       align-items: center;
-  -ms-justify-content: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-#app .header .container .header-column .top_cart .cart-img {
+#app .header .container .header-column.cart .top_cart .cart-img {
   background-color: #cb1d00;
   border-radius: 50%;
   padding: 0.8rem;
   margin: 0.5rem;
 }
-#app .header .container .header-column .top_cart .cart-img img {
+#app .header .container .header-column.cart .top_cart .cart-img img {
   -webkit-filter: brightness(10);
           filter: brightness(10);
 }
@@ -1116,20 +1118,22 @@ td {
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
     margin: auto 0;
   }
-  #app .header.mobile-menu-active .header-column .top_menu {
+  #app .header.mobile-menu-active .header-column.cart .top_menu {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin: 0;
+    -ms-justify-content: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
-  #app .header.mobile-menu-active .header-column .top_menu li {
+  #app .header.mobile-menu-active .header-column.cart .top_menu li {
     width: 100%;
     line-height: 120%;
   }
-  #app .header.mobile-menu-active .header-column .top_menu li:hover {
+  #app .header.mobile-menu-active .header-column.cart .top_menu li:hover {
     color: #fff;
   }
   #app .header.mobile-menu-active .header-column .top_cart {
@@ -1157,6 +1161,16 @@ td {
   }
   #app .header.mobile-menu-active .header-column.menu .top_menu {
     font-size: 200%;
+    margin: 0;
+    -ms-justify-content: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  #app .header.mobile-menu-active .header-column.menu .top_menu li {
+    width: 100%;
   }
   #app .header.mobile-menu-active .header-column.cart {
     font-size: 130%;
