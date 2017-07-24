@@ -14,10 +14,6 @@ $(document).ready(function() {
 			menuCondition = !menuCondition;
 			$(this).addClass('is-active');
 			$('section.header').addClass('mobile-menu-active')
-
-
-
-
 		}
 	})
 

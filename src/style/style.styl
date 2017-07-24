@@ -7,11 +7,10 @@ box-sizing-reset()
 
 edit()
 
-$min-font = 12px
-$max-font = 18px
+$min-font = 12px * $golden
+$max-font = 26px * $golden
 $min-width = 320px
 $max-width = 1200px
-$max-width-plus = 1600px
 
 $mainfont = 'Roboto', 'sans-serif'
 $line-height-ratio = 1.75
@@ -31,6 +30,10 @@ $darkgrey = #242424
 $lightgrey = #d3d3d3
 $darkbg = #121212
 $footerbg = #1b1b1b
+$transition = .4s ease-in-out
+$iphone = 375px
+$ipad = 768px
+$desktop = 1024px
 $goal01 = '../images/index_hat.png'
 $goal03 = '../images/index_back.png'
 
@@ -38,17 +41,17 @@ $goal03 = '../images/index_back.png'
 *
 	color inherit
 	z-index 5
-	position relative	
-
+	position relative
+	
+body
+	letter-spacing 0.04em !important
+ 
 #app
 	display flex 
 	flex-direction column
 	flex 1
 	flex-wrap: wrap;
-	overflow hidden
-	h1
-		color $white 
-		font-weight: bold;
+	overflow-x hidden
 
 	section
 		max-width 100%
@@ -66,7 +69,6 @@ $goal03 = '../images/index_back.png'
 		
 		
 
-	@import 'button.styl'
 	@import 'hamburger.styl'
 
 	@import 'header.styl'
@@ -74,3 +76,4 @@ $goal03 = '../images/index_back.png'
 
 	@import 'hero.styl'
 	@import 'about.styl'
+	@import 'button.styl'

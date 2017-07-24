@@ -2,28 +2,39 @@
 	background-color $white
 	.container
 		flex-direction column
-		min-height: 67rem;
+		max-height: 67rem;
+		height: 100%;
 		align-items: center;
 		text-align: center;
 		justify-content: space-around;
-		h1
+		.title
 			color: #1d1e1e;
 			padding: 18rem 0 0;
 			font-weight: 400;
-			font-size: 450%;
-			letter-spacing: .1rem;
 			word-spacing: .3rem;
 			line-height: 125%;
+			transition $transition
+			
 		.link
 			padding: 0 0 15rem 0;
-			font-size: 270%;
 			letter-spacing: 0.14rem;
 			span
-				border-bottom: 1px dashed #CCC;
 				padding: 0.5rem 0;
-				
+				transition $transition
+				color #545454
+				&:after
+					content: "";
+					display: block;
+					width: 100%;
+					margin:0.5rem auto
+					height: 1px;
+					background-color: #545454;
+					transition $transition
 				&:hover
-					border-bottom: 1px solid $specialRed;
 					cursor pointer
 					color $specialRed
+					&:after
+						width 0%
+						background-color: $specialRed
+						
 					

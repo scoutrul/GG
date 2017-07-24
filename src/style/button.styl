@@ -1,24 +1,31 @@
 .button
 	display: flex;
 	align-items: center;
-	justify-content: space-around;
-	border-radius: 3rem;
-	min-height: 3.5rem;
-	justify-content: center;
+	border-radius: 10rem;
+	min-height: 3.8rem;
 	max-width: 15rem;
 	width: 100%;
-	background-color #222222
+	padding 0 2rem
+	background-color #2b2b2b
+	transition $transition
+	justify-content: flex-start
 	span
 		white-space: nowrap;
 		color: #fff;
 		font-weight: 400;
-		letter-spacing 0.08rem
 		&:after
 			content '>'
 			padding: 0 0 0 3rem;
 			display: inline-block;
 			color $specialRed
+			transition $transition
 	&:hover
 		cursor pointer
+		background-color $specialRed
+		max-width: 16rem;
+		span
+			&:after
+				padding: 0 0 0 4rem;
+				color $white
 	
 

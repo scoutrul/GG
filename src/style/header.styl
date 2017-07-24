@@ -1,9 +1,12 @@
 .header
 	position: absolute;
+	@media screen and (min-width: $ipad)
+		top 1rem
+	top: 0rem;
 	z-index: 10;
 	font-weight 600
-	letter-spacing: 0.05rem;
 	color $white
+	
 	.container
 		display flex
 		align-items center
@@ -18,34 +21,42 @@
 			align-items center
 			flex: 1 0 auto;
 			margin: 1rem 0;
-			min-height 61px
+			min-height 4rem
 			.hamburger
-				@media screen and (min-width: 580px)
-					display none
-				@media screen and (max-width: 580px)	
+				.hamburger-inner
+					transition $transition
+					background-color $specialRed
+					&:before,&:after
+						transition $transition
+						background-color $specialRed
+				@media screen and (max-width: $desktop-1)
+					top: 1rem;
+				@media screen and (min-width: $desktop+1)
+					display none  
+
+				&:hover
 					.hamburger-inner
-						background-color #FFF
+						background-color $white	
 						&:before,&:after
-							background-color #FFF
+							background-color $white						
 							
 			&.menu
-				@media screen and (max-width: 620px)
+				@media screen and (max-width: $desktop+1)
 					min-width: 100%;
-				li:hover
-					color $specialRed
-					cursor pointer
+				li
+					transition $transition
+					&:hover
+						color $specialRed
+						cursor pointer
 			&:first-child, &:last-child
 				flex: 1 0 auto;
 				max-width 310px
 			&:last-child
 				justify-content: flex-end;
-				@media screen and (max-width: 620px)
+				@media screen and (max-width: $ipad)
 					min-width: 100%;
 					justify-content: center;
 				
-			// &:last-child, &:first-child
-			// 	@media screen and (max-width: 640px)
-			// 		flex 0
 			.top_menu
 				display flex 
 				padding 0
@@ -54,9 +65,9 @@
 				justify-content: space-around
 				margin: 0 2em;	
 				li
-					font-size: 140%;
+					font-size: 129%;
 					font-weight 400		
-					margin: 0 0.3rem;	
+					margin: 0 0.4rem;	
 			.location
 				margin: 0 auto 0 3rem
 				color #626262
@@ -65,57 +76,73 @@
 				align-items: center;
 				flex-wrap: wrap;
 				justify-content: center;
+				cursor pointer
+				@media screen and (max-width: $ipad)
+					display none
 				img
 					margin: 0 0.5rem;
 					width: 16px;
-				span.name
+				span
 					font-size 85%
 					color $white
-					font-weight 300			
-					
-				@media screen and (max-width: 580px)
-					margin 0 auto 0 1rem
-					img
-						display none
+					font-weight 300	
+					transition: $transition
+				&:hover
+					span
+						color $specialRed
 			&.cart
 				justify-content: flex-end;
+				display: flex;
 				.top_cart
 					text-align: center;
 					display: flex;
 					align-items: center;
 					flex-wrap: wrap
+					span
+						font-size: 129%;
+						font-weight 400
+						transition: $transition
 					.cart-img
-						margin: 1.3rem .7rem 1.3rem 2rem
+						margin: 1.3rem 1rem 1.3rem 1rem;
 						img
 							width 20px
-					span
-						font-size: 130%;
-						font-weight 400			
+							margin auto
+					&:hover
+						cursor pointer
+						span
+							color $specialRed			
 						
 						
 
-	@media screen and (max-width: 580px)
+	@media screen and (max-width: $desktop)
 		.container
 			align-items: flex-start;
 			margin-top: 1rem;
 			overflow auto
 			justify-content flex-start
-			height: 100%;
+			flex-direction: column;
+
 			.header-column
 				&.menu,&.cart 
 					display none
 				&:first-child
 					margin 0
 					min-width: 100%;
+					flex 0
 		&.mobile-menu-active
 			position fixed
 			width 100%
 			height 100%
 			background-color #d7d7d7
 			z-index 100
-			padding: 0 3rem
 			font-size 145%
 			overflow auto
+			top 0
+			padding-top: 4rem;
+			@media screen and (max-width: $ipad)
+				padding-top 0
+			.container
+				min-height 100vh
 			* 
 				text-transform: none;
 				
@@ -140,53 +167,44 @@
 				.hamburger
 					display block
 					.hamburger-inner
-						background-color #333
+						background-color $specialRed
 						&:before,&:after
-							background-color #333
-							
-				&:first-child
-					max-width 100%
-					flex 1
+							background-color $specialRed
+				
 				&:last-child
 					justify-content: flex-start;
 					margin: 3rem 0;
 				&.menu
-					order 3
+					display: flex;
 					margin auto 0
-				&.cart
+					flex 1 0 auto
 					.top_menu
-						flex-wrap wrap
-						margin 0
+						font-size 200%
+						margin: 0;
 						justify-content: flex-start;
+						flex-wrap wrap
 						li
 							width 100%
-							line-height 120%
-							&:hover
-								color #FFF
-				.top_cart
-					justify-content: flex-start;
-					span:hover
-						color #FFF
+				&.cart
+					display flex
+					margin 0
+					.top_cart
+						justify-content: flex-start;
+						flex-direction: row-reverse;
+						span:hover
+							color #FFF
+						.cart-img
+							margin: 0 .5rem !important
 				.logo
 					display none
-				.header-location
+				.location
+					display block
 					margin-right: auto;
 					margin-left: 0;
-					img
-						display block
 				&.menu,&.cart
 					*
 						color #000
-				&.menu .top_menu
-					font-size 200%
-					margin: 0;
-					justify-content: flex-start;
-					flex-wrap wrap
-					li
-						width 100%
-
-				&.cart 
-					font-size 130%
-					margin 0
+						font-size 130%
+						
 
 		
