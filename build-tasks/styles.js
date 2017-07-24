@@ -9,11 +9,15 @@ var gulp      = require('gulp'),
   plugins     = require('gulp-load-plugins')(opts.load),
   koutoSwiss = require('kouto-swiss'),
   typographic = require('typographic'),
+  concat = require('gulp-concat'),
+  notify = require('gulp-notify'),
   /* styles:lint */
   lint = function() {
     return gulp.src(src.styles)
-      .pipe(plugins.stylint(opts.stylint))
-      .pipe(plugins.stylint.reporter());
+      // .pipe(plugins.stylint(opts.stylint))
+      // .pipe(plugins.stylint.reporter())
+      .pipe(notify('No lint stylus'));
+      ;
   },
   /* styles:compile */
   compile = function() {
@@ -22,13 +26,12 @@ var gulp      = require('gulp'),
       .pipe(plugins.stylus({
             "use": [koutoSwiss(), typographic()]
         }))
+      .pipe(gulp.dest(env.dist ? dest.dist: dest.css))
       .pipe(plugins.prefix(opts.prefix))
-      .pipe(env.stat ? plugins.size(opts.gSize): plugins.gUtil.noop())
-      .pipe(env.deploy ? plugins.gUtil.noop(): gulp.dest(env.dist ? dest.dist: dest.css))
       .pipe(plugins.minify())
       .pipe(plugins.rename(opts.rename))
-      .pipe(env.stat ? plugins.size(opts.gSize): plugins.gUtil.noop())
-      .pipe(gulp.dest(env.dist ? dest.dist: dest.css));
+      .pipe(gulp.dest(env.dist ? dest.dist: dest.css))
+      .pipe(notify('Compiled : Stylus'));
   },
   /* styles:watch */
   watch = function() {

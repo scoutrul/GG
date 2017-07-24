@@ -15,6 +15,7 @@ var TASK_NAMES = keyMirror({
   watch_scripts: null,
   watch_markup: null,
   watch_styles: null,
+  images: null
 })
 
 module.exports = TASK_NAMES
