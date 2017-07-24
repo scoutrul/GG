@@ -1,0 +1,81 @@
+.hero {
+  background-color: $darkbg;
+}
+.hero .container {
+  flex-direction: column;
+  max-height: 1600px;
+  height: 80vh;
+  min-height: 900px;
+}
+@media screen and (max-width: 620px) {
+  .hero .container {
+    height: 100vh;
+  }
+}
+@media screen and (max-width: 580px) {
+  .hero .container {
+    min-height: 480px;
+  }
+}
+.hero .container:after {
+  content: '';
+  position: absolute;
+  top: 3rem;
+  right: -8rem;
+  background: url("$goal01") no-repeat;
+  background-size: contain;
+  background-position: 100% 50%;
+  height: 100%;
+  max-width: 100%;
+  width: 930px;
+  z-index: 6;
+}
+@media screen and (min-width: 1500px) {
+  .hero .container:after {
+    width: 1080px;
+  }
+}
+.hero .container .screener {
+  font-weight: 500;
+  padding: 10rem 0 0 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 70%;
+  height: 100%;
+}
+@media screen and (max-width: 620px) {
+  .hero .container .screener {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 340px) {
+  .hero .container .screener {
+    font-weight: 400;
+  }
+}
+.hero .container .screener h1 {
+  font-weight: 400;
+  font-size: 600%;
+  line-height: 130%;
+  letter-spacing: 0.2rem;
+  margin: auto;
+}
+@media screen and (max-width: 620px) {
+  .hero .container .screener h1 {
+    margin: auto 0 0 0;
+    font-size: 270%;
+    font-weight: 500;
+  }
+}
+.hero .container .screener .button {
+  margin: 4rem 0 5rem 0;
+}
+@media screen and (max-width: 620px) {
+  .hero .container .screener .button {
+    margin: auto 0 2rem;
+  }
+}

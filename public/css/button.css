@@ -1,0 +1,26 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 3rem;
+  min-height: 3.5rem;
+  justify-content: center;
+  max-width: 15rem;
+  width: 100%;
+  background-color: #222;
+}
+.button span {
+  white-space: nowrap;
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: 0.08rem;
+}
+.button span:after {
+  content: '>';
+  padding: 0 0 0 3rem;
+  display: inline-block;
+  color: $specialRed;
+}
+.button:hover {
+  cursor: pointer;
+}

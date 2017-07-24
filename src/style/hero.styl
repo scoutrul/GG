@@ -1,0 +1,61 @@
+.hero
+	background-color $darkbg
+	.container
+		flex-direction column
+		max-height: 1600px;
+		height 80vh
+		min-height 900px
+		@media screen and (max-width: 620px)
+			height 100vh
+		@media screen and (max-width: 580px)
+			min-height: 480px;
+		
+		&:after
+			content: '';
+			position: absolute;
+			top: 2rem;
+			right: -8rem;
+			background: url($goal01) no-repeat;
+			background-size: contain;
+			background-position: 100% 50%;
+			height: 100%;
+			max-width: 100%;
+			width: 930px;
+			z-index: 6;
+			
+			
+		.screener
+			font-weight 500
+			padding: 10rem 0 0 0;
+			z-index 10
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: center;
+			max-width: 75%
+			height: 100%;
+
+			@media screen and (max-width: 620px)
+				max-width: 100%;
+				padding 0
+
+			@media screen and (max-width: 340px)
+				font-weight 400
+			h1
+				font-weight: 400;
+				font-size: 600%;
+				line-height: 125%;
+				letter-spacing: 0.3rem;
+				margin: auto;
+				padding: 7rem 0;
+				@media screen and (max-width: 620px)
+					margin auto 0 0 0
+					font-size: 270%;
+					font-weight 500
+					
+			.button
+				margin: auto 0 6rem 0
+				@media screen and (max-width: 620px)
+					margin: auto 0 2rem;
+
+
