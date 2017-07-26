@@ -39,6 +39,7 @@
 }
 .about .container .link span:hover {
   cursor: pointer;
+  color: $specialRed;
 }
 .about .container .link span:hover:after {
   width: 0%;

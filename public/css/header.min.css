@@ -45,12 +45,12 @@
   transition: $transition;
   background-color: $specialRed;
 }
-@media screen and (max-width: $desktop-1) {
+@media screen and (max-width: $desktop) {
   .header .container .header-column .hamburger {
     top: 1rem;
   }
 }
-@media screen and (min-width: $desktop1) {
+@media screen and (min-width: $desktop) {
   .header .container .header-column .hamburger {
     display: none;
   }
@@ -62,7 +62,7 @@
 .header .container .header-column .hamburger:hover .hamburger-inner:after {
   background-color: $white;
 }
-@media screen and (max-width: $desktop1) {
+@media screen and (max-width: $desktop) {
   .header .container .header-column.menu {
     min-width: 100%;
   }
@@ -319,6 +319,30 @@
   .header.mobile-menu-active .cart *,
   .header.mobile-menu-active .top_social * {
     color: #000;
+  }
+}
+@media all and (orientation: landscape) {
+  .mobile-menu-active .top_social {
+    position: absolute !important;
+    right: 2rem !important;
+    bottom: 2rem !important;
+    margin: 0 !important;
+  }
+  .mobile-menu-active .top_social ul {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  .mobile-menu-active .cart {
+    margin: 0 0 2rem 0 !important;
+    -webkit-align-items: flex-end !important;
+            align-items: flex-end !important;
+    -webkit-flex: 0;
+            flex: 0;
+  }
+  .mobile-menu-active .menu {
+    -webkit-flex: 1 1 auto;
+            flex: 1 1 auto;
   }
 }
 

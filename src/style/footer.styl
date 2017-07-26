@@ -3,7 +3,7 @@
 	padding-top 7.5rem
 	padding-bottom 6rem
 	@media screen and (max-width: $ipad)
-		padding-bottom 1rem
+		padding-bottom 3rem
 		padding-top 3rem
 	
 	.container
@@ -31,12 +31,13 @@
 				
 		.footer-menu
 			display flex
-			flex: 1 0 0;
+			flex: 1 0 auto;
 			@media screen and (max-width: $ipad)
 				justify-content: flex-start;
+				flex-wrap: wrap;
 			
 			ul
-				flex: 1 0 0;
+				flex: 1 0 auto;
 				padding 0
 				@media screen and (max-width: $ipad)
 					margin 1rem 0 0 0

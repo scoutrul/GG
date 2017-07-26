@@ -29,9 +29,9 @@
 					&:before,&:after
 						transition $transition
 						background-color $specialRed
-				@media screen and (max-width: $desktop-1)
+				@media screen and (max-width: $desktop)
 					top: 1rem;
-				@media screen and (min-width: $desktop+1)
+				@media screen and (min-width: $desktop)
 					display none  
 
 				&:hover
@@ -41,7 +41,7 @@
 							background-color $white						
 							
 			&.menu
-				@media screen and (max-width: $desktop+1)
+				@media screen and (max-width: $desktop)
 					min-width: 100%;
 				li
 					transition $transition
@@ -219,45 +219,46 @@
 					color #000
 					
 
-			
-		@media all and (orientation: landscape)
-			.top_social
+				
+@media all and (orientation: landscape)
+	.mobile-menu-active
+		.top_social
+			position: absolute !important
+			right: 2rem !important
+			bottom: 2rem !important
+			margin 0 !important
+			ul
 				position: absolute;
-				right: 2rem;
-				bottom: 2rem;
-				margin 0 !important
-				ul
-					position: absolute;
-					right: 0;
-					bottom: 0;
-			.cart
-				margin 0 0 2rem 0 !important
-				align-items: flex-end !important
-				flex 0
-			.menu 
-				flex 1 1 auto
+				right: 0;
+				bottom: 0;
+		.cart
+			margin 0 0 2rem 0 !important
+			align-items: flex-end !important
+			flex 0
+		.menu 
+			flex 1 1 auto
 
-			@media all and (min-width $iphone)
-				.cart
-					span
-						font-size 140% !important
-						font-weight 600 !important
-				.menu 
-					*
-						font-size 140% !important
-						font-weight 600 !important
-				.top_social
-					li
-						font-size 120% !important
-						font-weight 600 !important
-			
-			@media all and (min-height $iphoneH)
-				.cart
-					span
-						font-size 220% !important
-				.menu 
-					*
-						font-size 180% !important
-				.top_social
-					li
-						font-size 180% !important
+	// @media all and (min-width $iphone) and (orientation: landscape)
+	// 	.cart
+	// 		span
+	// 			font-size 140% !important
+	// 			font-weight 600 !important
+	// 	.menu 
+	// 		*
+	// 			font-size 140% !important
+	// 			font-weight 600 !important
+	// 	.top_social
+	// 		li
+	// 			font-size 120% !important
+	// 			font-weight 600 !important
+	
+	// @media all and (min-height $iphoneH) and (orientation: landscape)
+	// 	.cart
+	// 		span
+	// 			font-size 220% !important
+	// 	.menu 
+	// 		*
+	// 			font-size 180% !important
+	// 	.top_social
+	// 		li
+	// 			font-size 180% !important

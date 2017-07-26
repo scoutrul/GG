@@ -5,7 +5,7 @@
 }
 @media screen and (max-width: $ipad) {
   .footer {
-    padding-bottom: 1rem;
+    padding-bottom: 3rem;
     padding-top: 3rem;
   }
 }
@@ -45,18 +45,20 @@
 .footer .container .footer-menu {
   display: -webkit-flex;
   display: flex;
-  -webkit-flex: 1 0 0;
-          flex: 1 0 0;
+  -webkit-flex: 1 0 auto;
+          flex: 1 0 auto;
 }
 @media screen and (max-width: $ipad) {
   .footer .container .footer-menu {
     -webkit-justify-content: flex-start;
             justify-content: flex-start;
+    -webkit-flex-wrap: wrap;
+            flex-wrap: wrap;
   }
 }
 .footer .container .footer-menu ul {
-  -webkit-flex: 1 0 0;
-          flex: 1 0 0;
+  -webkit-flex: 1 0 auto;
+          flex: 1 0 auto;
   padding: 0;
 }
 @media screen and (max-width: $ipad) {
