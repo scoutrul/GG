@@ -5,17 +5,17 @@
 	top: 0rem;
 	z-index: 10;
 	font-weight 600
-	color $white
+	color #262626
+	&.white_header
+		color $white
 	
 	.container
 		display flex
 		align-items center
 		justify-content space-between
 		min-height 10em
-		flex-wrap wrap
+		flex-flow row wrap
 		justify-content center
-		.top_social
-			display none
 		.header-column
 			display flex
 			align-items center
@@ -57,20 +57,24 @@
 					min-width: 100%;
 					justify-content: center;
 				
+			&.top_social
+				display none
 			.top_menu
 				display flex 
 				padding 0
 				font-weight: 400;
 				width: 100%;
-				justify-content: space-around
+				justify-content: center
 				margin: 0 2em;	
 				li
-					font-size: 129%;
+					font-size: 21px;
 					font-weight 400		
-					margin: 0 0.4rem;	
+					margin: 0 1rem;
+					min-width: 100px;
+					text-align: center;	
+					transition $transition
 			.location
 				margin: 0 auto 0 3rem
-				color #626262
 				text-align: center;
 				display: flex;
 				align-items: center;
@@ -84,15 +88,17 @@
 					width: 16px;
 				span
 					font-size 85%
-					color $white
 					font-weight 300	
 					transition: $transition
 				&:hover
 					span
 						color $specialRed
+			&.serv
+				flex: 0 0 220px;
 			&.cart
 				justify-content: flex-end;
 				display: flex;
+				flex: 0 0 220px;
 				.top_cart
 					text-align: center;
 					display: flex;
@@ -120,7 +126,7 @@
 			margin-top: 1rem;
 			overflow auto
 			justify-content flex-start
-			flex-direction: column;
+			flex-flow: column wrap;
 
 			.header-column
 				&.menu,&.cart 
@@ -135,30 +141,14 @@
 			height 100%
 			background-color #d7d7d7
 			z-index 100
-			font-size 145%
 			overflow auto
 			top 0
-			padding-top: 4rem;
-			@media screen and (max-width: $ipad)
-				padding-top 0
+			transition: $transition
 			.container
 				min-height 100vh
 			* 
 				text-transform: none;
 				
-			.top_social
-				display flex
-				flex-direction column
-				padding 0
-				font-size 100%
-				font-weight 600
-				order 4
-				padding 0
-				margin auto 0 3rem 0
-				color #000
-				li
-					&:hover
-						color #FFF
 			.header-column
 				max-width: 100%;
 				flex 1
@@ -174,37 +164,100 @@
 				&:last-child
 					justify-content: flex-start;
 					margin: 3rem 0;
+					
+				&.serv
+					position fixed
+					top 0
 				&.menu
 					display: flex;
-					margin auto 0
-					flex 1 0 auto
+					margin 5rem 0 0
+					flex 0 0 auto
 					.top_menu
-						font-size 200%
 						margin: 0;
 						justify-content: flex-start;
-						flex-wrap wrap
+						flex-flow column wrap
 						li
 							width 100%
+							margin 0
+							text-align: left;
 				&.cart
 					display flex
 					margin 0
+					align-items: flex-start;
+					margin 2rem 0
 					.top_cart
 						justify-content: flex-start;
 						flex-direction: row-reverse;
-						span:hover
-							color #FFF
+						span
+							&:hover
+								color #FFF
 						.cart-img
 							margin: 0 .5rem !important
+				&.top_social
+					display flex
+					order 4
+					margin auto 0 3rem 0
+					ul
+						display flex
+						flex-flow column wrap
+						padding 0
+						font-weight 600
+						padding 0
+						li
+							&:hover
+								color #FFF
 				.logo
 					display none
 				.location
 					display block
 					margin-right: auto;
 					margin-left: 0;
-				&.menu,&.cart
-					*
-						color #000
-						font-size 130%
-						
+					img
+						margin-left 0
+			.menu,.cart,.top_social
+				*
+					color #000
+					
 
-		
+			
+		@media all and (orientation: landscape)
+			.top_social
+				position: absolute;
+				right: 2rem;
+				bottom: 2rem;
+				margin 0 !important
+				ul
+					position: absolute;
+					right: 0;
+					bottom: 0;
+			.cart
+				margin 0 0 2rem 0 !important
+				align-items: flex-end !important
+				flex 0
+			.menu 
+				flex 1 1 auto
+
+			@media all and (min-width $iphone)
+				.cart
+					span
+						font-size 140% !important
+						font-weight 600 !important
+				.menu 
+					*
+						font-size 140% !important
+						font-weight 600 !important
+				.top_social
+					li
+						font-size 120% !important
+						font-weight 600 !important
+			
+			@media all and (min-height $iphoneH)
+				.cart
+					span
+						font-size 220% !important
+				.menu 
+					*
+						font-size 180% !important
+				.top_social
+					li
+						font-size 180% !important

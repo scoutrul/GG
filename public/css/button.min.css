@@ -1,1 +1,37 @@
-.button{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;border-radius:10rem;min-height:3.8rem;max-width:15rem;width:100%;padding:0 2rem;background-color:#2b2b2b;transition:$transition;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}.button span{white-space:nowrap;color:#fff;font-weight:400}.button span:after{content:">";padding:0 0 0 3rem;display:inline-block;color:$specialRed;transition:$transition}.button:hover{cursor:pointer;background-color:$specialRed;max-width:16rem}.button:hover span:after{padding:0 0 0 4rem;color:$white}
+.button {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+          align-items: center;
+  border-radius: 10rem;
+  min-height: 3.8rem;
+  max-width: 15rem;
+  width: 100%;
+  padding: 0 2rem;
+  background-color: $specialRed;
+  transition: $transition;
+  -webkit-justify-content: flex-start;
+          justify-content: flex-start;
+}
+.button span {
+  white-space: nowrap;
+  color: #fff;
+  font-weight: 400;
+}
+.button span:after {
+  content: '>';
+  padding: 0 0 0 3rem;
+  display: inline-block;
+  transition: $transition;
+}
+.button:hover {
+  cursor: pointer;
+  background-color: $specialRed;
+  max-width: 16rem;
+}
+.button:hover span:after {
+  padding: 0 0 0 4rem;
+  color: $white;
+}
+
+/*# sourceMappingURL=button.min.css.map */

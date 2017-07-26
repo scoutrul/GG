@@ -9,29 +9,32 @@ var gulp      = require('gulp'),
   plugins     = require('gulp-load-plugins')(opts.load),
   koutoSwiss = require('kouto-swiss'),
   typographic = require('typographic'),
-  concat = require('gulp-concat'),
-  notify = require('gulp-notify'),
+  postcss = require('gulp-postcss'),
+  autoprefixer = require('autoprefixer'),
+  sourcemaps = require('gulp-sourcemaps'),
+
   /* styles:lint */
   lint = function() {
     return gulp.src(src.styles)
       // .pipe(plugins.stylint(opts.stylint))
       // .pipe(plugins.stylint.reporter())
-      .pipe(notify('No lint stylus'));
       ;
   },
   /* styles:compile */
   compile = function() {
     return gulp.src(src.styles)
+      .pipe(sourcemaps.init())
       .pipe(plugins.plumber())
       .pipe(plugins.stylus({
             "use": [koutoSwiss(), typographic()]
         }))
-      .pipe(gulp.dest(env.dist ? dest.dist: dest.css))
-      .pipe(plugins.prefix(opts.prefix))
-      .pipe(plugins.minify())
+      // .pipe(plugins.prefix(opts.prefix))
+      // .pipe(plugins.minify())
+      .pipe( postcss([ autoprefixer(opts.prefix) ]) )
       .pipe(plugins.rename(opts.rename))
+      .pipe( sourcemaps.write('.') )
       .pipe(gulp.dest(env.dist ? dest.dist: dest.css))
-      .pipe(notify('Compiled : Stylus'));
+
   },
   /* styles:watch */
   watch = function() {

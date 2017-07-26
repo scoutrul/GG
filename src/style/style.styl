@@ -9,7 +9,7 @@ edit()
 
 $min-font = 12px * $golden
 $max-font = 26px * $golden
-$min-width = 320px
+$min-width = 380px
 $max-width = 1200px
 
 $mainfont = 'Roboto', 'sans-serif'
@@ -31,9 +31,10 @@ $lightgrey = #d3d3d3
 $darkbg = #121212
 $footerbg = #1b1b1b
 $transition = .4s ease-in-out
-$iphone = 375px
+$iphone = 320px
+$iphoneH = $iphone * 1.5
 $ipad = 768px
-$desktop = 1024px
+$desktop = $max-width
 $goal01 = '../images/index_hat.png'
 $goal03 = '../images/index_back.png'
 
@@ -47,27 +48,24 @@ body
 	letter-spacing 0.04em !important
  
 #app
-	display flex 
+	display: flex
 	flex-direction column
-	flex 1
-	flex-wrap: wrap;
+	flex 1 0 0
+	flex-flow column wrap
 	overflow-x hidden
 
 	section
 		max-width 100%
-		width 100%
+		width 100vw
 		flex 1
 		padding 0 15px
 
 	.container 
-		width 100%
-		flex 1
+		flex 1 0 0
 		margin auto
 		display: flex;
 		align-items: flex-start;
 		max-width: $max-width
-		
-		
 
 	@import 'hamburger.styl'
 

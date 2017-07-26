@@ -1,5 +1,6 @@
-extends header
-block layout
-	body
-		#app
-			block content
+include header.pug
+body
+	#app
+		include header_menu.pug
+		block content
+		include footer.pug

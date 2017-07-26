@@ -1,1 +1,48 @@
-.about{background-color:$white}.about .container{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;max-height:67rem;height:100%;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;-ms-flex-pack:distribute;justify-content:space-around}.about .container .title{color:#1d1e1e;padding:18rem 0 0;font-weight:400;word-spacing:.3rem;line-height:125%;transition:$transition}.about .container .link{padding:0 0 15rem;letter-spacing:.14rem}.about .container .link span{padding:.5rem 0;transition:$transition;color:#545454}.about .container .link span:after{content:"";display:block;width:100%;margin:.5rem auto;height:1px;background-color:#545454;transition:$transition}.about .container .link span:hover{cursor:pointer;color:$specialRed}.about .container .link span:hover:after{width:0;background-color:$specialRed}
+.about {
+  background-color: $white;
+}
+.about .container {
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  max-height: 67rem;
+  height: 100%;
+  -webkit-align-items: center;
+          align-items: center;
+  text-align: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
+.about .container .title {
+  color: #1d1e1e;
+  margin: 0 0 4rem;
+  font-weight: 400;
+  word-spacing: 0.3rem;
+  line-height: 125%;
+  transition: $transition;
+}
+.about .container .link {
+  letter-spacing: 0.14rem;
+}
+.about .container .link span {
+  padding: 0.5rem 0;
+  transition: $transition;
+  color: #545454;
+}
+.about .container .link span:after {
+  content: "";
+  display: block;
+  width: 100%;
+  margin: 0.5rem auto;
+  height: 1px;
+  background-color: #545454;
+  transition: $transition;
+}
+.about .container .link span:hover {
+  cursor: pointer;
+}
+.about .container .link span:hover:after {
+  width: 0%;
+  background-color: $specialRed;
+}
+
+/*# sourceMappingURL=about.min.css.map */

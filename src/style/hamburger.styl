@@ -14,17 +14,15 @@
 	overflow: visible; 
 	color #000
 	outline: 0 
-	z-index: 4;
+	z-index: 20;
 	position: fixed;
 	right: 1rem;
-	@media screen and (max-width: $desktop-1)
-		z-index: 20;
-	
+
 .hamburger:hover 
 	cursor pointer
 
 .hamburger-box {
-	width: 40px;
+	width: 37px;
 	height: 24px;
 	display: inline-block;
 	position: relative; }
@@ -34,9 +32,8 @@
 	top: 50%;
 	margin-top: -2px; }
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-	width: 40px;
-	height: 4px;
-	border-radius: 4px;
+	width: 37px;
+	height: 3px;
 	position: absolute;
 	transition-property: transform;
 	transition-duration: 0.15s;
@@ -45,20 +42,24 @@
 	content: "";
 	display: block; }
 .hamburger-inner::before {
-	top: -10px; }
+	top: -9px; }
 .hamburger-inner::after {
-	bottom: -10px; }
+	bottom: -9px; }
 
 
 .hamburger--minus .hamburger-inner::before, .hamburger--minus .hamburger-inner::after 
-	transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear; 
+	transition: bottom 0.04s 0s ease-out, top 0.04s 0s ease-out, opacity 0s linear; 
 
 .hamburger--minus.is-active .hamburger-inner::before, .hamburger--minus.is-active .hamburger-inner::after 
 	opacity: 0;
-	transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear; 
+	transition: bottom 0.04s ease-out, top 0.04s ease-out, opacity 0s 0.04s linear; 
 
+.hamburger--minus.is-active .hamburger-inner 
+	transform: rotate(45deg);
 .hamburger--minus.is-active .hamburger-inner::before 
 	top: 0; 
+	transform: rotate(90deg);
+	opacity: 1;
 
 .hamburger--minus.is-active .hamburger-inner::after 
 	bottom: 0; 
