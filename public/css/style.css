@@ -1098,6 +1098,7 @@ body {
     align-items: flex-start;
     -webkit-flex: 0;
     flex: 0;
+    margin: 1rem 0 2rem;
   }
   #app .header.mobile-menu-active .header-column.cart .top_cart {
     -webkit-justify-content: flex-start;
@@ -1110,6 +1111,7 @@ body {
     font-size: 500%;
     font-weight: 600;
     color: #242424;
+    line-height: 100%;
   }
   #app .header.mobile-menu-active .header-column.cart .top_cart span:hover {
     color: #fff;
@@ -1140,14 +1142,14 @@ body {
     font-weight: 600;
     padding: 0;
   }
-  #app .header.mobile-menu-active .header-column.top_social ul a {
+  #app .header.mobile-menu-active .header-column.top_social ul li a {
     font-size: 300%;
     font-weight: 600;
     line-height: 140%;
     transition: 0.4s ease-in-out;
     color: #242424;
   }
-  #app .header.mobile-menu-active .header-column.top_social ul a:hover {
+  #app .header.mobile-menu-active .header-column.top_social ul li a:hover {
     color: #fff;
   }
   #app .header.mobile-menu-active .header-column .logo {
@@ -1162,21 +1164,25 @@ body {
     margin-left: 0;
   }
 }
-@media screen and (max-width: 1200px) and (max-width: 568px) {
+@media screen and (max-width: 1200px) and (max-width: 667px) {
   #app .header a {
     font-size: 40px !important;
     line-height: 150% !important;
   }
 }
-@media screen and (max-width: 1200px) and (max-width: 568px) {
+@media screen and (max-width: 1200px) and (max-width: 667px) {
+  #app .header .location span {
+    font-size: 20px !important;
+  }
+}
+@media screen and (max-width: 1200px) and (max-width: 667px) {
   #app .header span {
     font-size: 40px !important;
-    line-height: 150% !important;
   }
 }
-@media screen and (max-width: 1200px) and (max-width: 568px) {
+@media screen and (max-width: 1200px) and (max-width: 667px) {
   #app .header a {
-    font-size: 32px !important;
+    font-size: 26px !important;
     line-height: 110% !important;
   }
 }

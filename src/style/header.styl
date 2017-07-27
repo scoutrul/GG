@@ -194,17 +194,20 @@
 								color $darkgrey
 								&:hover
 									color $specialRed
-								@media screen and (max-width: $iphone5)
+								@media screen and (max-width: $iphone6)
 									font-size: 40px !important;
 									line-height: 150% !important;
 							
 				.location span
 					color $darkgrey
 					font-weight: 600;
+					@media screen and (max-width: $iphone6)
+						font-size: 20px !important;
 				&.cart
 					display flex
 					align-items: flex-start;
 					flex: 0;
+					margin: 1rem 0 2rem;
 					.top_cart
 						justify-content: flex-start;
 						flex-direction: row-reverse;
@@ -212,11 +215,12 @@
 							font-size: 500%;
 							font-weight: 600;
 							color $darkgrey
+							line-height: 100%
+
 							&:hover
 								color #FFF
-							@media screen and (max-width: $iphone5)
+							@media screen and (max-width: $iphone6)
 								font-size: 40px !important;
-								line-height: 150% !important;
 						.cart-img
 							margin: 0 .5rem !important
 				&.top_social
@@ -232,17 +236,18 @@
 						padding 0
 						font-weight 600
 						padding 0
-						a
-							font-size: 300%;
-							font-weight: 600;
-							line-height: 140%;
-							transition $transition 
-							color $darkgrey
-							&:hover
-								color #FFF
-							@media screen and (max-width: $iphone5)
-								font-size: 32px !important;
-								line-height: 110% !important;
+						li
+							a
+								font-size: 300%;
+								font-weight: 600;
+								line-height: 140%;
+								transition $transition 
+								color $darkgrey
+								&:hover
+									color #FFF
+								@media screen and (max-width: $iphone6)
+									font-size: 26px !important;
+									line-height: 110% !important;
 				.logo
 					display none
 				.location
