@@ -21,7 +21,7 @@
             justify-content: flex-start;
   }
 }
-.footer .container .footer-slogan {
+.footer .container .footer-title {
   min-width: $iphone;
   max-width: 50%;
   width: 100%;
@@ -29,18 +29,28 @@
   -webkit-flex: 1 0 10rem;
           flex: 1 0 10rem;
 }
-.footer .container .footer-slogan .logo {
-  height: 3rem;
+@media screen and (max-width: $ipad) {
+  .footer .container .footer-title {
+    max-width: 100%;
+  }
 }
-.footer .container .footer-slogan .logo img {
-  height: 100%;
-}
-.footer .container .footer-slogan h6.footer_title {
-  margin: 3.6rem 0;
-  line-height: 140%;
+.footer .container .footer-title h6.footer-slogan {
   font-weight: 500;
   color: $white;
   transition: $transition;
+}
+.footer .container .footer-title h6.footer-slogan span {
+  display: block;
+  font-size: 4rem;
+}
+@media screen and (max-width: $ipad) {
+  .footer .container .footer-title h6.footer-slogan {
+    margin: 2rem 0;
+  }
+  .footer .container .footer-title h6.footer-slogan span {
+    display: inline-block;
+    font-size: 3rem;
+  }
 }
 .footer .container .footer-menu {
   display: -webkit-flex;
@@ -66,7 +76,6 @@
   -webkit-flex: 1 0 auto;
           flex: 1 0 auto;
   padding: 0;
-  top: 1.6rem;
 }
 @media screen and (max-width: $ipad) {
   .footer .container .footer-menu ul {
@@ -74,7 +83,7 @@
   }
 }
 .footer .container .footer-menu ul li {
-  height: 3rem;
+  line-height: 200%;
   font-weight: 600;
   color: $white;
   transition: $transition;
@@ -84,6 +93,11 @@
 .footer .container .footer-menu ul li:hover {
   color: $specialRed;
   cursor: pointer;
+}
+@media screen and (max-width: $iphone) {
+  .footer .container .footer-menu ul li {
+    font-size: 17px;
+  }
 }
 .footer .container .footer-copy {
   display: -webkit-flex;
@@ -97,7 +111,7 @@
 }
 .footer .container .footer-copy .copy {
   color: $white;
-  font-size: 17px;
+  font-size: 18px;
   max-width: 50%;
   width: 100%;
   min-width: $iphone;
@@ -137,4 +151,4 @@
   }
 }
 
-/*# sourceMappingURL=footer.min.css.map */
+/*# sourceMappingURL=footer.css.map */

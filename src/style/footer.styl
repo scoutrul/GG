@@ -12,22 +12,30 @@
 			flex-wrap wrap
 			justify-content: flex-start;
 		
-		.footer-slogan
+		.footer-title
 			min-width: $iphone;
 			max-width: 50%;
 			width: 100%;
 			min-height: 14rem;
 			flex: 1 0 10rem;
-			.logo
-				height: 3rem
-				img
-					height 100%
-			h6.footer_title
-				margin: 3.6rem 0;
-				line-height: 140%;
+			// .logo
+			// 	height: 3rem
+			// 	img
+			// 		height 100%
+			@media screen and (max-width: $ipad)
+				max-width 100%
+			h6.footer-slogan
 				font-weight: 500;
 				color: $white;
 				transition $transition
+				span
+					display block
+					font-size 4rem
+				@media screen and (max-width: $ipad)
+					margin: 2rem 0;
+					span
+						display inline-block
+						font-size 3rem
 				
 		.footer-menu
 			display flex
@@ -41,11 +49,10 @@
 			ul
 				flex: 1 0 auto;
 				padding 0
-				top: 1.6rem;
 				@media screen and (max-width: $ipad)
 					min-width 50%
 				li
-					height 3rem
+					line-height: 200%;
 					font-weight: 600;
 					color: $white;
 					transition $transition
@@ -54,6 +61,8 @@
 					&:hover
 						color $specialRed
 						cursor pointer
+					@media screen and (max-width: $iphone)
+						font-size: 17px;
 		.footer-copy
 			display flex
 			width: 100%;
@@ -62,7 +71,7 @@
 			flex-wrap: wrap;
 			.copy
 				color $white
-				font-size 17px
+				font-size 18px
 				max-width: 50%;
 				width: 100%;
 				min-width: $iphone;

@@ -31,7 +31,7 @@ var gulp      = require('gulp'),
       // .pipe(plugins.prefix(opts.prefix))
       // .pipe(plugins.minify())
       .pipe( postcss([ autoprefixer(opts.prefix) ]) )
-      .pipe(plugins.rename(opts.rename))
+      // .pipe(plugins.rename(opts.rename))
       .pipe( sourcemaps.write('.') )
       .pipe(gulp.dest(env.dist ? dest.dist: dest.css))
 

@@ -27,7 +27,7 @@
 }
 .button:hover {
   cursor: pointer;
-  background-color: $specialRed;
+  background-color: #2d2d2d;
   max-width: 16rem;
 }
 .button:hover span:after {
@@ -35,4 +35,4 @@
   color: $white;
 }
 
-/*# sourceMappingURL=button.min.css.map */
+/*# sourceMappingURL=button.css.map */
