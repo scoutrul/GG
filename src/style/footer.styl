@@ -13,17 +13,17 @@
 			justify-content: flex-start;
 		
 		.footer-slogan
+			min-width: $iphone;
 			max-width: 50%;
 			width: 100%;
 			min-height: 14rem;
 			flex: 1 0 10rem;
 			.logo
-				max-height: 3rem;
-				height: 100%;
+				height: 3rem
 				img
-					height 120%
+					height 100%
 			h6.footer_title
-				margin-top: 3.6rem;
+				margin: 3.6rem 0;
 				line-height: 140%;
 				font-weight: 500;
 				color: $white;
@@ -33,17 +33,19 @@
 			display flex
 			flex: 1 0 auto;
 			@media screen and (max-width: $ipad)
+				min-width $iphoneH
 				justify-content: flex-start;
 				flex-wrap: wrap;
-			
+			@media screen and (max-width: $iphoneH)
+				min-width auto
 			ul
 				flex: 1 0 auto;
 				padding 0
+				top: 1.6rem;
 				@media screen and (max-width: $ipad)
-					margin 1rem 0 0 0
 					min-width 50%
 				li
-					line-height: 191%;
+					height 3rem
 					font-weight: 600;
 					color: $white;
 					transition $transition
@@ -57,22 +59,28 @@
 			width: 100%;
 			align-items: center;
 			margin-top: 5rem;
+			flex-wrap: wrap;
 			.copy
 				color $white
+				font-size 17px
 				max-width: 50%;
 				width: 100%;
+				min-width: $iphone;
+				flex: 1 1 10rem;
 			.footer-column
 				margin 0 auto 0 0 
 				flex: 1 0 50%;	
 				font-weight 600
-				&:last-child
+				&.footer-button
 					margin 0 auto 0 auto
-					flex: 1 0 auto;
+					flex: 1 1 20rem;
 					display: flex;	
+					@media screen and (max-width: $iphone5)
+						flex: 1 0 $iphone5;
 			@media screen and (max-width: $ipad)
 				flex-wrap wrap
 				.copy
-					order 2
+					order 1
 					margin-top 3rem
 					min-width: 100%;
 					font-size: 13px;
