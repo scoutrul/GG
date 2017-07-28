@@ -848,7 +848,7 @@ body {
   min-height: 4rem;
 }
 #app .header .container .header-column .logo img {
-  width: 78px;
+  width: 67px;
 }
 @media screen and (max-width: 1200px) {
   #app .header .container .header-column.menu {
@@ -916,7 +916,7 @@ body {
   -ms-justify-content: center;
   justify-content: center;
   cursor: pointer;
-  top: 4px;
+  top: 1px;
 }
 @media screen and (max-width: 1200px) {
   #app .header .container .header-column .location {
@@ -968,7 +968,7 @@ body {
   margin: 1.3rem 1rem 1.3rem 1rem;
 }
 #app .header .container .header-column.cart .top_cart .cart-img img {
-  width: 24px;
+  width: 21px;
   margin: auto;
 }
 #app .header .container .header-column.cart .top_cart:hover {
@@ -1221,6 +1221,28 @@ body {
     flex: 1 1 auto;
   }
 }
+#app #choose {
+  display: none;
+}
+#app #choose.is-active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  background: #fff;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: column wrap;
+  flex-flow: column wrap;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+}
 #app .footer {
   background-color: #1b1b1b;
   padding-top: 7.5rem;
@@ -1305,7 +1327,7 @@ body {
     min-width: 50%;
   }
 }
-#app .footer .container .footer-menu ul li {
+#app .footer .container .footer-menu ul a {
   line-height: 200%;
   font-weight: 600;
   color: #fff;
@@ -1313,12 +1335,12 @@ body {
   font-size: 25px;
   min-width: 160px;
 }
-#app .footer .container .footer-menu ul li:hover {
+#app .footer .container .footer-menu ul a:hover {
   color: #cb1d00;
   cursor: pointer;
 }
 @media screen and (max-width: 320px) {
-  #app .footer .container .footer-menu ul li {
+  #app .footer .container .footer-menu ul a {
     font-size: 17px;
   }
 }
@@ -1334,7 +1356,7 @@ body {
   flex-wrap: wrap;
 }
 #app .footer .container .footer-copy .copy {
-  color: #fff;
+  color: #2d2d2d;
   font-size: 18px;
   max-width: 50%;
   width: 100%;
@@ -1460,7 +1482,7 @@ body {
   display: block;
 }
 #app .hero .container .screener .button {
-  margin: 0 0 2rem;
+  margin: 3rem 0 2rem;
 }
 #app .about .container {
   height: 100%;
@@ -1541,17 +1563,37 @@ body {
   color: #fff;
   font-weight: 400;
   font-size: 18px;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
 }
 #app .button span:after {
   content: '';
-  padding: 0 0 0 3rem;
-  display: inline-block;
   transition: 0.4s ease-in-out;
-  background-image: url("/images/icon_arrow.svg");
+  background-image: url("../images/icon_arrow.svg");
   background-repeat: no-repeat;
   background-position: 100%;
   width: 10px;
   height: 10px;
+  margin: auto;
+  -ms-filter: none;
+  -webkit-filter: none;
+          filter: none;
+  opacity: 1;
+}
+#app .button span:before {
+  content: '';
+  transition: 0.4s ease-in-out;
+  background-image: url("../images/icon_arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 0%;
+  width: 10px;
+  height: 10px;
+  margin: auto;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0;
+  display: none;
 }
 #app .button:hover {
   cursor: pointer;
@@ -1559,7 +1601,30 @@ body {
   max-width: 16rem;
 }
 #app .button:hover span:after {
-  padding: 0 0 0 4rem;
+  color: #fff;
+}
+#app .button.left {
+  background-color: #d3d3d3;
+}
+#app .button.left span {
+  color: #242424;
+}
+#app .button.left span:after {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+#app .button.left span:before {
+  -ms-filter: none;
+  -webkit-filter: none;
+          filter: none;
+  opacity: 1;
+  display: block;
+}
+#app .button.left:hover {
+  background-color: #cb1d00;
+}
+#app .button.left:hover span:before {
   color: #fff;
 }
 @media all and (orientation: landscape) and (max-width: 768px) {

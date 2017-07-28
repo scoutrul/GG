@@ -37,7 +37,7 @@
   min-height: 4rem;
 }
 .header .container .header-column .logo img {
-  width: 78px;
+  width: 67px;
 }
 @media screen and (max-width: $desktop) {
   .header .container .header-column.menu {
@@ -100,7 +100,7 @@
   -webkit-justify-content: center;
           justify-content: center;
   cursor: pointer;
-  top: 4px;
+  top: 1px;
 }
 @media screen and (max-width: $desktop) {
   .header .container .header-column .location {
@@ -150,7 +150,7 @@
   margin: 1.3rem 1rem 1.3rem 1rem;
 }
 .header .container .header-column.cart .top_cart .cart-img img {
-  width: 24px;
+  width: 21px;
   margin: auto;
 }
 .header .container .header-column.cart .top_cart:hover {

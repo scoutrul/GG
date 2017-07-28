@@ -1,0 +1,57 @@
+.about .container {
+  height: 100%;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: center;
+          align-items: center;
+  text-align: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  min-height: 70rem;
+}
+.about .container .title {
+  margin: 0 0 4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  word-spacing: 0.3rem;
+  line-height: 90%;
+  transition: $transition;
+}
+.about .container .title span {
+  display: block;
+}
+.about .container .link a {
+  padding: 0.5rem 0;
+  transition: $transition;
+  color: #545454;
+  font-size: 2rem;
+}
+@media screen and (max-width: $ipad) {
+  .about .container .link a {
+    font-size: 80%;
+  }
+}
+@media screen and (max-width: $iphone5) {
+  .about .container .link a {
+    font-size: 60%;
+  }
+}
+.about .container .link a:after {
+  content: "";
+  display: block;
+  width: 100%;
+  margin: 0.5rem auto;
+  height: 1px;
+  background-color: #545454;
+  transition: $transition;
+}
+.about .container .link a:hover {
+  cursor: pointer;
+  color: $specialRed;
+}
+.about .container .link a:hover:after {
+  width: 0%;
+  background-color: $specialRed;
+}
+
+/*# sourceMappingURL=index_about.css.map */

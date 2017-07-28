@@ -18,17 +18,32 @@
   color: #fff;
   font-weight: 400;
   font-size: 18px;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
 }
 .button span:after {
   content: '';
-  padding: 0 0 0 3rem;
-  display: inline-block;
   transition: $transition;
-  background-image: url("/images/icon_arrow.svg");
+  background-image: url("../images/icon_arrow.svg");
   background-repeat: no-repeat;
   background-position: 100%;
   width: 10px;
   height: 10px;
+  margin: auto;
+  opacity: 1;
+}
+.button span:before {
+  content: '';
+  transition: $transition;
+  background-image: url("../images/icon_arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 0%;
+  width: 10px;
+  height: 10px;
+  margin: auto;
+  opacity: 0;
+  display: none;
 }
 .button:hover {
   cursor: pointer;
@@ -36,7 +51,25 @@
   max-width: 16rem;
 }
 .button:hover span:after {
-  padding: 0 0 0 4rem;
+  color: $white;
+}
+.button.left {
+  background-color: $lightgrey;
+}
+.button.left span {
+  color: $darkgrey;
+}
+.button.left span:after {
+  opacity: 0;
+}
+.button.left span:before {
+  opacity: 1;
+  display: block;
+}
+.button.left:hover {
+  background-color: $specialRed;
+}
+.button.left:hover span:before {
   color: $white;
 }
 

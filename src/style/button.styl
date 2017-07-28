@@ -14,23 +14,49 @@
 		color: #fff;
 		font-weight: 400;
 		font-size: 18px;
+		display: flex;
+		width: 100%;
 		&:after
 			content ''
-			padding: 0 0 0 3rem;
-			display: inline-block;
 			transition $transition
-			background-image: url(/images/icon_arrow.svg);
+			background-image: url(../images/icon_arrow.svg);
 			background-repeat: no-repeat;
 			background-position: 100%;
 			width: 10px;
 			height: 10px;
+			margin auto
+			opacity 1
+		&:before
+			content ''
+			transition $transition
+			background-image: url(../images/icon_arrow.svg);
+			background-repeat: no-repeat;
+			background-position: 0%;
+			width: 10px;
+			height: 10px;
+			margin auto
+			opacity 0
+			display none
 	&:hover
 		cursor pointer
 		background-color #2d2d2d
 		max-width: 16rem;
 		span
 			&:after
-				padding: 0 0 0 4rem;
 				color $white
 	
 
+	&.left
+		background-color $lightgrey
+		span
+			color $darkgrey
+			&:after
+				opacity 0
+			&:before
+				opacity 1
+				display block
+		&:hover
+			background-color $specialRed
+			span
+				&:before
+					color $white

@@ -80,7 +80,7 @@
     min-width: 50%;
   }
 }
-.footer .container .footer-menu ul li {
+.footer .container .footer-menu ul a {
   line-height: 200%;
   font-weight: 600;
   color: $white;
@@ -88,12 +88,12 @@
   font-size: 25px;
   min-width: 160px;
 }
-.footer .container .footer-menu ul li:hover {
+.footer .container .footer-menu ul a:hover {
   color: $specialRed;
   cursor: pointer;
 }
 @media screen and (max-width: $iphone) {
-  .footer .container .footer-menu ul li {
+  .footer .container .footer-menu ul a {
     font-size: 17px;
   }
 }
@@ -108,7 +108,7 @@
           flex-wrap: wrap;
 }
 .footer .container .footer-copy .copy {
-  color: $white;
+  color: $darkhover;
   font-size: 18px;
   max-width: 50%;
   width: 100%;
