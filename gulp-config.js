@@ -51,7 +51,7 @@ module.exports = {
       overwatch: env + '**/*.{html,js,css,png,jpg,svg,gif}',
       scripts  : 'src/script/**/*.js',
       styles   : 'src/style/*.styl',
-      images   : 'src/images/*.{png, svg, jpg, gif}'
+      images   : 'src/images/*.{png,svg,jpg,gif}'
     },
     destinations: {
       dist: './dist',

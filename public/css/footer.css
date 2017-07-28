@@ -13,7 +13,7 @@
   display: -webkit-flex;
   display: flex;
 }
-@media screen and (max-width: $ipad) {
+@media screen and (max-width: $ipadPro) {
   .footer .container {
     -webkit-flex-wrap: wrap;
             flex-wrap: wrap;
@@ -25,29 +25,27 @@
   min-width: $iphone;
   max-width: 50%;
   width: 100%;
-  min-height: 14rem;
   -webkit-flex: 1 0 10rem;
           flex: 1 0 10rem;
 }
-@media screen and (max-width: $ipad) {
+@media screen and (max-width: $ipadPro) {
   .footer .container .footer-title {
     max-width: 100%;
+    margin-bottom: 3rem;
   }
 }
-.footer .container .footer-title h6.footer-slogan {
-  font-weight: 500;
+.footer .container .footer-title .footer-slogan {
+  font-weight: 900;
   color: $white;
   transition: $transition;
 }
-.footer .container .footer-title h6.footer-slogan span {
+.footer .container .footer-title .footer-slogan span {
   display: block;
   font-size: 4rem;
+  transition: $transition;
 }
-@media screen and (max-width: $ipad) {
-  .footer .container .footer-title h6.footer-slogan {
-    margin: 2rem 0;
-  }
-  .footer .container .footer-title h6.footer-slogan span {
+@media screen and (max-width: $ipadPro) {
+  .footer .container .footer-title .footer-slogan span {
     display: inline-block;
     font-size: 3rem;
   }
@@ -147,6 +145,10 @@
             order: 1;
     margin-top: 3rem;
     min-width: 100%;
+  }
+}
+@media screen and (max-width: $iphone) {
+  .footer .container .footer-copy .copy {
     font-size: 13px;
   }
 }

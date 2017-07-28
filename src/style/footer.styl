@@ -8,7 +8,7 @@
 	
 	.container
 		display flex 
-		@media screen and (max-width: $ipad)
+		@media screen and (max-width: $ipadPro)
 			flex-wrap wrap
 			justify-content: flex-start;
 		
@@ -16,27 +16,23 @@
 			min-width: $iphone;
 			max-width: 50%;
 			width: 100%;
-			min-height: 14rem;
 			flex: 1 0 10rem;
-			// .logo
-			// 	height: 3rem
-			// 	img
-			// 		height 100%
-			@media screen and (max-width: $ipad)
+			@media screen and (max-width: $ipadPro)
 				max-width 100%
-			h6.footer-slogan
-				font-weight: 500;
+				margin-bottom 3rem
+			.footer-slogan
+				font-weight: 900;
 				color: $white;
 				transition $transition
 				span
 					display block
 					font-size 4rem
-				@media screen and (max-width: $ipad)
-					margin: 2rem 0;
+					transition $transition
+					
+				@media screen and (max-width: $ipadPro)
 					span
 						display inline-block
 						font-size 3rem
-				
 		.footer-menu
 			display flex
 			flex: 1 0 auto;
@@ -92,5 +88,7 @@
 					order 1
 					margin-top 3rem
 					min-width: 100%;
+			@media screen and (max-width: $iphone)
+				.copy
 					font-size: 13px;
 		

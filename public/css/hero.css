@@ -51,6 +51,8 @@
   max-width: 75%;
   -webkit-flex: 1 0 auto;
           flex: 1 0 auto;
+  -webkit-justify-content: center;
+          justify-content: center;
 }
 @media screen and (max-width: 620px) {
   .hero .container .screener {
@@ -68,24 +70,14 @@
   font-weight: 900;
   line-height: 85%;
   text-transform: uppercase;
-  margin: auto;
+  margin: 1rem 0;
   transition: $transition;
-}
-@media screen and (max-width: $ipad) {
-  .hero .container .screener h1 {
-    margin: auto 0 0 0;
-  }
 }
 .hero .container .screener h1 span {
   display: block;
 }
 .hero .container .screener .button {
-  margin: -8rem 0 5rem;
-}
-@media screen and (max-width: $ipad) {
-  .hero .container .screener .button {
-    margin: auto 0 2rem;
-  }
+  margin: 0 0 2rem;
 }
 
 /*# sourceMappingURL=hero.css.map */

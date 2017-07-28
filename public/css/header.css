@@ -36,31 +36,8 @@
   margin: 1rem 0;
   min-height: 4rem;
 }
-.header .container .header-column .hamburger .hamburger-inner {
-  transition: $transition;
-  background-color: $specialRed;
-}
-.header .container .header-column .hamburger .hamburger-inner:before,
-.header .container .header-column .hamburger .hamburger-inner:after {
-  transition: $transition;
-  background-color: $specialRed;
-}
-@media screen and (max-width: $desktop) {
-  .header .container .header-column .hamburger {
-    top: 1rem;
-  }
-}
-@media screen and (min-width: $desktop) {
-  .header .container .header-column .hamburger {
-    display: none;
-  }
-}
-.header .container .header-column .hamburger:hover .hamburger-inner {
-  background-color: $white;
-}
-.header .container .header-column .hamburger:hover .hamburger-inner:before,
-.header .container .header-column .hamburger:hover .hamburger-inner:after {
-  background-color: $white;
+.header .container .header-column .logo img {
+  width: 78px;
 }
 @media screen and (max-width: $desktop) {
   .header .container .header-column.menu {
@@ -125,7 +102,7 @@
   cursor: pointer;
   top: 4px;
 }
-@media screen and (max-width: $ipad) {
+@media screen and (max-width: $desktop) {
   .header .container .header-column .location {
     display: none;
   }
@@ -173,7 +150,7 @@
   margin: 1.3rem 1rem 1.3rem 1rem;
 }
 .header .container .header-column.cart .top_cart .cart-img img {
-  width: 20px;
+  width: 24px;
   margin: auto;
 }
 .header .container .header-column.cart .top_cart:hover {
@@ -252,6 +229,38 @@
     right: 2rem;
     padding: 0;
   }
+  .header.mobile-menu-active .header-column .location span {
+    color: $darkgrey;
+    font-weight: 600;
+  }
+  .header.mobile-menu-active .header-column.cart {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: flex-start;
+            align-items: flex-start;
+    -webkit-flex: 0;
+            flex: 0;
+    margin: 1rem 0 2rem;
+    text-transform: uppercase;
+  }
+  .header.mobile-menu-active .header-column.cart .top_cart {
+    -webkit-justify-content: flex-start;
+            justify-content: flex-start;
+    -webkit-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .header.mobile-menu-active .header-column.cart .top_cart span {
+    font-size: 472%;
+    font-weight: 900;
+    color: $darkgrey;
+    line-height: 100%;
+  }
+  .header.mobile-menu-active .header-column.cart .top_cart span:hover {
+    color: $specialRed;
+  }
+  .header.mobile-menu-active .header-column.cart .top_cart .cart-img {
+    margin: 0 0.5rem !important;
+  }
   .header.mobile-menu-active .header-column.menu {
     display: -webkit-flex;
     display: flex;
@@ -272,61 +281,31 @@
   .header.mobile-menu-active .header-column.menu .top_menu li a {
     display: -webkit-flex;
     display: flex;
-    font-size: 470%;
+    font-size: 472%;
+    font-weight: 900;
     line-height: 120%;
-    font-weight: 600;
     width: 100%;
     margin: 0;
     text-align: left;
     color: $darkgrey;
+    text-transform: uppercase;
   }
   .header.mobile-menu-active .header-column.menu .top_menu li a:hover {
     color: $specialRed;
-  }
-  .header.mobile-menu-active .header-column .location span {
-    color: $darkgrey;
-    font-weight: 600;
-  }
-  .header.mobile-menu-active .header-column.cart {
-    display: -webkit-flex;
-    display: flex;
-    -webkit-align-items: flex-start;
-            align-items: flex-start;
-    -webkit-flex: 0;
-            flex: 0;
-    margin: 1rem 0 2rem;
-  }
-  .header.mobile-menu-active .header-column.cart .top_cart {
-    -webkit-justify-content: flex-start;
-            justify-content: flex-start;
-    -webkit-flex-direction: row-reverse;
-            flex-direction: row-reverse;
-  }
-  .header.mobile-menu-active .header-column.cart .top_cart span {
-    font-size: 500%;
-    font-weight: 600;
-    color: $darkgrey;
-    line-height: 100%;
-  }
-  .header.mobile-menu-active .header-column.cart .top_cart span:hover {
-    color: #fff;
-  }
-  .header.mobile-menu-active .header-column.cart .top_cart .cart-img {
-    margin: 0 0.5rem !important;
   }
   .header.mobile-menu-active .header-column.top_social {
     display: -webkit-flex;
     display: flex;
     -webkit-order: 4;
             order: 4;
-    min-width: 20rem;
+    min-width: 24rem;
     margin: 0;
     -webkit-flex: 1 0 auto;
             flex: 1 0 auto;
     -webkit-align-items: flex-end;
             align-items: flex-end;
   }
-  .header.mobile-menu-active .header-column.top_social ul {
+  .header.mobile-menu-active .header-column.top_social .list {
     display: -webkit-flex;
     display: flex;
     -webkit-flex-flow: column wrap;
@@ -335,15 +314,15 @@
     font-weight: 600;
     padding: 0;
   }
-  .header.mobile-menu-active .header-column.top_social ul li a {
-    font-size: 300%;
+  .header.mobile-menu-active .header-column.top_social .list li a {
+    font-size: 266%;
     font-weight: 600;
-    line-height: 140%;
+    line-height: 120%;
     transition: $transition;
     color: $darkgrey;
   }
-  .header.mobile-menu-active .header-column.top_social ul li a:hover {
-    color: #fff;
+  .header.mobile-menu-active .header-column.top_social .list li a:hover {
+    color: $specialRed;
   }
   .header.mobile-menu-active .header-column .logo {
     display: none;
@@ -357,26 +336,40 @@
     margin-left: 0;
   }
 }
-@media screen and (max-width: $desktop) and (max-width: $iphone6) {
-  .header a {
-    font-size: 40px !important;
-    line-height: 150% !important;
-  }
-}
-@media screen and (max-width: $desktop) and (max-width: $iphone6) {
+@media screen and (max-width: $desktop) and (max-width: $ipadPro) {
   .header .location span {
     font-size: 20px !important;
   }
 }
-@media screen and (max-width: $desktop) and (max-width: $iphone6) {
+@media screen and (max-width: $desktop) and (max-width: $ipadPro) {
   .header span {
-    font-size: 40px !important;
+    font-size: 3rem !important;
   }
 }
-@media screen and (max-width: $desktop) and (max-width: $iphone6) {
+@media screen and (max-width: $desktop) and (max-width: $ipad) {
+  .header span {
+    font-size: 2.6rem !important;
+  }
+}
+@media screen and (max-width: $desktop) and (max-width: $ipadPro) {
   .header a {
-    font-size: 26px !important;
+    font-size: 4rem !important;
+  }
+}
+@media screen and (max-width: $desktop) and (max-width: $ipad) {
+  .header a {
+    font-size: 2.6rem !important;
+  }
+}
+@media screen and (max-width: $desktop) and (max-width: $ipadPro) {
+  .header a {
+    font-size: 2rem !important;
     line-height: 110% !important;
+  }
+}
+@media screen and (max-width: $desktop) and (max-width: $ipad) {
+  .header a {
+    font-size: 1.6rem !important;
   }
 }
 @media all and (orientation: landscape) {
@@ -398,6 +391,11 @@
   .mobile-menu-active .menu {
     -webkit-flex: 1 1 auto;
             flex: 1 1 auto;
+  }
+}
+@media all and (orientation: landscape) and (max-width: $ipad) {
+  ul {
+    right: 0 !important;
   }
 }
 

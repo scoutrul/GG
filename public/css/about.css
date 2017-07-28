@@ -1,4 +1,5 @@
 .about .container {
+  height: 100%;
   -webkit-flex-direction: column;
           flex-direction: column;
   -webkit-align-items: center;
@@ -23,6 +24,17 @@
   padding: 0.5rem 0;
   transition: $transition;
   color: #545454;
+  font-size: 2rem;
+}
+@media screen and (max-width: $ipad) {
+  .about .container .link a {
+    font-size: 80%;
+  }
+}
+@media screen and (max-width: $iphone5) {
+  .about .container .link a {
+    font-size: 60%;
+  }
 }
 .about .container .link a:after {
   content: "";
