@@ -16,47 +16,48 @@
 		font-size: 18px;
 		display: flex;
 		width: 100%;
-		&:after
+		transition $transition
+		
+		&:after,&:before
 			content ''
-			transition $transition
-			background-image: url(../images/icon_arrow.svg);
+			width: 15px;
+			height: 15px;
+			margin auto
 			background-repeat: no-repeat;
+			transition $transition
+		&:after	
+			background-image: url(../images/icon_arrow.svg);
 			background-position: 100%;
-			width: 10px;
-			height: 10px;
-			margin auto
-			opacity 1
+
 		&:before
-			content ''
-			transition $transition
-			background-image: url(../images/icon_arrow.svg);
-			background-repeat: no-repeat;
+			transform: rotate(180deg)
+			background-image: url(../images/icon_arrow_black.svg);
 			background-position: 0%;
-			width: 10px;
-			height: 10px;
-			margin auto
-			opacity 0
-			display none
+
 	&:hover
 		cursor pointer
-		background-color #2d2d2d
+		background-color $darkhover
 		max-width: 16rem;
 		span
+			color $white !important
+	&.right
+		span
 			&:after
-				color $white
-	
+				opacity 1
+			&:before
+				opacity 0
+				display none
 
 	&.left
-		background-color $lightgrey
+		background-color #e5e5e5
 		span
-			color $darkgrey
+			color #1b1b1b
 			&:after
 				opacity 0
 			&:before
 				opacity 1
 				display block
 		&:hover
-			background-color $specialRed
 			span
 				&:before
-					color $white
+					filter: brightness(10)

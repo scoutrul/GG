@@ -108,7 +108,7 @@
           flex-wrap: wrap;
 }
 .footer .container .footer-copy .copy {
-  color: $darkhover;
+  color: #505050;
   font-size: 18px;
   max-width: 50%;
   width: 100%;

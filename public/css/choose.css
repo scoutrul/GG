@@ -18,5 +18,35 @@
   -webkit-justify-content: center;
           justify-content: center;
 }
+#choose.is-active .title {
+  margin: auto 0 1rem 0;
+  color: #e5e5e5;
+  font-weight: 500;
+  font-size: 130%;
+}
+#choose.is-active .button {
+  margin: 4rem 0 auto;
+}
+#choose.is-active ul {
+  display: -webkit-flex;
+  display: flex;
+  padding: 0;
+  margin: 0rem 0 auto;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
+#choose.is-active ul li {
+  margin: 2rem;
+}
+#choose.is-active ul li a {
+  font-size: 260%;
+  font-weight: 600;
+  transition: $transition;
+}
+#choose.is-active ul li a:hover {
+  color: $specialRed;
+}
 
 /*# sourceMappingURL=choose.css.map */
