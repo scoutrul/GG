@@ -1,20 +1,32 @@
-.content .container .link_under a {
+.content {
+  min-height: 100vh;
+  display: -webkit-flex;
+  display: flex;
+}
+.content .container {
+  margin: 11rem auto 8rem;
+  -webkit-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-align-self: center;
+          align-self: center;
+}
+.content .container .link_under {
   padding: 0.5rem 0;
   transition: $transition;
   color: #545454;
   font-size: 2rem;
 }
 @media screen and (max-width: $ipad) {
-  .content .container .link_under a {
+  .content .container .link_under {
     font-size: 80%;
   }
 }
 @media screen and (max-width: $iphone5) {
-  .content .container .link_under a {
+  .content .container .link_under {
     font-size: 60%;
   }
 }
-.content .container .link_under a:after {
+.content .container .link_under:after {
   content: "";
   display: block;
   width: 100%;
@@ -23,11 +35,11 @@
   background-color: #545454;
   transition: $transition;
 }
-.content .container .link_under a:hover {
+.content .container .link_under:hover {
   cursor: pointer;
   color: $specialRed;
 }
-.content .container .link_under a:hover:after {
+.content .container .link_under:hover:after {
   width: 0%;
   background-color: $specialRed;
 }
@@ -43,6 +55,29 @@
   color: $lightgrey2;
   margin: 2rem auto;
   font-weight: 400;
+}
+.content.about .container {
+  height: 100%;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: center;
+          align-items: center;
+  text-align: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  min-height: 70rem;
+  margin: auto;
+}
+.content.about .container .title {
+  margin: 0 0 4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  word-spacing: 0.3rem;
+  line-height: 90%;
+  transition: $transition;
+}
+.content.about .container .title span {
+  display: block;
 }
 
 /*# sourceMappingURL=content.css.map */

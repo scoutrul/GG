@@ -935,7 +935,10 @@ td {
   position: relative;
   letter-spacing: 0.04em !important;
 }
-body #app {
+html {
+  overflow-x: hidden;
+}
+html body #app {
   display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: column;
@@ -946,22 +949,14 @@ body #app {
   flex-flow: column nowrap;
   height: 100%;
 }
-body #app section {
+html body #app section {
   max-width: 100%;
   width: 100vw;
   -webkit-flex: 1 0 auto;
   flex: 1 0 auto;
   padding: 0 15px;
 }
-body #app section.content {
-  min-height: 100vh;
-}
-body #app section.content .container {
-  margin: 11rem auto auto;
-  -webkit-flex-flow: column wrap;
-  flex-flow: column wrap;
-}
-body #app .container {
+html body #app .container {
   -webkit-flex: 1 0 auto;
   flex: 1 0 auto;
   margin: auto;
@@ -972,7 +967,7 @@ body #app .container {
   align-items: flex-start;
   max-width: 1200px;
 }
-body #app .header {
+html body #app .header {
   position: absolute;
   top: 0rem;
   z-index: 10;
@@ -980,14 +975,14 @@ body #app .header {
   color: #262626;
 }
 @media screen and (min-width: 768px) {
-  body #app .header {
+  html body #app .header {
     top: 1rem;
   }
 }
-body #app .header.white_header {
+html body #app .header.white_header {
   color: #fff;
 }
-body #app .header .container {
+html body #app .header .container {
   display: -webkit-flex;
   display: flex;
   -webkit-align-items: center;
@@ -1003,7 +998,7 @@ body #app .header .container {
   -ms-justify-content: center;
   justify-content: center;
 }
-body #app .header .container .header-column {
+html body #app .header .container .header-column {
   display: -webkit-flex;
   display: flex;
   -webkit-align-items: center;
@@ -1014,43 +1009,43 @@ body #app .header .container .header-column {
   margin: 1rem 0;
   min-height: 4rem;
 }
-body #app .header .container .header-column .logo img {
+html body #app .header .container .header-column .logo img {
   width: 67px;
 }
 @media screen and (max-width: 1200px) {
-  body #app .header .container .header-column.menu {
+  html body #app .header .container .header-column.menu {
     min-width: 100%;
   }
 }
-body #app .header .container .header-column.menu a {
+html body #app .header .container .header-column.menu a {
   transition: 0.4s ease-in-out;
 }
-body #app .header .container .header-column.menu a:hover {
+html body #app .header .container .header-column.menu a:hover {
   color: #cb1d00;
 }
-body #app .header .container .header-column:first-child,
-body #app .header .container .header-column:last-child {
+html body #app .header .container .header-column:first-child,
+html body #app .header .container .header-column:last-child {
   -webkit-flex: 1 0 auto;
   flex: 1 0 auto;
   max-width: 310px;
 }
-body #app .header .container .header-column:last-child {
+html body #app .header .container .header-column:last-child {
   -webkit-justify-content: flex-end;
   -ms-justify-content: flex-end;
   justify-content: flex-end;
 }
 @media screen and (max-width: 768px) {
-  body #app .header .container .header-column:last-child {
+  html body #app .header .container .header-column:last-child {
     min-width: 100%;
     -webkit-justify-content: center;
     -ms-justify-content: center;
     justify-content: center;
   }
 }
-body #app .header .container .header-column.top_social {
+html body #app .header .container .header-column.top_social {
   display: none;
 }
-body #app .header .container .header-column .top_menu {
+html body #app .header .container .header-column .top_menu {
   display: -webkit-flex;
   display: flex;
   padding: 0;
@@ -1061,7 +1056,7 @@ body #app .header .container .header-column .top_menu {
   justify-content: center;
   margin: 0 2em;
 }
-body #app .header .container .header-column .top_menu li {
+html body #app .header .container .header-column .top_menu li {
   font-size: 21px;
   font-weight: 400;
   margin: 0 1rem;
@@ -1069,7 +1064,7 @@ body #app .header .container .header-column .top_menu li {
   text-align: center;
   transition: 0.4s ease-in-out;
 }
-body #app .header .container .header-column .location {
+html body #app .header .container .header-column .location {
   margin: 0 auto 0 3rem;
   text-align: center;
   display: -webkit-flex;
@@ -1086,27 +1081,27 @@ body #app .header .container .header-column .location {
   top: 1px;
 }
 @media screen and (max-width: 1200px) {
-  body #app .header .container .header-column .location {
+  html body #app .header .container .header-column .location {
     display: none;
   }
 }
-body #app .header .container .header-column .location img {
+html body #app .header .container .header-column .location img {
   margin: 0 0.5rem;
   width: 16px;
 }
-body #app .header .container .header-column .location span {
+html body #app .header .container .header-column .location span {
   font-size: 85%;
   font-weight: 300;
   transition: 0.4s ease-in-out;
 }
-body #app .header .container .header-column .location:hover span {
+html body #app .header .container .header-column .location:hover span {
   color: #cb1d00;
 }
-body #app .header .container .header-column.serv {
+html body #app .header .container .header-column.serv {
   -webkit-flex: 0 0 220px;
   flex: 0 0 220px;
 }
-body #app .header .container .header-column.cart {
+html body #app .header .container .header-column.cart {
   -webkit-justify-content: flex-end;
   -ms-justify-content: flex-end;
   justify-content: flex-end;
@@ -1115,7 +1110,7 @@ body #app .header .container .header-column.cart {
   -webkit-flex: 0 0 220px;
   flex: 0 0 220px;
 }
-body #app .header .container .header-column.cart .top_cart {
+html body #app .header .container .header-column.cart .top_cart {
   text-align: center;
   display: -webkit-flex;
   display: flex;
@@ -1125,27 +1120,27 @@ body #app .header .container .header-column.cart .top_cart {
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-body #app .header .container .header-column.cart .top_cart a {
+html body #app .header .container .header-column.cart .top_cart a {
   font-size: 129%;
   font-weight: 400;
   transition: 0.4s ease-in-out;
   top: 1px;
 }
-body #app .header .container .header-column.cart .top_cart .cart-img {
+html body #app .header .container .header-column.cart .top_cart .cart-img {
   margin: 1.3rem 1rem 1.3rem 1rem;
 }
-body #app .header .container .header-column.cart .top_cart .cart-img img {
+html body #app .header .container .header-column.cart .top_cart .cart-img img {
   width: 21px;
   margin: auto;
 }
-body #app .header .container .header-column.cart .top_cart:hover {
+html body #app .header .container .header-column.cart .top_cart:hover {
   cursor: pointer;
 }
-body #app .header .container .header-column.cart .top_cart:hover a {
+html body #app .header .container .header-column.cart .top_cart:hover a {
   color: #cb1d00;
 }
 @media screen and (max-width: 1200px) {
-  body #app .header .container {
+  html body #app .header .container {
     -webkit-align-items: flex-start;
     -ms-align-items: flex-start;
     align-items: flex-start;
@@ -1157,17 +1152,17 @@ body #app .header .container .header-column.cart .top_cart:hover a {
     -webkit-flex-flow: column wrap;
     flex-flow: column wrap;
   }
-  body #app .header .container .header-column.menu,
-  body #app .header .container .header-column.cart {
+  html body #app .header .container .header-column.menu,
+  html body #app .header .container .header-column.cart {
     display: none;
   }
-  body #app .header .container .header-column:first-child {
+  html body #app .header .container .header-column:first-child {
     margin: 0;
     min-width: 100%;
     -webkit-flex: 0;
     flex: 0;
   }
-  body #app .header.mobile-menu-active {
+  html body #app .header.mobile-menu-active {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -1178,51 +1173,51 @@ body #app .header .container .header-column.cart .top_cart:hover a {
     transition: 0.1s ease-out;
     padding: 2rem;
   }
-  body #app .header.mobile-menu-active .container {
+  html body #app .header.mobile-menu-active .container {
     min-height: 100%;
     margin: 0;
   }
-  body #app .header.mobile-menu-active .header-column {
+  html body #app .header.mobile-menu-active .header-column {
     max-width: 100%;
     -webkit-flex: 1;
     flex: 1;
   }
-  body #app .header.mobile-menu-active .header-column.menu,
-  body #app .header.mobile-menu-active .header-column.cart {
+  html body #app .header.mobile-menu-active .header-column.menu,
+  html body #app .header.mobile-menu-active .header-column.cart {
     display: block;
   }
-  body #app .header.mobile-menu-active .header-column .hamburger {
+  html body #app .header.mobile-menu-active .header-column .hamburger {
     display: block;
   }
-  body #app .header.mobile-menu-active .header-column .hamburger .hamburger-inner {
+  html body #app .header.mobile-menu-active .header-column .hamburger .hamburger-inner {
     background-color: #cb1d00;
   }
-  body #app .header.mobile-menu-active .header-column .hamburger .hamburger-inner:before,
-  body #app .header.mobile-menu-active .header-column .hamburger .hamburger-inner:after {
+  html body #app .header.mobile-menu-active .header-column .hamburger .hamburger-inner:before,
+  html body #app .header.mobile-menu-active .header-column .hamburger .hamburger-inner:after {
     background-color: #cb1d00;
   }
-  body #app .header.mobile-menu-active .header-column:last-child {
+  html body #app .header.mobile-menu-active .header-column:last-child {
     -webkit-justify-content: flex-start;
     -ms-justify-content: flex-start;
     justify-content: flex-start;
     margin: 3rem 0;
   }
-  body #app .header.mobile-menu-active .header-column.serv {
+  html body #app .header.mobile-menu-active .header-column.serv {
     top: 0;
     -webkit-align-items: flex-start;
     -ms-align-items: flex-start;
     align-items: flex-start;
   }
-  body #app .header.mobile-menu-active .header-column.serv .hamburger {
+  html body #app .header.mobile-menu-active .header-column.serv .hamburger {
     top: 2rem;
     right: 2rem;
     padding: 0;
   }
-  body #app .header.mobile-menu-active .header-column .location span {
+  html body #app .header.mobile-menu-active .header-column .location span {
     color: #242424;
     font-weight: 600;
   }
-  body #app .header.mobile-menu-active .header-column.cart {
+  html body #app .header.mobile-menu-active .header-column.cart {
     display: -webkit-flex;
     display: flex;
     -webkit-align-items: flex-start;
@@ -1233,33 +1228,33 @@ body #app .header .container .header-column.cart .top_cart:hover a {
     margin: 1rem 0 2rem;
     text-transform: uppercase;
   }
-  body #app .header.mobile-menu-active .header-column.cart .top_cart {
+  html body #app .header.mobile-menu-active .header-column.cart .top_cart {
     -webkit-justify-content: flex-start;
     -ms-justify-content: flex-start;
     justify-content: flex-start;
     -webkit-flex-direction: row-reverse;
     flex-direction: row-reverse;
   }
-  body #app .header.mobile-menu-active .header-column.cart .top_cart a {
+  html body #app .header.mobile-menu-active .header-column.cart .top_cart a {
     font-size: 472%;
     font-weight: 900;
     color: #242424;
     line-height: 100%;
   }
-  body #app .header.mobile-menu-active .header-column.cart .top_cart a:hover {
+  html body #app .header.mobile-menu-active .header-column.cart .top_cart a:hover {
     color: #cb1d00;
   }
-  body #app .header.mobile-menu-active .header-column.cart .top_cart .cart-img {
+  html body #app .header.mobile-menu-active .header-column.cart .top_cart .cart-img {
     margin: 0 0.5rem !important;
   }
-  body #app .header.mobile-menu-active .header-column.menu {
+  html body #app .header.mobile-menu-active .header-column.menu {
     display: -webkit-flex;
     display: flex;
     margin: 0 0 auto;
     -webkit-flex: 0 0 auto;
     flex: 0 0 auto;
   }
-  body #app .header.mobile-menu-active .header-column.menu .top_menu {
+  html body #app .header.mobile-menu-active .header-column.menu .top_menu {
     margin: 0;
     -webkit-justify-content: flex-start;
     -ms-justify-content: flex-start;
@@ -1267,10 +1262,10 @@ body #app .header .container .header-column.cart .top_cart:hover a {
     -webkit-flex-flow: column wrap;
     flex-flow: column wrap;
   }
-  body #app .header.mobile-menu-active .header-column.menu .top_menu li {
+  html body #app .header.mobile-menu-active .header-column.menu .top_menu li {
     margin: 0;
   }
-  body #app .header.mobile-menu-active .header-column.menu .top_menu li a {
+  html body #app .header.mobile-menu-active .header-column.menu .top_menu li a {
     display: -webkit-flex;
     display: flex;
     font-size: 472%;
@@ -1282,10 +1277,10 @@ body #app .header .container .header-column.cart .top_cart:hover a {
     color: #242424;
     text-transform: uppercase;
   }
-  body #app .header.mobile-menu-active .header-column.menu .top_menu li a:hover {
+  html body #app .header.mobile-menu-active .header-column.menu .top_menu li a:hover {
     color: #cb1d00;
   }
-  body #app .header.mobile-menu-active .header-column.top_social {
+  html body #app .header.mobile-menu-active .header-column.top_social {
     display: -webkit-flex;
     display: flex;
     -webkit-order: 4;
@@ -1299,7 +1294,7 @@ body #app .header .container .header-column.cart .top_cart:hover a {
     -ms-align-items: flex-end;
     align-items: flex-end;
   }
-  body #app .header.mobile-menu-active .header-column.top_social .list {
+  html body #app .header.mobile-menu-active .header-column.top_social .list {
     display: -webkit-flex;
     display: flex;
     -webkit-flex-flow: column wrap;
@@ -1308,103 +1303,103 @@ body #app .header .container .header-column.cart .top_cart:hover a {
     font-weight: 600;
     padding: 0;
   }
-  body #app .header.mobile-menu-active .header-column.top_social .list li a {
+  html body #app .header.mobile-menu-active .header-column.top_social .list li a {
     font-size: 266%;
     font-weight: 600;
     line-height: 120%;
     transition: 0.4s ease-in-out;
     color: #242424;
   }
-  body #app .header.mobile-menu-active .header-column.top_social .list li a:hover {
+  html body #app .header.mobile-menu-active .header-column.top_social .list li a:hover {
     color: #cb1d00;
   }
-  body #app .header.mobile-menu-active .header-column .logo {
+  html body #app .header.mobile-menu-active .header-column .logo {
     display: none;
   }
-  body #app .header.mobile-menu-active .header-column .location {
+  html body #app .header.mobile-menu-active .header-column .location {
     display: block;
     margin-right: auto;
     margin-left: 0;
   }
-  body #app .header.mobile-menu-active .header-column .location img {
+  html body #app .header.mobile-menu-active .header-column .location img {
     margin-left: 0;
   }
 }
 @media screen and (max-width: 1200px) and (max-width: 1024px) {
-  body #app .header .location span {
+  html body #app .header .location span {
     font-size: 20px !important;
   }
 }
 @media screen and (max-width: 1200px) and (max-width: 1024px) {
-  body #app .header a {
+  html body #app .header a {
     font-size: 3rem !important;
   }
 }
 @media screen and (max-width: 1200px) and (max-width: 768px) {
-  body #app .header a {
+  html body #app .header a {
     font-size: 2.6rem !important;
   }
 }
 @media screen and (max-width: 1200px) and (max-width: 1024px) {
-  body #app .header a {
+  html body #app .header a {
     font-size: 4rem !important;
   }
 }
 @media screen and (max-width: 1200px) and (max-width: 768px) {
-  body #app .header a {
+  html body #app .header a {
     font-size: 2.6rem !important;
   }
 }
 @media screen and (max-width: 1200px) and (max-width: 1024px) {
-  body #app .header a {
+  html body #app .header a {
     font-size: 2rem !important;
     line-height: 110% !important;
   }
 }
 @media screen and (max-width: 1200px) and (max-width: 768px) {
-  body #app .header a {
+  html body #app .header a {
     font-size: 1.6rem !important;
   }
 }
 @media all and (orientation: landscape) {
-  body #app .mobile-menu-active .top_social {
+  html body #app .mobile-menu-active .top_social {
     position: absolute !important;
     right: 2rem !important;
     bottom: 2rem !important;
   }
-  body #app .mobile-menu-active .top_social ul {
+  html body #app .mobile-menu-active .top_social ul {
     position: absolute;
     right: 0;
     bottom: 0;
   }
-  body #app .mobile-menu-active .cart {
+  html body #app .mobile-menu-active .cart {
     margin: 2.5rem 0;
     -webkit-align-items: flex-end !important;
     -ms-align-items: flex-end !important;
     align-items: flex-end !important;
   }
-  body #app .mobile-menu-active .menu {
+  html body #app .mobile-menu-active .menu {
     -webkit-flex: 1 1 auto;
     flex: 1 1 auto;
   }
 }
-body #app .footer {
+html body #app .footer {
   background-color: #1b1b1b;
   padding-top: 7.5rem;
   padding-bottom: 6rem;
 }
 @media screen and (max-width: 768px) {
-  body #app .footer {
+  html body #app .footer {
     padding-bottom: 3rem;
     padding-top: 3rem;
   }
 }
-body #app .footer .container {
+html body #app .footer .container {
   display: -webkit-flex;
   display: flex;
 }
 @media screen and (max-width: 1024px) {
-  body #app .footer .container {
+  html body #app .footer .container {
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
     -webkit-justify-content: flex-start;
@@ -1412,7 +1407,7 @@ body #app .footer .container {
     justify-content: flex-start;
   }
 }
-body #app .footer .container .footer-title {
+html body #app .footer .container .footer-title {
   min-width: 320px;
   max-width: 50%;
   width: 100%;
@@ -1420,35 +1415,35 @@ body #app .footer .container .footer-title {
   flex: 1 0 10rem;
 }
 @media screen and (max-width: 1024px) {
-  body #app .footer .container .footer-title {
+  html body #app .footer .container .footer-title {
     max-width: 100%;
     margin-bottom: 3rem;
   }
 }
-body #app .footer .container .footer-title .footer-slogan {
+html body #app .footer .container .footer-title .footer-slogan {
   font-weight: 900;
   color: #fff;
   transition: 0.4s ease-in-out;
 }
-body #app .footer .container .footer-title .footer-slogan span {
+html body #app .footer .container .footer-title .footer-slogan span {
   display: block;
   font-size: 4rem;
   transition: 0.4s ease-in-out;
 }
 @media screen and (max-width: 1024px) {
-  body #app .footer .container .footer-title .footer-slogan span {
+  html body #app .footer .container .footer-title .footer-slogan span {
     display: inline-block;
     font-size: 3rem;
   }
 }
-body #app .footer .container .footer-menu {
+html body #app .footer .container .footer-menu {
   display: -webkit-flex;
   display: flex;
   -webkit-flex: 1 0 auto;
   flex: 1 0 auto;
 }
 @media screen and (max-width: 768px) {
-  body #app .footer .container .footer-menu {
+  html body #app .footer .container .footer-menu {
     min-width: 480px;
     -webkit-justify-content: flex-start;
     -ms-justify-content: flex-start;
@@ -1458,21 +1453,21 @@ body #app .footer .container .footer-menu {
   }
 }
 @media screen and (max-width: 480px) {
-  body #app .footer .container .footer-menu {
+  html body #app .footer .container .footer-menu {
     min-width: auto;
   }
 }
-body #app .footer .container .footer-menu ul {
+html body #app .footer .container .footer-menu ul {
   -webkit-flex: 1 0 auto;
   flex: 1 0 auto;
   padding: 0;
 }
 @media screen and (max-width: 768px) {
-  body #app .footer .container .footer-menu ul {
+  html body #app .footer .container .footer-menu ul {
     min-width: 50%;
   }
 }
-body #app .footer .container .footer-menu ul a {
+html body #app .footer .container .footer-menu ul a {
   line-height: 200%;
   font-weight: 600;
   color: #fff;
@@ -1480,16 +1475,16 @@ body #app .footer .container .footer-menu ul a {
   font-size: 25px;
   min-width: 160px;
 }
-body #app .footer .container .footer-menu ul a:hover {
+html body #app .footer .container .footer-menu ul a:hover {
   color: #cb1d00;
   cursor: pointer;
 }
 @media screen and (max-width: 320px) {
-  body #app .footer .container .footer-menu ul a {
+  html body #app .footer .container .footer-menu ul a {
     font-size: 17px;
   }
 }
-body #app .footer .container .footer-copy {
+html body #app .footer .container .footer-copy {
   display: -webkit-flex;
   display: flex;
   width: 100%;
@@ -1500,7 +1495,7 @@ body #app .footer .container .footer-copy {
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-body #app .footer .container .footer-copy .copy {
+html body #app .footer .container .footer-copy .copy {
   color: #505050;
   font-size: 18px;
   max-width: 50%;
@@ -1509,13 +1504,13 @@ body #app .footer .container .footer-copy .copy {
   -webkit-flex: 1 1 10rem;
   flex: 1 1 10rem;
 }
-body #app .footer .container .footer-copy .footer-column {
+html body #app .footer .container .footer-copy .footer-column {
   margin: 0 auto 0 0;
   -webkit-flex: 1 0 50%;
   flex: 1 0 50%;
   font-weight: 600;
 }
-body #app .footer .container .footer-copy .footer-column.footer-button {
+html body #app .footer .container .footer-copy .footer-column.footer-button {
   margin: 0 auto 0 auto;
   -webkit-flex: 1 1 20rem;
   flex: 1 1 20rem;
@@ -1523,17 +1518,17 @@ body #app .footer .container .footer-copy .footer-column.footer-button {
   display: flex;
 }
 @media screen and (max-width: 568px) {
-  body #app .footer .container .footer-copy .footer-column.footer-button {
+  html body #app .footer .container .footer-copy .footer-column.footer-button {
     -webkit-flex: 1 0 568px;
     flex: 1 0 568px;
   }
 }
 @media screen and (max-width: 768px) {
-  body #app .footer .container .footer-copy {
+  html body #app .footer .container .footer-copy {
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
   }
-  body #app .footer .container .footer-copy .copy {
+  html body #app .footer .container .footer-copy .copy {
     -webkit-order: 1;
     -ms-order: 1;
     order: 1;
@@ -1542,35 +1537,35 @@ body #app .footer .container .footer-copy .footer-column.footer-button {
   }
 }
 @media screen and (max-width: 320px) {
-  body #app .footer .container .footer-copy .copy {
+  html body #app .footer .container .footer-copy .copy {
     font-size: 13px;
   }
 }
-body #app .hero {
+html body #app .hero {
   background-color: #121212;
 }
-body #app .hero .container {
+html body #app .hero .container {
   -webkit-flex-direction: column;
   flex-direction: column;
   max-height: 1200px;
   height: 100%;
 }
 @media screen and (min-height: 1200px) {
-  body #app .hero .container {
+  html body #app .hero .container {
     max-height: 1200px;
   }
 }
 @media screen and (max-width: 768px) {
-  body #app .hero .container {
+  html body #app .hero .container {
     height: 100vh;
   }
 }
 @media screen and (max-width: 580px) {
-  body #app .hero .container {
+  html body #app .hero .container {
     min-height: 480px;
   }
 }
-body #app .hero .container:after {
+html body #app .hero .container:after {
   content: '';
   position: absolute;
   top: 2rem;
@@ -1584,11 +1579,11 @@ body #app .hero .container:after {
   z-index: 6;
 }
 @media screen and (max-width: 768px) {
-  body #app .hero .container:after {
+  html body #app .hero .container:after {
     right: -30%;
   }
 }
-body #app .hero .container .screener {
+html body #app .hero .container .screener {
   z-index: 10;
   display: -webkit-flex;
   display: flex;
@@ -1605,17 +1600,17 @@ body #app .hero .container .screener {
   justify-content: center;
 }
 @media screen and (max-width: 620px) {
-  body #app .hero .container .screener {
+  html body #app .hero .container .screener {
     max-width: 100%;
     padding: 0;
   }
 }
 @media screen and (max-width: 320px) {
-  body #app .hero .container .screener {
+  html body #app .hero .container .screener {
     max-height: 1200px;
   }
 }
-body #app .hero .container .screener h1 {
+html body #app .hero .container .screener h1 {
   color: #fff;
   font-weight: 900;
   line-height: 85%;
@@ -1623,13 +1618,71 @@ body #app .hero .container .screener h1 {
   margin: 1rem 0;
   transition: 0.4s ease-in-out;
 }
-body #app .hero .container .screener h1 span {
-  display: block;
-}
-body #app .hero .container .screener .button {
+html body #app .hero .container .screener .button {
   margin: 3rem 0 2rem;
 }
-body #app .content.about .container {
+html body #app .content {
+  min-height: 100vh;
+  display: -webkit-flex;
+  display: flex;
+}
+html body #app .content .container {
+  margin: 11rem auto 8rem;
+  -webkit-flex-flow: column wrap;
+  flex-flow: column wrap;
+  -webkit-align-self: center;
+  -ms-align-self: center;
+  align-self: center;
+}
+html body #app .content .container .link_under {
+  padding: 0.5rem 0;
+  transition: 0.4s ease-in-out;
+  color: #545454;
+  font-size: 2rem;
+}
+@media screen and (max-width: 768px) {
+  html body #app .content .container .link_under {
+    font-size: 80%;
+  }
+}
+@media screen and (max-width: 568px) {
+  html body #app .content .container .link_under {
+    font-size: 60%;
+  }
+}
+html body #app .content .container .link_under:after {
+  content: "";
+  display: block;
+  width: 100%;
+  margin: 0.5rem auto;
+  height: 1px;
+  background-color: #545454;
+  transition: 0.4s ease-in-out;
+}
+html body #app .content .container .link_under:hover {
+  cursor: pointer;
+  color: #cb1d00;
+}
+html body #app .content .container .link_under:hover:after {
+  width: 0%;
+  background-color: #cb1d00;
+}
+html body #app .content.in-cart .container {
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  margin: auto;
+  height: 100%;
+}
+html body #app .content.in-cart .container .title {
+  color: #e5e5e5;
+  margin: 2rem auto;
+  font-weight: 400;
+}
+html body #app .content.about .container {
   height: 100%;
   -webkit-flex-direction: column;
   flex-direction: column;
@@ -1641,8 +1694,9 @@ body #app .content.about .container {
   -ms-justify-content: center;
   justify-content: center;
   min-height: 70rem;
+  margin: auto;
 }
-body #app .content.about .container .title {
+html body #app .content.about .container .title {
   margin: 0 0 4rem;
   font-weight: 900;
   text-transform: uppercase;
@@ -1650,61 +1704,23 @@ body #app .content.about .container .title {
   line-height: 90%;
   transition: 0.4s ease-in-out;
 }
-body #app .content.about .container .title span {
+html body #app .content.about .container .title span {
   display: block;
-}
-body #app .content .container .link_under a {
-  padding: 0.5rem 0;
-  transition: 0.4s ease-in-out;
-  color: #545454;
-  font-size: 2rem;
-}
-@media screen and (max-width: 768px) {
-  body #app .content .container .link_under a {
-    font-size: 80%;
-  }
-}
-@media screen and (max-width: 568px) {
-  body #app .content .container .link_under a {
-    font-size: 60%;
-  }
-}
-body #app .content .container .link_under a:after {
-  content: "";
-  display: block;
-  width: 100%;
-  margin: 0.5rem auto;
-  height: 1px;
-  background-color: #545454;
-  transition: 0.4s ease-in-out;
-}
-body #app .content .container .link_under a:hover {
-  cursor: pointer;
-  color: #cb1d00;
-}
-body #app .content .container .link_under a:hover:after {
-  width: 0%;
-  background-color: #cb1d00;
-}
-body #app .content.in-cart .container {
-  -webkit-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  -ms-justify-content: center;
-  justify-content: center;
-  margin: auto;
-  height: 100%;
-}
-body #app .content.in-cart .container .title {
-  color: #e5e5e5;
-  margin: 2rem auto;
-  font-weight: 400;
 }
 @media all and (orientation: landscape) and (max-width: 768px) {
   ul {
     right: 0 !important;
   }
+}
+.slide_up_text {
+  overflow: hidden;
+}
+.slide_up_text * {
+  transition: 0.7s ease-in-out;
+  bottom: -7rem;
+}
+.slide_up_text.slide_up_text--active * {
+  bottom: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

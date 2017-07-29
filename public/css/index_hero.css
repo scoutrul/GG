@@ -73,9 +73,6 @@
   margin: 1rem 0;
   transition: $transition;
 }
-.hero .container .screener h1 span {
-  display: block;
-}
 .hero .container .screener .button {
   margin: 3rem 0 2rem;
 }

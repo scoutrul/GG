@@ -27,7 +27,7 @@ gulp.task(keys.watch_scripts, scripts.watch);
 /*
   styles:compile/styles:watch
 */
-gulp.task(keys.lint_styles, styles.lint);
+// gulp.task(keys.lint_styles, styles.lint);
 gulp.task(keys.compile_styles, styles.compile);
 gulp.task(keys.watch_styles, styles.watch);
 

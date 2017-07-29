@@ -28,6 +28,7 @@ $lightgrey2 = #e5e5e5
 $darkbg = #121212
 $footerbg = #1b1b1b
 $transition = .4s ease-in-out
+$slide_up_text = .7s ease-in-out
 $iphone = 320px
 $iphoneH = $iphone * 1.5
 $iphone5 = 568px
@@ -48,39 +49,41 @@ typographic()
 	z-index 5
 	position relative
 	letter-spacing 0.04em !important
-
-body
-	#app
-		display: flex
-		flex-direction column
-		flex 1 0 auto
-		flex-flow column nowrap
-		height: 100%;
-
-		section
-			max-width 100%
-			width 100vw
+html
+	overflow-x: hidden;
+	body
+		#app
+			display: flex
+			flex-direction column
 			flex 1 0 auto
-			padding 0 15px
-			&.content
-				min-height: 100vh;
-				.container
-					margin 11rem auto auto
-					flex-flow: column wrap;
+			flex-flow column nowrap
+			height: 100%;
 
-		.container 
-			flex 1 0 auto
-			margin auto
-			display: flex;
-			align-items: flex-start;
-			max-width: $max-width
+			section
+				max-width 100%
+				width 100vw
+				flex 1 0 auto
+				padding 0 15px
 
-		
-		@import 'header.styl'
-		@import 'footer.styl'
-		@import 'index_hero.styl'
-		@import 'index_about.styl'
-		@import 'content.styl'
-		
+			.container 
+				flex 1 0 auto
+				margin auto
+				display: flex;
+				align-items: flex-start;
+				max-width: $max-width
 
+			
+			@import 'header.styl'
+			@import 'footer.styl'
+			@import 'index_hero.styl'
+			@import 'content.styl'
+			
+.slide_up_text
+	overflow hidden
+	*
+		transition $slide_up_text
+		bottom -7rem
+	&.slide_up_text--active
+		*
+			bottom 0
 
