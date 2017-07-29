@@ -15,9 +15,9 @@
 		font-weight: 400;
 		font-size: 18px;
 		display: flex;
+		align-items: center;
 		width: 100%;
 		transition $transition
-		
 		&:after,&:before
 			content ''
 			width: 15px;
@@ -28,36 +28,37 @@
 		&:after	
 			background-image: url(../images/icon_arrow.svg);
 			background-position: 100%;
-
 		&:before
 			transform: rotate(180deg)
 			background-image: url(../images/icon_arrow_black.svg);
 			background-position: 0%;
-
 	&:hover
 		cursor pointer
 		background-color $darkhover
 		max-width: 16rem;
 		span
 			color $white !important
+
 	&.right
 		span
 			&:after
 				opacity 1
+				margin 0 0 0 2rem
 			&:before
 				opacity 0
 				display none
-
-	&.left
+		&:hover
+			span
+				&:after
+					margin 0 0rem 0 3rem
+	&.left.center
 		background-color #e5e5e5
 		span
 			color #1b1b1b
 			&:after
 				opacity 0
+	&:hover
+		background-color $darkhover !important
+		span
 			&:before
-				opacity 1
-				display block
-		&:hover
-			span
-				&:before
-					filter: brightness(10)
+				filter: brightness(10)

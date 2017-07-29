@@ -140,7 +140,7 @@
   -webkit-flex-wrap: wrap;
           flex-wrap: wrap;
 }
-.header .container .header-column.cart .top_cart span {
+.header .container .header-column.cart .top_cart a {
   font-size: 129%;
   font-weight: 400;
   transition: $transition;
@@ -156,7 +156,7 @@
 .header .container .header-column.cart .top_cart:hover {
   cursor: pointer;
 }
-.header .container .header-column.cart .top_cart:hover span {
+.header .container .header-column.cart .top_cart:hover a {
   color: $specialRed;
 }
 @media screen and (max-width: $desktop) {
@@ -249,13 +249,13 @@
     -webkit-flex-direction: row-reverse;
             flex-direction: row-reverse;
   }
-  .header.mobile-menu-active .header-column.cart .top_cart span {
+  .header.mobile-menu-active .header-column.cart .top_cart a {
     font-size: 472%;
     font-weight: 900;
     color: $darkgrey;
     line-height: 100%;
   }
-  .header.mobile-menu-active .header-column.cart .top_cart span:hover {
+  .header.mobile-menu-active .header-column.cart .top_cart a:hover {
     color: $specialRed;
   }
   .header.mobile-menu-active .header-column.cart .top_cart .cart-img {
@@ -342,12 +342,12 @@
   }
 }
 @media screen and (max-width: $desktop) and (max-width: $ipadPro) {
-  .header span {
+  .header a {
     font-size: 3rem !important;
   }
 }
 @media screen and (max-width: $desktop) and (max-width: $ipad) {
-  .header span {
+  .header a {
     font-size: 2.6rem !important;
   }
 }

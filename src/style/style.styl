@@ -22,7 +22,9 @@ $specialRed = #cb1d00
 $white = #FFF
 $darkgrey = #242424
 $darkhover = #2d2d2d
+
 $lightgrey = #d3d3d3
+$lightgrey2 = #e5e5e5
 $darkbg = #121212
 $footerbg = #1b1b1b
 $transition = .4s ease-in-out
@@ -37,42 +39,48 @@ $goal01 = '../images/index_hat.png'
 $goal03 = '../images/index_back.png'
 typographic()
 
-
+@import 'choose.styl'
+@import 'button.styl'
+@import 'hamburger.styl'
 
 *
 	color inherit
 	z-index 5
 	position relative
-	
-body
 	letter-spacing 0.04em !important
- 
-#app
-	display: flex
-	flex-direction column
-	flex 1 0 auto
-	flex-flow column wrap
-	overflow-x hidden
 
-	section
-		max-width 100%
-		width 100vw
+body
+	#app
+		display: flex
+		flex-direction column
 		flex 1 0 auto
-		padding 0 15px
+		flex-flow column nowrap
+		height: 100%;
 
-	.container 
-		flex 1 0 auto
-		margin auto
-		display: flex;
-		align-items: flex-start;
-		max-width: $max-width
+		section
+			max-width 100%
+			width 100vw
+			flex 1 0 auto
+			padding 0 15px
+			&.content
+				min-height: 100vh;
+				.container
+					margin 11rem auto auto
+					flex-flow: column wrap;
 
-	@import 'hamburger.styl'
+		.container 
+			flex 1 0 auto
+			margin auto
+			display: flex;
+			align-items: flex-start;
+			max-width: $max-width
 
-	@import 'header.styl'
-	@import 'choose.styl'
-	@import 'footer.styl'
+		
+		@import 'header.styl'
+		@import 'footer.styl'
+		@import 'index_hero.styl'
+		@import 'index_about.styl'
+		@import 'content.styl'
+		
 
-	@import 'index_hero.styl'
-	@import 'index_about.styl'
-	@import 'button.styl'
+

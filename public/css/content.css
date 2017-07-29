@@ -1,0 +1,48 @@
+.content .container .link_under a {
+  padding: 0.5rem 0;
+  transition: $transition;
+  color: #545454;
+  font-size: 2rem;
+}
+@media screen and (max-width: $ipad) {
+  .content .container .link_under a {
+    font-size: 80%;
+  }
+}
+@media screen and (max-width: $iphone5) {
+  .content .container .link_under a {
+    font-size: 60%;
+  }
+}
+.content .container .link_under a:after {
+  content: "";
+  display: block;
+  width: 100%;
+  margin: 0.5rem auto;
+  height: 1px;
+  background-color: #545454;
+  transition: $transition;
+}
+.content .container .link_under a:hover {
+  cursor: pointer;
+  color: $specialRed;
+}
+.content .container .link_under a:hover:after {
+  width: 0%;
+  background-color: $specialRed;
+}
+.content.in-cart .container {
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  margin: auto;
+  height: 100%;
+}
+.content.in-cart .container .title {
+  color: $lightgrey2;
+  margin: 2rem auto;
+  font-weight: 400;
+}
+
+/*# sourceMappingURL=content.css.map */

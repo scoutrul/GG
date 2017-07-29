@@ -1,0 +1,37 @@
+.content
+	.container
+		.link_under
+			a
+				padding: 0.5rem 0;
+				transition $transition
+				color #545454
+				font-size 2rem
+				@media screen and (max-width: $ipad)
+					font-size 80%
+				@media screen and (max-width: $iphone5)
+					font-size 60%
+					
+				&:after
+					content: "";
+					display: block;
+					width: 100%;
+					margin:0.5rem auto
+					height: 1px;
+					background-color: #545454;
+					transition $transition
+				&:hover
+					cursor pointer
+					color $specialRed
+					&:after
+						width 0%
+						background-color: $specialRed
+	&.in-cart
+		.container
+			align-items: center;
+			justify-content: center;
+			margin: auto;
+			height: 100%;
+			.title
+				color $lightgrey2
+				margin 2rem auto
+				font-weight: 400;

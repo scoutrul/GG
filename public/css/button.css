@@ -20,6 +20,8 @@
   font-size: 18px;
   display: -webkit-flex;
   display: flex;
+  -webkit-align-items: center;
+          align-items: center;
   width: 100%;
   transition: $transition;
 }
@@ -52,25 +54,28 @@
 }
 .button.right span:after {
   opacity: 1;
+  margin: 0 0 0 2rem;
 }
 .button.right span:before {
   opacity: 0;
   display: none;
 }
-.button.left {
+.button.right:hover span:after {
+  margin: 0 0rem 0 3rem;
+}
+.button.left.center {
   background-color: #e5e5e5;
 }
-.button.left span {
+.button.left.center span {
   color: #1b1b1b;
 }
-.button.left span:after {
+.button.left.center span:after {
   opacity: 0;
 }
-.button.left span:before {
-  opacity: 1;
-  display: block;
+.button:hover {
+  background-color: $darkhover !important;
 }
-.button.left:hover span:before {
+.button:hover span:before {
   -webkit-filter: brightness(10);
           filter: brightness(10);
 }

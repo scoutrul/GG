@@ -1,45 +1,22 @@
-.about
-	.container
-		height: 100%;
-		flex-direction column
-		align-items: center;
-		text-align: center;
-		justify-content: center
-		min-height 70rem
-		.title
-			margin: 0 0 4rem;
-			font-weight: 900;
-			text-transform uppercase
-			word-spacing: .3rem;
-			line-height: 90%;
-			transition $transition
-			span
-				display block
-			
-		.link
-			a
-				padding: 0.5rem 0;
+.content
+	&.about
+		.container
+			height: 100%;
+			flex-direction column
+			align-items: center;
+			text-align: center;
+			justify-content: center
+			min-height 70rem
+			.title
+				margin: 0 0 4rem;
+				font-weight: 900;
+				text-transform uppercase
+				word-spacing: .3rem;
+				line-height: 90%;
 				transition $transition
-				color #545454
-				font-size 2rem
-				@media screen and (max-width: $ipad)
-					font-size 80%
-				@media screen and (max-width: $iphone5)
-					font-size 60%
-					
-				&:after
-					content: "";
-					display: block;
-					width: 100%;
-					margin:0.5rem auto
-					height: 1px;
-					background-color: #545454;
-					transition $transition
-				&:hover
-					cursor pointer
-					color $specialRed
-					&:after
-						width 0%
-						background-color: $specialRed
+				span
+					display block
+				
+			
+							
 						
-					
