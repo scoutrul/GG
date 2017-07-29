@@ -1,0 +1,11 @@
+.slide_up_text,.slide_up_text>div,.slide_up_text>li
+	overflow hidden
+	span,a
+		display block
+		transition $slide_up_text
+		transform: translate(0, 100%)
+	&.slide_up_text--active
+		span,a
+			display block
+			transform: translate(0, 0%)
+			

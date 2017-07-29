@@ -76,8 +76,5 @@
   line-height: 90%;
   transition: $transition;
 }
-.content.about .container .title span {
-  display: block;
-}
 
 /*# sourceMappingURL=content.css.map */

@@ -47,7 +47,7 @@ $(document).ready(function() {
 
 		var elemTop = $(elem).offset().top;
 		var elemBottom = elemTop + $(elem).height();
-		return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop)); //try it, will only work for text
+		return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop-300)); //try it, will only work for text
 		// return (docViewBottom >= elemTop && docViewTop <= elemBottom);
 	}
 

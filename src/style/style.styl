@@ -27,8 +27,8 @@ $lightgrey = #d3d3d3
 $lightgrey2 = #e5e5e5
 $darkbg = #121212
 $footerbg = #1b1b1b
-$transition = .4s ease-in-out
-$slide_up_text = .7s ease-in-out
+$transition = .4s ease
+$slide_up_text = .7s ease
 $iphone = 320px
 $iphoneH = $iphone * 1.5
 $iphone5 = 568px
@@ -43,6 +43,7 @@ typographic()
 @import 'choose.styl'
 @import 'button.styl'
 @import 'hamburger.styl'
+@import 'slide_up.styl'
 
 *
 	color inherit
@@ -78,12 +79,6 @@ html
 			@import 'index_hero.styl'
 			@import 'content.styl'
 			
-.slide_up_text
-	overflow hidden
-	*
-		transition $slide_up_text
-		bottom -7rem
-	&.slide_up_text--active
-		*
-			bottom 0
+
+			transform: translate(0, 0)
 

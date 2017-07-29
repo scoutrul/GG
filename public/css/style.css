@@ -727,7 +727,7 @@ td {
 #choose.is-active ul li a {
   font-size: 260%;
   font-weight: 600;
-  transition: 0.4s ease-in-out;
+  transition: 0.4s ease;
 }
 #choose.is-active ul li a:hover {
   color: #cb1d00;
@@ -744,7 +744,7 @@ td {
   width: 100%;
   padding: 0 2rem;
   background-color: #cb1d00;
-  transition: 0.4s ease-in-out;
+  transition: 0.4s ease;
   -webkit-justify-content: flex-start;
   -ms-justify-content: flex-start;
   justify-content: flex-start;
@@ -760,7 +760,7 @@ td {
   -ms-align-items: center;
   align-items: center;
   width: 100%;
-  transition: 0.4s ease-in-out;
+  transition: 0.4s ease;
 }
 .button span:after,
 .button span:before {
@@ -769,7 +769,7 @@ td {
   height: 15px;
   margin: auto;
   background-repeat: no-repeat;
-  transition: 0.4s ease-in-out;
+  transition: 0.4s ease;
 }
 .button span:after {
   background-image: url("../images/icon_arrow.svg");
@@ -904,12 +904,12 @@ td {
   right: 1rem;
 }
 .hamburger .hamburger-inner {
-  transition: 0.4s ease-in-out;
+  transition: 0.4s ease;
   background-color: #cb1d00;
 }
 .hamburger .hamburger-inner:before,
 .hamburger .hamburger-inner:after {
-  transition: 0.4s ease-in-out;
+  transition: 0.4s ease;
   background-color: #cb1d00;
 }
 @media screen and (max-width: 1200px) {
@@ -928,6 +928,32 @@ td {
 .hamburger:hover .hamburger-inner:before,
 .hamburger:hover .hamburger-inner:after {
   background-color: #2d2d2d !important;
+}
+.slide_up_text,
+.slide_up_text>div,
+.slide_up_text>li {
+  overflow: hidden;
+}
+.slide_up_text span,
+.slide_up_text>div span,
+.slide_up_text>li span,
+.slide_up_text a,
+.slide_up_text>div a,
+.slide_up_text>li a {
+  display: block;
+  transition: 0.7s ease;
+  -webkit-transform: translate(0, 100%);
+  transform: translate(0, 100%);
+}
+.slide_up_text.slide_up_text--active span,
+.slide_up_text>div.slide_up_text--active span,
+.slide_up_text>li.slide_up_text--active span,
+.slide_up_text.slide_up_text--active a,
+.slide_up_text>div.slide_up_text--active a,
+.slide_up_text>li.slide_up_text--active a {
+  display: block;
+  -webkit-transform: translate(0, 0%);
+  transform: translate(0, 0%);
 }
 * {
   color: inherit;
@@ -948,6 +974,8 @@ html body #app {
   -webkit-flex-flow: column nowrap;
   flex-flow: column nowrap;
   height: 100%;
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
 }
 html body #app section {
   max-width: 100%;
@@ -1018,7 +1046,7 @@ html body #app .header .container .header-column .logo img {
   }
 }
 html body #app .header .container .header-column.menu a {
-  transition: 0.4s ease-in-out;
+  transition: 0.4s ease;
 }
 html body #app .header .container .header-column.menu a:hover {
   color: #cb1d00;
@@ -1062,7 +1090,7 @@ html body #app .header .container .header-column .top_menu li {
   margin: 0 1rem;
   min-width: 100px;
   text-align: center;
-  transition: 0.4s ease-in-out;
+  transition: 0.4s ease;
 }
 html body #app .header .container .header-column .location {
   margin: 0 auto 0 3rem;
@@ -1092,7 +1120,7 @@ html body #app .header .container .header-column .location img {
 html body #app .header .container .header-column .location span {
   font-size: 85%;
   font-weight: 300;
-  transition: 0.4s ease-in-out;
+  transition: 0.4s ease;
 }
 html body #app .header .container .header-column .location:hover span {
   color: #cb1d00;
@@ -1123,7 +1151,7 @@ html body #app .header .container .header-column.cart .top_cart {
 html body #app .header .container .header-column.cart .top_cart a {
   font-size: 129%;
   font-weight: 400;
-  transition: 0.4s ease-in-out;
+  transition: 0.4s ease;
   top: 1px;
 }
 html body #app .header .container .header-column.cart .top_cart .cart-img {
@@ -1307,7 +1335,7 @@ html body #app .header .container .header-column.cart .top_cart:hover a {
     font-size: 266%;
     font-weight: 600;
     line-height: 120%;
-    transition: 0.4s ease-in-out;
+    transition: 0.4s ease;
     color: #242424;
   }
   html body #app .header.mobile-menu-active .header-column.top_social .list li a:hover {
@@ -1411,8 +1439,8 @@ html body #app .footer .container .footer-title {
   min-width: 320px;
   max-width: 50%;
   width: 100%;
-  -webkit-flex: 1 0 10rem;
-  flex: 1 0 10rem;
+  -webkit-flex: 1 0 20rem;
+  flex: 1 0 20rem;
 }
 @media screen and (max-width: 1024px) {
   html body #app .footer .container .footer-title {
@@ -1423,12 +1451,12 @@ html body #app .footer .container .footer-title {
 html body #app .footer .container .footer-title .footer-slogan {
   font-weight: 900;
   color: #fff;
-  transition: 0.4s ease-in-out;
+  transition: 0.4s ease;
 }
 html body #app .footer .container .footer-title .footer-slogan span {
   display: block;
   font-size: 4rem;
-  transition: 0.4s ease-in-out;
+  transition: 0.4s ease;
 }
 @media screen and (max-width: 1024px) {
   html body #app .footer .container .footer-title .footer-slogan span {
@@ -1471,7 +1499,7 @@ html body #app .footer .container .footer-menu ul a {
   line-height: 200%;
   font-weight: 600;
   color: #fff;
-  transition: 0.4s ease-in-out;
+  transition: 0.4s ease;
   font-size: 25px;
   min-width: 160px;
 }
@@ -1501,8 +1529,8 @@ html body #app .footer .container .footer-copy .copy {
   max-width: 50%;
   width: 100%;
   min-width: 320px;
-  -webkit-flex: 1 1 10rem;
-  flex: 1 1 10rem;
+  -webkit-flex: 1 1 20rem;
+  flex: 1 1 20rem;
 }
 html body #app .footer .container .footer-copy .footer-column {
   margin: 0 auto 0 0;
@@ -1616,7 +1644,7 @@ html body #app .hero .container .screener h1 {
   line-height: 85%;
   text-transform: uppercase;
   margin: 1rem 0;
-  transition: 0.4s ease-in-out;
+  transition: 0.4s ease;
 }
 html body #app .hero .container .screener .button {
   margin: 3rem 0 2rem;
@@ -1636,7 +1664,7 @@ html body #app .content .container {
 }
 html body #app .content .container .link_under {
   padding: 0.5rem 0;
-  transition: 0.4s ease-in-out;
+  transition: 0.4s ease;
   color: #545454;
   font-size: 2rem;
 }
@@ -1657,7 +1685,7 @@ html body #app .content .container .link_under:after {
   margin: 0.5rem auto;
   height: 1px;
   background-color: #545454;
-  transition: 0.4s ease-in-out;
+  transition: 0.4s ease;
 }
 html body #app .content .container .link_under:hover {
   cursor: pointer;
@@ -1702,25 +1730,12 @@ html body #app .content.about .container .title {
   text-transform: uppercase;
   word-spacing: 0.3rem;
   line-height: 90%;
-  transition: 0.4s ease-in-out;
-}
-html body #app .content.about .container .title span {
-  display: block;
+  transition: 0.4s ease;
 }
 @media all and (orientation: landscape) and (max-width: 768px) {
   ul {
     right: 0 !important;
   }
-}
-.slide_up_text {
-  overflow: hidden;
-}
-.slide_up_text * {
-  transition: 0.7s ease-in-out;
-  bottom: -7rem;
-}
-.slide_up_text.slide_up_text--active * {
-  bottom: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

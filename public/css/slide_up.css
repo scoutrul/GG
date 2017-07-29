@@ -1,0 +1,28 @@
+.slide_up_text,
+.slide_up_text>div,
+.slide_up_text>li {
+  overflow: hidden;
+}
+.slide_up_text span,
+.slide_up_text>div span,
+.slide_up_text>li span,
+.slide_up_text a,
+.slide_up_text>div a,
+.slide_up_text>li a {
+  display: block;
+  transition: $slide_up_text;
+  -webkit-transform: translate(0, 100%);
+          transform: translate(0, 100%);
+}
+.slide_up_text.slide_up_text--active span,
+.slide_up_text>div.slide_up_text--active span,
+.slide_up_text>li.slide_up_text--active span,
+.slide_up_text.slide_up_text--active a,
+.slide_up_text>div.slide_up_text--active a,
+.slide_up_text>li.slide_up_text--active a {
+  display: block;
+  -webkit-transform: translate(0, 0%);
+          transform: translate(0, 0%);
+}
+
+/*# sourceMappingURL=slide_up.css.map */
