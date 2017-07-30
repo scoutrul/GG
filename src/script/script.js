@@ -47,13 +47,13 @@ $(document).ready(function() {
 
 		var elemTop = $(elem).offset().top;
 		var elemBottom = elemTop + $(elem).height();
-		return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop-300)); //try it, will only work for text
+		return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop)); //try it, will only work for text
 		// return (docViewBottom >= elemTop && docViewTop <= elemBottom);
 	}
 
 	function appear(){
 		$('.slide_up_text').each(function () {
-			(isScrolledIntoView(this)) && $(this).addClass('slide_up_text--active') || $(this).removeClass('slide_up_text--active')
+			(isScrolledIntoView(this)) && $(this).addClass('slide_up_text--active') 
 		});
 	}
 	

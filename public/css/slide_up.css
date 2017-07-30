@@ -24,5 +24,15 @@
   -webkit-transform: translate(0, 0%);
           transform: translate(0, 0%);
 }
+.slide_up_text.slide_up_text--active div:nth-child(2) span,
+.slide_up_text>div.slide_up_text--active div:nth-child(2) span,
+.slide_up_text>li.slide_up_text--active div:nth-child(2) span {
+  transition-delay: 0.3s;
+}
+.slide_up_text.slide_up_text--active div:nth-child(3) span,
+.slide_up_text>div.slide_up_text--active div:nth-child(3) span,
+.slide_up_text>li.slide_up_text--active div:nth-child(3) span {
+  transition-delay: 0.6s;
+}
 
 /*# sourceMappingURL=slide_up.css.map */

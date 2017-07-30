@@ -20,7 +20,7 @@
 				width: 100%;
 				margin:0.5rem auto
 				height: 1px;
-				background-color: #545454;
+				background-color: $darkgrey2
 				transition $transition
 			&:hover
 				cursor pointer
@@ -39,7 +39,7 @@
 				color $lightgrey2
 				margin 2rem auto
 				font-weight: 400;
-	&.about
+	&.index-about
 		.container
 			height: 100%;
 			flex-direction column
@@ -55,3 +55,63 @@
 				word-spacing: .3rem;
 				line-height: 90%;
 				transition $transition
+	&.contact
+		.container
+			.office
+				display: flex;
+				flex-flow: column wrap;
+				margin 2rem auto
+				address.vcard
+					margin 2rem 0
+					.hide
+						display none
+					.adr,.call,.info
+						display: flex;
+						flex-flow: column wrap;
+						align-items: center;
+						justify-content: center;
+						span,a
+							&:after
+								content: "";
+								display: block;
+								width: 100%;
+								margin:0.3rem auto
+								height: 1px;
+								background-color: $lightgrey2
+								transition $transition
+						.fax,.tel
+							display inline-block
+							margin 0 2rem
+					.adr
+						font-size: 260%;
+						font-weight 500
+						line-height 150%
+					.call
+						flex-flow row nowrap
+						font-size: 160%;
+					.info
+						margin 3rem
+						font-size: 160%						
+						
+			ul.office-tab
+				margin 2rem auto
+				padding 0
+				display flex
+				flex-flow row wrap
+				li
+					flex 1 0 auto
+					white-space nowrap
+					margin 1rem
+			ul.forces
+				margin 2rem auto
+				padding 0
+				display flex
+				flex-flow row wrap
+				li
+					flex 1 0 50%
+					min-width 25%
+					.force-name
+						font-weight 700
+						margin 1rem 0
+					.force-address,.force-tel,.force-fax
+						font-weight 300
