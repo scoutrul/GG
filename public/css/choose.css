@@ -60,7 +60,6 @@
 #choose.is-active ul li a {
   font-size: 260%;
   font-weight: 600;
-  transition: $transition;
 }
 #choose.is-active ul li a:hover {
   color: $specialRed;
