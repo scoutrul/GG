@@ -88,20 +88,20 @@
 				.top_cart
 					text-align: center;
 					display: flex;
-					align-items: center;
-					flex-wrap: wrap
-					a
+
+					.cart-img
+						display flex
+						align-items: center;
+						flex-flow row wrap
+						align-items center
 						font-size: 129%;
 						font-weight 400
 						transition: $transition
 						top: 1px;
-						.cart-img
-							display flex
-							align-items center
-							img
-								width 21px
-								height 21px
-								margin: 1rem 1rem 1.3rem 1rem;
+						img
+							width 21px
+							height 21px
+							margin: 1rem 1rem 1.3rem 1rem;
 					&:hover
 						cursor pointer
 						a
@@ -177,9 +177,9 @@
 					justify-content: flex-start;
 					min-width: 100%;
 					.top_cart
-						justify-content: flex-start;
-						flex-direction: row-reverse;
-						a
+						.cart-img
+							justify-content: flex-start;
+							flex-direction: row-reverse;
 							font-size: 472%;
 							font-weight: 900;
 							color $darkgrey
@@ -189,10 +189,12 @@
 								color $specialRed
 							@media screen and (max-width: $ipadPro)
 								font-size: 3rem !important;
+								
 							@media screen and (max-width: $ipad)
 								font-size: 2.6rem !important;
-						.cart-img
-							margin: 0 .5rem !important
+							img
+								width 2rem !important;
+								height 2rem !important;
 				&.menu
 					display: flex;
 					margin: 0 0 auto;

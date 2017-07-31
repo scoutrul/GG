@@ -1039,7 +1039,7 @@ html body #app .container {
   width: 100%;
   padding: 0 15px;
 }
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1500px) {
   html body #app .container {
     overflow: hidden;
   }
@@ -1191,26 +1191,24 @@ html body #app .header .container .header-column.cart .top_cart {
   text-align: center;
   display: -webkit-flex;
   display: flex;
-  -webkit-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
 }
-html body #app .header .container .header-column.cart .top_cart a {
-  font-size: 129%;
-  font-weight: 400;
-  transition: 0.4s ease;
-  top: 1px;
-}
-html body #app .header .container .header-column.cart .top_cart a .cart-img {
+html body #app .header .container .header-column.cart .top_cart .cart-img {
   display: -webkit-flex;
   display: flex;
   -webkit-align-items: center;
   -ms-align-items: center;
   align-items: center;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  font-size: 129%;
+  font-weight: 400;
+  transition: 0.4s ease;
+  top: 1px;
 }
-html body #app .header .container .header-column.cart .top_cart a .cart-img img {
+html body #app .header .container .header-column.cart .top_cart .cart-img img {
   width: 21px;
   height: 21px;
   margin: 1rem 1rem 1.3rem 1rem;
@@ -1313,24 +1311,23 @@ html body #app .header .container .header-column.cart .top_cart:hover a {
     justify-content: flex-start;
     min-width: 100%;
   }
-  html body #app .header.mobile-menu-active .header-column.cart .top_cart {
+  html body #app .header.mobile-menu-active .header-column.cart .top_cart .cart-img {
     -webkit-justify-content: flex-start;
     -ms-justify-content: flex-start;
     justify-content: flex-start;
     -webkit-flex-direction: row-reverse;
     flex-direction: row-reverse;
-  }
-  html body #app .header.mobile-menu-active .header-column.cart .top_cart a {
     font-size: 472%;
     font-weight: 900;
     color: #242424;
     line-height: 100%;
   }
-  html body #app .header.mobile-menu-active .header-column.cart .top_cart a:hover {
+  html body #app .header.mobile-menu-active .header-column.cart .top_cart .cart-img:hover {
     color: #cb1d00;
   }
-  html body #app .header.mobile-menu-active .header-column.cart .top_cart .cart-img {
-    margin: 0 0.5rem !important;
+  html body #app .header.mobile-menu-active .header-column.cart .top_cart .cart-img img {
+    width: 2rem !important;
+    height: 2rem !important;
   }
   html body #app .header.mobile-menu-active .header-column.menu {
     display: -webkit-flex;
@@ -1422,12 +1419,12 @@ html body #app .header .container .header-column.cart .top_cart:hover a {
   }
 }
 @media screen and (max-width: 1200px) and (max-width: 1024px) {
-  html body #app .header a {
+  html body #app .header .cart-img {
     font-size: 3rem !important;
   }
 }
 @media screen and (max-width: 1200px) and (max-width: 768px) {
-  html body #app .header a {
+  html body #app .header .cart-img {
     font-size: 2.6rem !important;
   }
 }
@@ -1641,12 +1638,12 @@ html body #app .hero .container {
   max-height: 1200px;
   height: 100%;
 }
-@media screen and (min-height: 1200px) {
+@media screen and (min-height: 1200px) and (min-width: 768px) {
   html body #app .hero .container {
     max-height: 1200px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 667px) {
   html body #app .hero .container {
     height: auto;
   }
@@ -1746,6 +1743,7 @@ html body #app .content .container .link_under:after {
   content: "";
   display: block;
   width: 100%;
+  max-width: calc(100% - 0.16rem);
   margin: 0.5rem auto;
   height: 1px;
   background-color: #545454;
