@@ -1,7 +1,5 @@
 .header
 	position: absolute;
-	@media screen and (min-width: $ipad)
-		top 1rem
 	top: 0rem;
 	z-index: 10;
 	font-weight 600
@@ -16,6 +14,10 @@
 		flex-flow row wrap
 		align-items center
 		justify-content center
+		@media screen and (max-width: $ipad)
+			min-height: auto;
+			padding: 15px;
+		
 		.header-column
 			display flex
 			flex: 1 0 auto;
@@ -80,7 +82,11 @@
 					span
 						color $specialRed
 			&.serv
-				flex: 0 0 220px;
+				@media screen and (max-width: $desktop)
+					flex: 0 0 220px;
+					align-items center
+					.logo
+						align-self: center;
 			&.cart
 				justify-content: flex-end;
 				display: flex;
@@ -112,10 +118,8 @@
 	@media screen and (max-width: $desktop)
 		.container
 			align-items: flex-start;
-			margin-top: 1rem;
 			overflow auto
 			justify-content flex-start
-			flex-flow: column wrap;
 
 			.header-column
 				&.menu,&.cart 
