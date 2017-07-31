@@ -1,6 +1,13 @@
 #choose
-	display none
+	height 0%
+	visibility hidden
+	text-align: center;
+	
+	// position: fixed;
+	// top 200%
 	&.is-active
+		visibility visible
+		display: flex;
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -10,21 +17,21 @@
 		min-width: 100vw;
 		min-height: 100vh;
 		z-index: 100;
-		background: #FFF;
-		display: flex;
 		flex-flow: column nowrap;
 		align-items: center;
 		justify-content: center;
+		transition 0.2s cubic-bezier(1, 0.01, 0.85, 0.99)
+		background-color: $white
 		.title
 			margin: 35vh auto 2rem auto;
 			color: $lightgrey2;
 			font-weight: 500;
 			font-size: 130%;
-			@media screen and (max-width: $iphone6)
+			@media screen and (max-width: $ipad)
 				margin 1rem auto auto		
 		.button
 			margin: auto auto 21vh
-			@media screen and (max-width: $iphone6)
+			@media screen and (max-width: $ipad)
 				margin auto auto 1rem
 		ul
 			display: flex;
@@ -32,16 +39,27 @@
 			flex-flow: row wrap;
 			justify-content: center;
 			width 100%
-			@media screen and (max-width: $iphone6)
+			@media screen and (max-width: $ipad)
 				overflow auto
 			li
-				margin: 2rem;
+				margin: 1rem auto;
+				min-width: 300px;
+				@media all and (orientation: portrait)
+					width: 100%;
 				a
 					font-size: 260%;
 					font-weight: 600;
+					line-height: 110%;
+					margin: auto;
+					transition $transition
 					&:hover
 						color $specialRed
-					@media screen and (max-height $iphone6)
+					@media screen and (max-height $ipad)
 						font-size: 180%;
-					
-					
+			&.language 
+				li
+					margin 2rem
+					display: flex;
+					flex-flow: column wrap;
+					align-items: center;
+

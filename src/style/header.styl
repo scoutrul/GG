@@ -95,12 +95,13 @@
 						font-weight 400
 						transition: $transition
 						top: 1px;
-					.cart-img
-						margin: 1.3rem 1rem 1.3rem 1rem;
-						img
-							width 21px
-							height 21px
-							margin auto
+						.cart-img
+							display flex
+							align-items center
+							img
+								width 21px
+								height 21px
+								margin: 1rem 1rem 1.3rem 1rem;
 					&:hover
 						cursor pointer
 						a
@@ -138,7 +139,7 @@
 
 			.header-column
 				max-width: 100%;
-				flex 1
+				flex 1 1 auto
 				&.menu,&.cart 
 					display block
 				.hamburger
@@ -155,10 +156,13 @@
 				&.serv
 					top: 0
 					align-items: flex-start;
+					max-height: 4rem;
 					.hamburger
 						top: 2rem;
 						right: 2rem;
 						padding: 0;
+					@media screen and (max-width: $ipadPro)
+						display block
 				.location span
 					color $darkgrey
 					font-weight: 600;
@@ -170,6 +174,8 @@
 					flex: 0;
 					margin: 1rem 0 2rem;
 					text-transform: uppercase;
+					justify-content: flex-start;
+					min-width: 100%;
 					.top_cart
 						justify-content: flex-start;
 						flex-direction: row-reverse;
@@ -221,6 +227,7 @@
 					margin 0
 					flex: 1 0 auto;
 					align-items: flex-end;
+					min-width: 100%;
 					.list
 						display flex
 						flex-flow column wrap

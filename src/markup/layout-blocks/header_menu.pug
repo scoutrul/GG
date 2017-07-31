@@ -5,8 +5,9 @@ section.header
 				a(href="index.html")
 					img(src="images/icon_logo.svg", alt="LOGOTYPE")
 			.location.location_toggle 
-				img(src="images/icon_marker.svg", alt="Location") 
-				span Jamaica
+				a 
+					img(src="images/icon_marker.svg", alt="Location") 
+					span Jamaica
 		.header-column.menu
 			ul.top_menu
 				li 
@@ -19,9 +20,10 @@ section.header
 					a(href="contact.html") Contact
 		.header-column.cart
 			.top_cart 
-				.cart-img
-					img(src="images/icon_cart.svg", alt="Cart") 
-				a(href="cart.html") Cart
+				a(href="cart.html") 
+					.cart-img
+						img(src="images/icon_cart.svg", alt="Cart")
+						span Cart 
 		.header-column.top_social
 			ul.list
 				li

@@ -20,21 +20,6 @@ $(document).ready(function() {
 		$('section.header').addClass('white_header');
 	}
 
-	// toggle location
-	let Choose = false;
-	$('.location_toggle').click(function() {
-		if (Choose) {
-			Choose =!Choose;
-			$('#choose').removeClass('is-active');
-		}
-		else {
-			Choose =!Choose;
-			$('#choose').addClass('is-active');
-			$('#choose .slide_up_text').removeClass('slide_up_text--active');
-			addAppear()
-		}
-	})
-
 	// appear element in the view
 	function isScrolledIntoView(elem) {
 		($(elem).length == 0)? false:true;
@@ -50,6 +35,46 @@ $(document).ready(function() {
 			(isScrolledIntoView(el)) && $(this).addClass('slide_up_text--active') // toggle: || $(this).removeClass('slide_up_text--active');
 		});
 	}
+
+
+	// toggle location
+	let ChooseWindowVis = false;
+
+
+	$('.location_toggle, .regions a').click(function() {
+		$('.regions ul').hide();
+		if (ChooseWindowVis) {
+			ChooseWindowVis =!ChooseWindowVis;
+			$('#choose').removeClass('is-active');
+			$('#choose .slide_up_text--active').removeClass('slide_up_text--active');
+			languageTab.css({'color':''});
+		}
+		else {
+			ChooseWindowVis =!ChooseWindowVis;
+			$('#choose').addClass('is-active');
+			addAppear();
+		}
+	});
+
+	let languageTab = $('.language .name a');
+	languageTab.each(function(i,el) { 
+		$(el).click(function(){ // click on name
+			languageTab.css({'color':'#CCC'});
+			$(this).css({'color':'#cb1d00'}); //hover active tab
+			$(`.regions ul`).removeClass('slide_up_text--active').hide();
+			let activeRegion = $(`.regions ul:nth-child(${i+1})`);
+			activeRegion.show(); // show closest region list w animation
+			addAppear();
+
+
+		})
+	})
+
+
+
+
+
+
 
 	$(window).on('DOMContentLoaded load resize scroll', addAppear); 
 });

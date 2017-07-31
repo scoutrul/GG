@@ -13,24 +13,12 @@
   </head>
 </html>
 <body>
-  <div id="choose">
-    <div class="title">Choose country</div>
-    <ul class="slide_up_text">
-      <li><span> <a href="#">Barbados</a></span></li>
-      <li><span> <a href="#">Grenadine</a></span></li>
-      <li><span> <a href="#">Jamaica</a></span></li>
-      <li><span> <a href="#">St.Lucia</a></span></li>
-      <li><span> <a href="#">St.Vincent</a></span></li>
-    </ul>
-    <div class="button left center location_toggle"><span>Back</span></div>
-  </div>
-  <button class="hamburger hamburger--minus" id="hamburger"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
   <div id="app">
     <section class="header">
       <div class="container">
         <div class="header-column serv">
           <div class="logo"> <a href="index.html"><img src="images/icon_logo.svg" alt="LOGOTYPE"/></a></div>
-          <div class="location location_toggle"> <img src="images/icon_marker.svg" alt="Location"/><span>Jamaica</span></div>
+          <div class="location location_toggle"> <a> <img src="images/icon_marker.svg" alt="Location"/><span>Jamaica</span></a></div>
         </div>
         <div class="header-column menu">
           <ul class="top_menu">
@@ -41,9 +29,8 @@
           </ul>
         </div>
         <div class="header-column cart">
-          <div class="top_cart"> 
-            <div class="cart-img"><img src="images/icon_cart.svg" alt="Cart"/></div><a href="cart.html">Cart</a>
-          </div>
+          <div class="top_cart"> <a href="cart.html"> 
+              <div class="cart-img"><img src="images/icon_cart.svg" alt="Cart"/><span>Cart </span></div></a></div>
         </div>
         <div class="header-column top_social">
           <ul class="list">
@@ -110,5 +97,30 @@
         </div>
       </div>
     </section>
+  </div>
+  <button class="hamburger hamburger--minus" id="hamburger"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
+  <div id="choose">
+    <div class="title">Choose country</div>
+    <ul class="language slide_up_text">
+      <li><span class="name"><a href="#">English</a></span></li>
+      <li><span class="name"><a href="#">Spain</a></span></li>
+    </ul>
+    <div class="regions">
+      <ul class="slide_up_text">
+        <li><span> <a href="#">Barbados</a></span></li>
+        <li><span> <a href="#">Grenadine</a></span></li>
+        <li><span> <a href="#">Jamaica</a></span></li>
+        <li><span> <a href="#">St.Lucia</a></span></li>
+        <li><span> <a href="#">St.Vincent</a></span></li>
+      </ul>
+      <ul class="slide_up_text">
+        <li><span> <a href="#">Barbados</a></span></li>
+        <li><span> <a href="#">Grenadine</a></span></li>
+        <li><span> <a href="#">Jamaica</a></span></li>
+        <li><span> <a href="#">St.Lucia</a></span></li>
+        <li><span> <a href="#">St.Vincent</a></span></li>
+      </ul>
+    </div>
+    <div class="button left center location_toggle"><span>Back</span></div>
   </div>
 </body>
