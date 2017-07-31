@@ -31,6 +31,7 @@
 			padding: 0;
 			flex-flow: row wrap;
 			justify-content: center;
+			width 100%
 			@media screen and (max-width: $iphone6)
 				overflow auto
 			li
@@ -40,3 +41,7 @@
 					font-weight: 600;
 					&:hover
 						color $specialRed
+					@media screen and (max-height $iphone6)
+						font-size: 180%;
+					
+					

@@ -731,6 +731,11 @@ td {
 #choose.is-active ul li a:hover {
   color: #cb1d00;
 }
+@media screen and (max-height: 667px) {
+  #choose.is-active ul li a {
+    font-size: 180%;
+  }
+}
 .button {
   display: -webkit-flex;
   display: flex;
@@ -739,6 +744,7 @@ td {
   align-items: center;
   border-radius: 10rem;
   min-height: 3.8rem;
+  line-height: 3.8rem;
   max-width: 15rem;
   width: 100%;
   padding: 0 2rem;
@@ -758,6 +764,9 @@ td {
   -webkit-align-items: center;
   -ms-align-items: center;
   align-items: center;
+  -webkit-align-self: center;
+  -ms-align-self: center;
+  align-self: center;
   width: 100%;
   transition: 0.4s ease;
 }
@@ -1002,6 +1011,11 @@ html body #app .container {
   max-width: 1200px;
   width: 100%;
 }
+@media screen and (max-width: 1200px) {
+  html body #app .container {
+    overflow: hidden;
+  }
+}
 html body #app .header {
   position: absolute;
   top: 0rem;
@@ -1020,15 +1034,15 @@ html body #app .header.white_header {
 html body #app .header .container {
   display: -webkit-flex;
   display: flex;
-  -webkit-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
   -webkit-justify-content: space-between;
   -ms-justify-content: space-between;
   justify-content: space-between;
   min-height: 10em;
   -webkit-flex-flow: row wrap;
   flex-flow: row wrap;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
   -webkit-justify-content: center;
   -ms-justify-content: center;
   justify-content: center;
@@ -1036,16 +1050,15 @@ html body #app .header .container {
 html body #app .header .container .header-column {
   display: -webkit-flex;
   display: flex;
-  -webkit-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
   -webkit-flex: 1 0 auto;
   flex: 1 0 auto;
-  margin: 1rem 0;
-  min-height: 4rem;
+  -webkit-align-self: center;
+  -ms-align-self: center;
+  align-self: center;
 }
 html body #app .header .container .header-column .logo img {
   width: 67px;
+  height: 67px;
 }
 @media screen and (max-width: 1200px) {
   html body #app .header .container .header-column.menu {
@@ -1123,6 +1136,7 @@ html body #app .header .container .header-column .location {
 html body #app .header .container .header-column .location img {
   margin: 0 0.5rem;
   width: 16px;
+  height: 16px;
 }
 html body #app .header .container .header-column .location span {
   font-size: 85%;
@@ -1166,6 +1180,7 @@ html body #app .header .container .header-column.cart .top_cart .cart-img {
 }
 html body #app .header .container .header-column.cart .top_cart .cart-img img {
   width: 21px;
+  height: 21px;
   margin: auto;
 }
 html body #app .header .container .header-column.cart .top_cart:hover {
@@ -1194,8 +1209,6 @@ html body #app .header .container .header-column.cart .top_cart:hover a {
   html body #app .header .container .header-column:first-child {
     margin: 0;
     min-width: 100%;
-    -webkit-flex: 0;
-    flex: 0;
   }
   html body #app .header.mobile-menu-active {
     position: fixed;
@@ -1652,6 +1665,7 @@ html body #app .hero .container .screener h1 {
   text-transform: uppercase;
   margin: 1rem 0;
   transition: 0.4s ease;
+  padding-top: 5rem;
 }
 @media screen and (max-width: 320px) {
   html body #app .hero .container .screener h1 {
@@ -1733,7 +1747,7 @@ html body #app .content.index-about .container {
   -webkit-justify-content: center;
   -ms-justify-content: center;
   justify-content: center;
-  min-height: 70rem;
+  min-height: 600px;
   margin: auto;
 }
 html body #app .content.index-about .container .title {

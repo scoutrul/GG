@@ -11,21 +11,19 @@
 	
 	.container
 		display flex
-		align-items center
 		justify-content space-between
 		min-height 10em
 		flex-flow row wrap
+		align-items center
 		justify-content center
 		.header-column
 			display flex
-			align-items center
 			flex: 1 0 auto;
-			margin: 1rem 0;
-			min-height 4rem
-			
+			align-self: center;
 			.logo
 				img
 					width 67px
+					height 67px
 			
 			&.menu
 				@media screen and (max-width: $desktop)
@@ -73,6 +71,7 @@
 				img
 					margin: 0 0.5rem;
 					width: 16px;
+					height: 16px;
 				span
 					font-size 85%
 					font-weight 300	
@@ -100,6 +99,7 @@
 						margin: 1.3rem 1rem 1.3rem 1rem;
 						img
 							width 21px
+							height 21px
 							margin auto
 					&:hover
 						cursor pointer
@@ -122,7 +122,6 @@
 				&:first-child
 					margin 0
 					min-width: 100%;
-					flex 0
 		&.mobile-menu-active
 			position fixed
 			width 100%
