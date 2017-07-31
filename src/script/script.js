@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-
 	// toggle hamburger
 	let Hamburger = false;
 	$('#hamburger').click(function() {
@@ -8,12 +7,11 @@ $(document).ready(function() {
 			Hamburger = !Hamburger;
 			$(this).removeClass('is-active');
 			$('section.header').removeClass('mobile-menu-active')
-			$('html').css({'overflow':'visible'})
 		} else {
 			Hamburger = !Hamburger;
 			$(this).addClass('is-active');
 			$('section.header').addClass('mobile-menu-active');
-			$('html').css({'overflow':'hidden'})
+
 		}
 	})
 
@@ -28,7 +26,6 @@ $(document).ready(function() {
 		if (Choose) {
 			Choose =!Choose;
 			$('#choose').removeClass('is-active');
-			
 		}
 		else {
 			Choose =!Choose;
@@ -36,32 +33,23 @@ $(document).ready(function() {
 			$('#choose .slide_up_text').removeClass('slide_up_text--active');
 			addAppear()
 		}
-
 	})
 
 	// appear element in the view
 	function isScrolledIntoView(elem) {
 		($(elem).length == 0)? false:true;
-
 		var viewTop = $(window).scrollTop();
-
 		var viewBottom = viewTop + $(window).height();
-
 		var elemTop = $(elem).offset().top;
-
 		var elemBottom = elemTop + $(elem).height();
-
 		return ((elemBottom <= viewBottom) && (elemTop >= viewTop))
 	}
 
 	function addAppear(){
-		$('.slide_up_text').each(function () {
-			(isScrolledIntoView(this)) && $(this).addClass('slide_up_text--active') || $(this).removeClass('slide_up_text--active') 
+		$('.slide_up_text').each(function (i,el) {
+			(isScrolledIntoView(el)) && $(this).addClass('slide_up_text--active') // toggle: || $(this).removeClass('slide_up_text--active');
 		});
 	}
 
-	$(window).on('scroll', function () {
-		addAppear()
-	})
-	addAppear()
+	$(window).on('DOMContentLoaded load resize scroll', addAppear); 
 });

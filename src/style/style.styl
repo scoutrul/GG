@@ -52,13 +52,14 @@ typographic()
 	position relative
 	letter-spacing 0.04em !important
 html
+	max-width: 100vw; //!
+	overflow: hidden; //!
 	body
 		#app
 			display: flex
 			flex 1 0 auto
 			flex-flow column nowrap
-			overflow-x: hidden;
-			// height 100%
+			height 100% //!
 
 			section
 				width 100%
