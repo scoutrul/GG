@@ -47,7 +47,7 @@ $(document).ready(function() {
 			ChooseWindowVis =!ChooseWindowVis;
 			$('#choose').removeClass('is-active');
 			$('#choose .slide_up_text--active').removeClass('slide_up_text--active');
-			languageTab.css({'color':''});
+			$('.language').show()
 		}
 		else {
 			ChooseWindowVis =!ChooseWindowVis;
@@ -59,8 +59,7 @@ $(document).ready(function() {
 	let languageTab = $('.language .name a');
 	languageTab.each(function(i,el) { 
 		$(el).click(function(){ // click on name
-			languageTab.css({'color':'#CCC'});
-			$(this).css({'color':'#cb1d00'}); //hover active tab
+			$('.language').hide();
 			$(`.regions ul`).removeClass('slide_up_text--active').hide();
 			let activeRegion = $(`.regions ul:nth-child(${i+1})`);
 			activeRegion.show(); // show closest region list w animation

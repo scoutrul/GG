@@ -62,9 +62,14 @@
 
 .hamburger:hover
 		.hamburger-inner
-			background-color $darkhover	!important
+			background-color $darkhover
 			&:before,&:after
-				background-color $darkhover	!important
+				background-color $darkhover	
+.hamburger:focus,.hamburger:hover:focus
+	.hamburger-inner
+		background-color $specialRed 
+		&:before,&:after
+			background-color $specialRed 
 
 
 
