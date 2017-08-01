@@ -1,7 +1,9 @@
-extends layout-blocks/layout
+extends assets/layout.pug
 block content
 	section.content.in-cart
 		.container 
-			h5.title.slide_up_text Cart is empty
-			h6
-				a.link_under(href="products.html") Products
+			h3.title.slide_up_text 
+				div
+					span Cart is empty
+			h6.link_under
+				a(href="products.html") Products

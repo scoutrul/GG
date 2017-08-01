@@ -1,0 +1,44 @@
+@import 'assets/choose-location.styl'
+@import 'assets/button.styl'
+@import 'assets/hamburger.styl'
+@import 'assets/slide_up_text.styl'
+@import 'assets/link_under.styl'
+
+*
+	color inherit
+	z-index 5
+	position relative
+	letter-spacing 0.04em !important
+
+html
+	max-width: 100vw; //! not change
+	overflow: hidden; //!
+	body
+		#app
+			display: flex
+			flex 1 0 auto
+			flex-flow column nowrap
+			height 100% //!
+
+			section
+				width 100%
+				min-width 100vw
+				flex 1 0 auto
+				max-width: 100%;
+				width: 100vw;
+				min-width: 100%;
+
+			.container 
+				flex 1 0 auto
+				margin auto
+				display: flex;
+				align-items: flex-start;
+				max-width: $max-width
+				width 100%
+				padding 0 15px
+			
+			@import 'assets/header.styl'
+			@import 'assets/footer.styl'
+				
+			@import 'assets/content.styl'
+			@import 'pages/*.styl'
