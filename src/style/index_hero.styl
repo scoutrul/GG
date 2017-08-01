@@ -9,7 +9,7 @@
 			    max-height: $desktop;
 		@media screen and (max-width: $iphone6)
 			height auto
-		@media screen and (max-width: 580px)
+		@media screen and (max-width: $iphoneH)
 			min-height: 480px;
 		
 		&:after
@@ -25,7 +25,18 @@
 			width: 930px;
 			z-index: 6;
 			@media screen and (max-width: $ipad)
-				right: -30%;
+				right: -40%;
+				background-position: 0% 50%;
+				background-size: 900px;
+			@media screen and (max-width: $iphone6)
+				right: -40%;
+				background-position: 0% 30%;
+				background-size: 590px;
+			@media screen and (max-width: $iphone5)
+				right: 0;
+				background-position: -20% 40%;
+				background-size: 600px;
+				
 			
 		.screener
 			z-index 10

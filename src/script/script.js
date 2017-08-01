@@ -35,7 +35,7 @@ $(document).ready(function() {
 			(isScrolledIntoView(el)) && $(this).addClass('slide_up_text--active') // toggle: || $(this).removeClass('slide_up_text--active');
 		});
 	}
-
+	addAppear();
 
 	// toggle location
 	let ChooseWindowVis = false;
@@ -64,8 +64,6 @@ $(document).ready(function() {
 			let activeRegion = $(`.regions ul:nth-child(${i+1})`);
 			activeRegion.show(); // show closest region list w animation
 			addAppear();
-
-
 		})
 	})
 

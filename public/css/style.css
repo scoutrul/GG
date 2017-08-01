@@ -1049,11 +1049,6 @@ html body #app .container {
   width: 100%;
   padding: 0 15px;
 }
-@media screen and (max-width: 1500px) {
-  html body #app .container {
-    overflow: hidden;
-  }
-}
 html body #app .header {
   position: absolute;
   top: 0rem;
@@ -1299,16 +1294,13 @@ html body #app .header .container .header-column.cart .top_cart:hover a {
     margin: 3rem 0;
   }
   html body #app .header.mobile-menu-active .header-column.serv {
-    top: 0;
     -webkit-align-items: flex-start;
     -ms-align-items: flex-start;
     align-items: flex-start;
+    -webkit-align-self: baseline;
+    -ms-align-self: baseline;
+    align-self: baseline;
     max-height: 4rem;
-  }
-  html body #app .header.mobile-menu-active .header-column.serv .hamburger {
-    top: 2rem;
-    right: 2rem;
-    padding: 0;
   }
   html body #app .header.mobile-menu-active .header-column .location span {
     color: #242424;
@@ -1425,11 +1417,6 @@ html body #app .header .container .header-column.cart .top_cart:hover a {
   }
 }
 @media screen and (max-width: 1200px) and (max-width: 1024px) {
-  html body #app .header.serv {
-    display: block;
-  }
-}
-@media screen and (max-width: 1200px) and (max-width: 1024px) {
   html body #app .header .location span {
     font-size: 20px !important;
   }
@@ -1441,16 +1428,6 @@ html body #app .header .container .header-column.cart .top_cart:hover a {
 }
 @media screen and (max-width: 1200px) and (max-width: 768px) {
   html body #app .header .cart-img {
-    font-size: 2.6rem !important;
-  }
-}
-@media screen and (max-width: 1200px) and (max-width: 1024px) {
-  html body #app .header a {
-    font-size: 4rem !important;
-  }
-}
-@media screen and (max-width: 1200px) and (max-width: 768px) {
-  html body #app .header a {
     font-size: 2.6rem !important;
   }
 }
@@ -1664,7 +1641,7 @@ html body #app .hero .container {
     height: auto;
   }
 }
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 480px) {
   html body #app .hero .container {
     min-height: 480px;
   }
@@ -1684,7 +1661,23 @@ html body #app .hero .container:after {
 }
 @media screen and (max-width: 768px) {
   html body #app .hero .container:after {
-    right: -30%;
+    right: -40%;
+    background-position: 0% 50%;
+    background-size: 900px;
+  }
+}
+@media screen and (max-width: 667px) {
+  html body #app .hero .container:after {
+    right: -40%;
+    background-position: 0% 30%;
+    background-size: 590px;
+  }
+}
+@media screen and (max-width: 568px) {
+  html body #app .hero .container:after {
+    right: 0;
+    background-position: -20% 40%;
+    background-size: 600px;
   }
 }
 html body #app .hero .container .screener {
@@ -1762,21 +1755,6 @@ html body #app .content .container .link_under:hover:after {
   width: 0%;
   background-color: #cb1d00;
 }
-html body #app .content.in-cart .container {
-  -webkit-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  -ms-justify-content: center;
-  justify-content: center;
-  margin: auto;
-  height: 100%;
-}
-html body #app .content.in-cart .container .title {
-  color: #e5e5e5;
-  margin: 2rem auto;
-  font-weight: 400;
-}
 html body #app .content.index-about .container {
   height: 100%;
   -webkit-flex-direction: column;
@@ -1799,22 +1777,43 @@ html body #app .content.index-about .container .title {
   line-height: 90%;
   transition: 0.4s ease;
 }
-html body #app .content.contact .container .office {
+html body #app .contact .container .office {
   display: -webkit-flex;
   display: flex;
   -webkit-flex-flow: column wrap;
   flex-flow: column wrap;
   margin: 2rem auto;
+  width: 100%;
 }
-html body #app .content.contact .container .office address.vcard {
+@media screen and (max-width: 1024px) {
+  html body #app .contact .container .office {
+    font-size: 90%;
+  }
+}
+@media screen and (max-width: 768px) {
+  html body #app .contact .container .office {
+    font-size: 80%;
+  }
+}
+@media screen and (max-width: 568px) {
+  html body #app .contact .container .office {
+    font-size: 70%;
+  }
+}
+@media screen and (max-width: 320px) {
+  html body #app .contact .container .office {
+    font-size: 60%;
+  }
+}
+html body #app .contact .container .office address.vcard {
   margin: 2rem 0;
 }
-html body #app .content.contact .container .office address.vcard .hide {
+html body #app .contact .container .office address.vcard .hide {
   display: none;
 }
-html body #app .content.contact .container .office address.vcard .adr,
-html body #app .content.contact .container .office address.vcard .call,
-html body #app .content.contact .container .office address.vcard .info {
+html body #app .contact .container .office address.vcard .adr,
+html body #app .contact .container .office address.vcard .call,
+html body #app .contact .container .office address.vcard .info {
   display: -webkit-flex;
   display: flex;
   -webkit-flex-flow: column wrap;
@@ -1826,12 +1825,12 @@ html body #app .content.contact .container .office address.vcard .info {
   -ms-justify-content: center;
   justify-content: center;
 }
-html body #app .content.contact .container .office address.vcard .adr span:after,
-html body #app .content.contact .container .office address.vcard .call span:after,
-html body #app .content.contact .container .office address.vcard .info span:after,
-html body #app .content.contact .container .office address.vcard .adr a:after,
-html body #app .content.contact .container .office address.vcard .call a:after,
-html body #app .content.contact .container .office address.vcard .info a:after {
+html body #app .contact .container .office address.vcard .adr span:after,
+html body #app .contact .container .office address.vcard .call span:after,
+html body #app .contact .container .office address.vcard .info span:after,
+html body #app .contact .container .office address.vcard .adr a:after,
+html body #app .contact .container .office address.vcard .call a:after,
+html body #app .contact .container .office address.vcard .info a:after {
   content: "";
   display: block;
   width: 100%;
@@ -1840,30 +1839,30 @@ html body #app .content.contact .container .office address.vcard .info a:after {
   background-color: #e5e5e5;
   transition: 0.4s ease;
 }
-html body #app .content.contact .container .office address.vcard .adr .fax,
-html body #app .content.contact .container .office address.vcard .call .fax,
-html body #app .content.contact .container .office address.vcard .info .fax,
-html body #app .content.contact .container .office address.vcard .adr .tel,
-html body #app .content.contact .container .office address.vcard .call .tel,
-html body #app .content.contact .container .office address.vcard .info .tel {
+html body #app .contact .container .office address.vcard .adr .fax,
+html body #app .contact .container .office address.vcard .call .fax,
+html body #app .contact .container .office address.vcard .info .fax,
+html body #app .contact .container .office address.vcard .adr .tel,
+html body #app .contact .container .office address.vcard .call .tel,
+html body #app .contact .container .office address.vcard .info .tel {
   display: inline-block;
-  margin: 0 2rem;
+  margin: 0 auto;
 }
-html body #app .content.contact .container .office address.vcard .adr {
+html body #app .contact .container .office address.vcard .adr {
   font-size: 260%;
   font-weight: 500;
   line-height: 150%;
 }
-html body #app .content.contact .container .office address.vcard .call {
+html body #app .contact .container .office address.vcard .call {
   -webkit-flex-flow: row nowrap;
   flex-flow: row nowrap;
   font-size: 160%;
 }
-html body #app .content.contact .container .office address.vcard .info {
+html body #app .contact .container .office address.vcard .info {
   margin: 3rem;
   font-size: 160%;
 }
-html body #app .content.contact .container ul.office-tab {
+html body #app .contact .container ul.office-tab {
   margin: 2rem auto;
   padding: 0;
   display: -webkit-flex;
@@ -1871,13 +1870,13 @@ html body #app .content.contact .container ul.office-tab {
   -webkit-flex-flow: row wrap;
   flex-flow: row wrap;
 }
-html body #app .content.contact .container ul.office-tab li {
+html body #app .contact .container ul.office-tab li {
   -webkit-flex: 1 0 auto;
   flex: 1 0 auto;
   white-space: nowrap;
   margin: 1rem;
 }
-html body #app .content.contact .container ul.forces {
+html body #app .contact .container ul.forces {
   margin: 2rem auto;
   padding: 0;
   display: -webkit-flex;
@@ -1885,19 +1884,45 @@ html body #app .content.contact .container ul.forces {
   -webkit-flex-flow: row wrap;
   flex-flow: row wrap;
 }
-html body #app .content.contact .container ul.forces li {
-  -webkit-flex: 1 0 50%;
-  flex: 1 0 50%;
-  min-width: 25%;
+html body #app .contact .container ul.forces li {
+  -webkit-flex: 1 0 25%;
+  flex: 1 0 25%;
 }
-html body #app .content.contact .container ul.forces li .force-name {
+@media screen and (max-width: 768px) {
+  html body #app .contact .container ul.forces li {
+    -webkit-flex: 1 0 50%;
+    flex: 1 0 50%;
+  }
+}
+@media screen and (max-width: 400px) {
+  html body #app .contact .container ul.forces li {
+    -webkit-flex: 1 0 100%;
+    flex: 1 0 100%;
+  }
+}
+html body #app .contact .container ul.forces li .force-name {
   font-weight: 700;
   margin: 1rem 0;
 }
-html body #app .content.contact .container ul.forces li .force-address,
-html body #app .content.contact .container ul.forces li .force-tel,
-html body #app .content.contact .container ul.forces li .force-fax {
+html body #app .contact .container ul.forces li .force-address,
+html body #app .contact .container ul.forces li .force-tel,
+html body #app .contact .container ul.forces li .force-fax {
   font-weight: 300;
+}
+html body #app .in-cart .container {
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  margin: auto;
+  height: 100%;
+}
+html body #app .in-cart .container .title {
+  color: #e5e5e5;
+  margin: 2rem auto;
+  font-weight: 400;
 }
 @media all and (orientation: landscape) and (max-width: 768px) {
   ul {
