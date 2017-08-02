@@ -39,6 +39,17 @@ text_underscore(border, color)
 	padding: 0.5rem 0;
 	transition $transition
 	color color
+	font-size: 2.8rem
+	padding 1rem 0
+	@media screen and (max-width: $ipadPro)
+		font-size: 2.5rem
+	@media screen and (max-width: $ipad)
+		font-size: 2rem
+	@media screen and (max-width: $iphone5)
+		font-size: 1.5rem
+	@media screen and (max-width: $iphone)
+		font-size: 1rem
+	
 	&:after
 		content: "";
 		display: block; 
@@ -47,11 +58,10 @@ text_underscore(border, color)
 		margin:0.5rem auto
 		height: 1px;
 		background-color: border
-		transition $transition
+		transition .8s ease
 	&:hover
 		cursor pointer
 		color $specialRed
-		transition $transition
 		&:after
 			width 0%
 			background-color: $specialRed

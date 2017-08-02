@@ -70,14 +70,9 @@ $(document).ready(function() {
 
 	// FAQ toggle module
 	let faq_header = $('ul.faq header');
-	
 	faq_header.each(function(i,el){
-		if(i === 0){ // activate first item
+		$(el).click(function(){ 
 			$(el).toggleClass('active');
-		};
-		$(el).click(function(){ // click on header
-			$(el).toggleClass('active');
-			// $(el).siblings('main').slideDown();
 		})
 	})
 });

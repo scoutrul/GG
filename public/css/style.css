@@ -1005,31 +1005,6 @@ td {
 .slide_up_text.slide_up_text--active > div:nth-child(9) span {
   transition-delay: 1.6s;
 }
-.link_under {
-  display: inline-block;
-  padding: 0.5rem 0;
-  transition: 0.4s ease;
-  color: #545454;
-}
-.link_under:after {
-  content: "";
-  display: block;
-  width: 100%;
-  max-width: calc(100% - 0.22rem);
-  margin: 0.5rem auto;
-  height: 1px;
-  background-color: #545454;
-  transition: 0.4s ease;
-}
-.link_under:hover {
-  cursor: pointer;
-  color: #cb1d00;
-  transition: 0.4s ease;
-}
-.link_under:hover:after {
-  width: 0%;
-  background-color: #cb1d00;
-}
 * {
   color: inherit;
   z-index: 5;
@@ -1699,6 +1674,52 @@ html body #app section.content.index-about .container .title {
   line-height: 90%;
   transition: 0.4s ease;
 }
+html body #app section.content.index-about .container .link_under {
+  display: inline-block;
+  padding: 0.5rem 0;
+  transition: 0.4s ease;
+  color: darkgrey2;
+  font-size: 2.8rem;
+  padding: 1rem 0;
+}
+@media screen and (max-width: 1024px) {
+  html body #app section.content.index-about .container .link_under {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  html body #app section.content.index-about .container .link_under {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 568px) {
+  html body #app section.content.index-about .container .link_under {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  html body #app section.content.index-about .container .link_under {
+    font-size: 1rem;
+  }
+}
+html body #app section.content.index-about .container .link_under:after {
+  content: "";
+  display: block;
+  width: 100%;
+  max-width: calc(100% - 0.22rem);
+  margin: 0.5rem auto;
+  height: 1px;
+  background-color: #545454;
+  transition: 0.8s ease;
+}
+html body #app section.content.index-about .container .link_under:hover {
+  cursor: pointer;
+  color: #cb1d00;
+}
+html body #app section.content.index-about .container .link_under:hover:after {
+  width: 0%;
+  background-color: #cb1d00;
+}
 html body #app section.in-cart .container {
   -webkit-align-items: center;
   -ms-align-items: center;
@@ -1718,6 +1739,52 @@ html body #app section.in-cart .container .title {
   line-height: 90%;
   transition: 0.4s ease;
   text-align: center;
+}
+html body #app section.in-cart .container .link_under {
+  display: inline-block;
+  padding: 0.5rem 0;
+  transition: 0.4s ease;
+  color: darkgrey2;
+  font-size: 2.8rem;
+  padding: 1rem 0;
+}
+@media screen and (max-width: 1024px) {
+  html body #app section.in-cart .container .link_under {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  html body #app section.in-cart .container .link_under {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 568px) {
+  html body #app section.in-cart .container .link_under {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  html body #app section.in-cart .container .link_under {
+    font-size: 1rem;
+  }
+}
+html body #app section.in-cart .container .link_under:after {
+  content: "";
+  display: block;
+  width: 100%;
+  max-width: calc(100% - 0.22rem);
+  margin: 0.5rem auto;
+  height: 1px;
+  background-color: #545454;
+  transition: 0.8s ease;
+}
+html body #app section.in-cart .container .link_under:hover {
+  cursor: pointer;
+  color: #cb1d00;
+}
+html body #app section.in-cart .container .link_under:hover:after {
+  width: 0%;
+  background-color: #cb1d00;
 }
 html body #app .contact .container .office {
   display: -webkit-flex;
@@ -1871,14 +1938,35 @@ html body #app section.help .container ul.faq {
   -webkit-flex-flow: column nowrap;
   flex-flow: column nowrap;
   margin: auto;
+  max-width: 930px;
 }
 html body #app section.help .container ul.faq li span header {
-  font-size: 2.8rem;
-  padding: 1rem 0;
   display: inline-block;
   padding: 0.5rem 0;
   transition: 0.4s ease;
   color: #232323;
+  font-size: 2.8rem;
+  padding: 1rem 0;
+}
+@media screen and (max-width: 1024px) {
+  html body #app section.help .container ul.faq li span header {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  html body #app section.help .container ul.faq li span header {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 568px) {
+  html body #app section.help .container ul.faq li span header {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  html body #app section.help .container ul.faq li span header {
+    font-size: 1rem;
+  }
 }
 html body #app section.help .container ul.faq li span header:after {
   content: "";
@@ -1888,12 +1976,11 @@ html body #app section.help .container ul.faq li span header:after {
   margin: 0.5rem auto;
   height: 1px;
   background-color: #ddd;
-  transition: 0.4s ease;
+  transition: 0.8s ease;
 }
 html body #app section.help .container ul.faq li span header:hover {
   cursor: pointer;
   color: #cb1d00;
-  transition: 0.4s ease;
 }
 html body #app section.help .container ul.faq li span header:hover:after {
   width: 0%;
@@ -1918,7 +2005,8 @@ html body #app section.help .container ul.faq li span header.active + main {
   transition: 0.4s ease;
 }
 html body #app section.help .container ul.faq li span main {
-  height: 0;
+  text-align: left;
+  height: 1rem;
   top: 1rem;
   overflow: hidden;
   font-size: 1.2rem;
