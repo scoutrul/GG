@@ -70,16 +70,14 @@ $(document).ready(function() {
 
 	// FAQ toggle module
 	let faq_header = $('ul.faq header');
+	
 	faq_header.each(function(i,el){
 		if(i === 0){ // activate first item
-			$(el).addClass('active');
-			$(el).siblings('main').show();
+			$(el).toggleClass('active');
 		};
 		$(el).click(function(){ // click on header
-			faq_header.removeClass('active');
 			$(el).toggleClass('active');
-			$('ul.faq main').hide();
-			$(el).siblings('main').show(100);
+			// $(el).siblings('main').slideDown();
 		})
 	})
 });

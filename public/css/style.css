@@ -1016,7 +1016,7 @@ td {
   display: block;
   width: 100%;
   max-width: calc(100% - 0.22rem);
-  margin: 0.1rem auto;
+  margin: 0.5rem auto;
   height: 1px;
   background-color: #545454;
   transition: 0.4s ease;
@@ -1873,7 +1873,8 @@ html body #app section.help .container ul.faq {
   margin: auto;
 }
 html body #app section.help .container ul.faq li span header {
-  font-size: 3rem;
+  font-size: 2.8rem;
+  padding: 1rem 0;
   display: inline-block;
   padding: 0.5rem 0;
   transition: 0.4s ease;
@@ -1884,7 +1885,7 @@ html body #app section.help .container ul.faq li span header:after {
   display: block;
   width: 100%;
   max-width: calc(100% - 0.22rem);
-  margin: 0.1rem auto;
+  margin: 0.5rem auto;
   height: 1px;
   background-color: #ddd;
   transition: 0.4s ease;
@@ -1901,9 +1902,32 @@ html body #app section.help .container ul.faq li span header:hover:after {
 html body #app section.help .container ul.faq li span header.active {
   color: #ddd;
 }
+html body #app section.help .container ul.faq li span header.active:hover {
+  color: #cb1d00;
+}
+html body #app section.help .container ul.faq li span header.active + main {
+  display: block;
+  -ms-filter: none;
+  -webkit-filter: none;
+          filter: none;
+  opacity: 1;
+  margin: 3rem 0;
+  top: 0;
+  height: auto;
+  overflow: visible;
+  transition: 0.4s ease;
+}
 html body #app section.help .container ul.faq li span main {
+  height: 0;
+  top: 1rem;
+  overflow: hidden;
   font-size: 1.2rem;
-  display: none;
+  margin: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0;
+  transition: 0.4s ease;
+  line-height: 200%;
 }
 html body #app section.hero {
   background-color: #121212;
