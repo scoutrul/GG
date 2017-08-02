@@ -1,1 +1,1 @@
-https://scoutrul.github.io/JamaicSecurity/public/
+https://scoutrul.github.io/JamaicSecurity/
