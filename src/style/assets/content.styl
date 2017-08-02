@@ -5,6 +5,14 @@ section.content
 		margin 11rem auto 8rem
 		flex-flow: column wrap;
 		align-self: center
+		@media screen and (max-width: $ipadPro)
+			font-size 90%
+		@media screen and (max-width: $ipad)
+			font-size 80%
+		@media screen and (max-width: $iphone5)
+			font-size 70%
+		@media screen and (max-width: $iphone)
+			font-size 60%
 	&.index-about
 		.container
 			height: 100%;

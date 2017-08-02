@@ -1,19 +1,2 @@
 .link_under
-	padding: 0.5rem 0;
-	transition $transition
-	color #545454
-	&:after
-		content: "";
-		display: block; 
-		width: 100%
-		max-width: calc('100% - 0.22rem');
-		margin:0.5rem auto
-		height: 1px;
-		background-color: $darkgrey2
-		transition $transition
-	&:hover
-		cursor pointer
-		color $specialRed
-		&:after
-			width 0%
-			background-color: $specialRed
+	text_underscore($darkgrey2, #545454)

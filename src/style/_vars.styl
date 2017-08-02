@@ -22,7 +22,7 @@ $lightgrey2 = #e5e5e5
 $darkbg = #121212
 $footerbg = #1b1b1b
 $transition = .4s ease
-$slide_up_text = .5s cubic-bezier(0, 0.98, 0.94, 1)
+$slide_up_text = .15s cubic-bezier(0, 0.98, 0.94, 1)
 $iphone = 320px
 $iphoneH = $iphone * 1.5
 $iphone5 = 568px
@@ -32,3 +32,26 @@ $ipadPro = 1024px
 $desktop = $max-width
 $goal01 = '../images/index_hat.png'
 $goal03 = '../images/index_back.png'
+
+
+text_underscore(border, color)
+	display: inline-block;
+	padding: 0.5rem 0;
+	transition $transition
+	color color
+	&:after
+		content: "";
+		display: block; 
+		width: 100%
+		max-width: calc('100% - 0.22rem');
+		margin:0.1rem auto
+		height: 1px;
+		background-color: border
+		transition $transition
+	&:hover
+		cursor pointer
+		color $specialRed
+		transition $transition
+		&:after
+			width 0%
+			background-color: $specialRed

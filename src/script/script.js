@@ -39,7 +39,7 @@ $(document).ready(function() {
 
 	// toggle location
 	let ChooseWindowVis = false;
-
+	let languageTab = $('.language .name a');
 
 	$('.location_toggle, .regions a').click(function() {
 		$('.regions ul').hide();
@@ -56,7 +56,6 @@ $(document).ready(function() {
 		}
 	});
 
-	let languageTab = $('.language .name a');
 	languageTab.each(function(i,el) { 
 		$(el).click(function(){ // click on name
 			$('.language').hide();
@@ -67,11 +66,20 @@ $(document).ready(function() {
 		})
 	})
 
+	$(window).on('DOMContentLoaded load resize scroll', addAppear); // animation initial by scroll
 
-
-
-
-
-
-	$(window).on('DOMContentLoaded load resize scroll', addAppear); 
+	// FAQ toggle module
+	let faq_header = $('ul.faq header');
+	faq_header.each(function(i,el){
+		if(i === 0){ // activate first item
+			$(el).addClass('active');
+			$(el).siblings('main').show();
+		};
+		$(el).click(function(){ // click on header
+			faq_header.removeClass('active');
+			$(el).toggleClass('active');
+			$('ul.faq main').hide();
+			$(el).siblings('main').show(100);
+		})
+	})
 });
