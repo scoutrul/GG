@@ -3,7 +3,7 @@ block content
 	section.content.contact
 		.container
 			.office
-				address(data-office="kingston").vcard
+				address.vcard
 					.hide
 						a.url(href="http://www.guardsmangroup.com")
 							img.photo(src="images/icon_logo.svg")
@@ -15,8 +15,9 @@ block content
 							span.category ervices
 					.adr 
 						span.street-address 107 Old Hope Road
-						span.locality Kingston
-						span.region 6 Jamaica W.I.
+						div.location
+							span.locality Kingston
+							span.region 6 Jamaica W.I.
 						span.country-name Jamaica
 					.info
 						a.email(href="mailto:info@guardsmangroup.com") info@guardsmangroup.com
@@ -26,11 +27,12 @@ block content
 						span.fax (876) 927-7539
 						
 
-				address(data-office-active="Montego Bay").vcard
+				address.vcard
 					.adr
 						span.street-address Lot 1219 Ironshore, Industrial Estate 
-						span.locality Montego Bay
-						span.region Ironshore
+						div.location
+							span.locality Montego Bay
+							span.region Ironshore
 						span.country-name Jamaica
 					.info
 						a.email(href="mailto:info@guardsmangroup.com") info@guardsmangroup.com
@@ -40,23 +42,25 @@ block content
 						span.tel (876) 953-9709
 						span.fax (876) 953-3385
 
-				address(data-office-active="May Pen").vcard
+				address.vcard
 					.adr
 						span.street-address 55a Manchester Avenue, Industrial Estate 
-						span.locality May Pen
-						span.region Clarendon
+						div.location
+							span.locality May Pen
+							span.region Clarendon
 						span.country-name Jamaica
 					.info
 						a.email(href="mailto:info@guardsmangroup.com") info@guardsmangroup.com
 					.call
-						span.tel(876) 986-2765
-						span.fax(876) 902-6762
+						span.tel (876)986-2765
+						span.fax (876)902-6762
 
-				address(data-office-active="Negril").vcard
+				address.vcard
 					.adr
 						span.street-address Monte Vista 
-						span.locality Nompriel Road
-						span.region Sheffield
+						div.location
+							span.locality Nompriel Road
+							span.region Sheffield
 						span.country-name Jamaica
 					.info
 						a.email(href="mailto:info@guardsmangroup.com") info@guardsmangroup.com
@@ -65,7 +69,7 @@ block content
 						span.tel (876) 957-3924
 						span.fax (876) 957-9027
 
-				address(data-office-active="Mandeville").vcard
+				address.vcard
 					.adr
 						span.street-address 84 Manchester Road
 						span.locality 
@@ -79,48 +83,67 @@ block content
 
 			
 
-			ul.office-tab
-				li(data-office="Kingston") Kingston
-				li(data-office="Montego Bay") Montego Bay
-				li(data-office="May Pen") May Pen
-				li(data-office="Negril") Negril
-				li(data-office="Mandeville") Mandeville
+			ul.office-tab.slide_up_text
+				li
+					span
+						a Kingston
+				li
+					span
+						a Montego Bay
+				li
+					span
+						a May Pen
+				li
+					span
+						a Negril
+				li
+					span
+						a Mandeville
 
 			.social
-				h6.slogan.slide_up_text
-					span Work or just
-					span follow us online
+				h4.slogan.slide_up_text
+					span Work with us
+					span or just follow
+				
 				ul.links.slide_up_text
 					li
-						a Youtube
+						span
+							a Youtube
 
 					li
-						a Facebook
+						span
+							a Facebook
 
 					li
-						a Twitter
+						span
+							a Twitter
 
 					li
-						a Google Plus
+						span
+							a Google Plus
 
-			ul.forces
+			ul.forces.slide_up_text
 				li
-					.force-name Guardsman Alarms
-					.force-adress 6 Carvalho Drive, Kingston 10
-					.force-tel Tel: (876) 929-6847, (876) 929-3299, (876) 926-1938
-					.force-fax Fax: (876) 968-3038
+					span
+						.force-name Guardsman Alarms
+						.force-adress 6 Carvalho Drive, Kingston 10
+						.force-tel Tel: (876) 929-6847, (876) 929-3299, (876) 926-1938
+						.force-fax Fax: (876) 968-3038
 				li
-					.force-name Guardsman Armoured
-					.force-adress 1-7 South Camp Road, Kingston, CSO
-					.force-tel Tel: (876) 928-9005 – 7, (876) 928-4947-9
-					.force-fax Fax: (876) 928-2063 – Operations, (876) 928-9003 – Administration
+					span
+						.force-name Guardsman Armoured
+						.force-adress 1-7 South Camp Road, Kingston, CSO
+						.force-tel Tel: (876) 928-9005 – 7, (876) 928-4947-9
+						.force-fax Fax: (876) 928-2063 – Operations, (876) 928-9003 – Administration
 				li
-					.force-name Guardsman Limited
-					.force-adress 2-6 Emmaville Crescent, Kingston CSO, Jamaica W.I.
-					.force-tel Tel: (876) 928-2246, (876) 928-5285, (876) 928-2641
-					.force-fax Fax: (876) 928-5936
+					span
+						.force-name Guardsman Limited
+						.force-adress 2-6 Emmaville Crescent, Kingston CSO, Jamaica W.I.
+						.force-tel Tel: (876) 928-2246, (876) 928-5285, (876) 928-2641
+						.force-fax Fax: (876) 928-5936
 				li
-					.force-name Marksman
-					.force-adress 14-16 Balmoral Ave, Kingston 10, Jamaica W.I.
-					.force-tel Tel: (876) 926-3600, (876) 926-0440, (876) 929-2228
-					.force-fax Fax: (876) 929-6138
+					span
+						.force-name Marksman
+						.force-adress 14-16 Balmoral Ave, Kingston 10, Jamaica W.I.
+						.force-tel Tel: (876) 926-3600, (876) 926-0440, (876) 929-2228
+						.force-fax Fax: (876) 929-6138

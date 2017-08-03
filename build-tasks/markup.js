@@ -15,7 +15,7 @@ var gulp      = require('gulp'),
   /* markup:compile */
   compile = function() {
     if (env.deploy && opts.pug.pretty) opts.pug.pretty = false;
-    return gulp.src(src.markup)
+    return gulp.src(src.docs)
       .pipe(plugins.plumber())
       .pipe(plugins.pug(opts.pug))
       .pipe(gulp.dest(dest.html));

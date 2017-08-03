@@ -1,9 +1,10 @@
-.contact
+section.contact
 	.container
+		margin 17.7rem auto 8rem
 		.office
 			display: flex;
 			flex-flow: column wrap;
-			margin 2rem auto
+			margin 1rem auto
 			width: 100%;
 			address.vcard
 				margin 2rem 0
@@ -18,24 +19,67 @@
 						&:after
 							content: "";
 							display: block;
-							width: 100%;
+							width: calc('100% - 0.22rem')
 							margin:0.3rem auto
 							height: 1px;
 							background-color: $lightgrey2
 							transition $transition
 					.fax,.tel
 						display inline-block
-						margin 0 auto
+						margin 0 2rem
 				.adr
-					font-size: 260%;
+					font-size: 280%;
 					font-weight 500
 					line-height 150%
+					text-align: center;
+					.location
+						display flex
+						span 
+							margin 0 .5rem
 				.call
 					flex-flow row nowrap
 					font-size: 160%;
+					margin: 4rem 0;
 				.info
-					margin 3rem
+					margin 3rem 0
 					font-size: 160%			
+		ul.office-tab
+			margin 0 auto
+			padding 0
+			display flex
+			flex-flow row wrap
+			justify-content: center;
+			align-items: center;
+			li
+				flex 1 0 auto
+				white-space nowrap
+				margin: 1.6rem;
+				cursor: pointer;
+				text-align: center;
+				a
+					font-size: 16px;
+					transition: $transition 
+					&:hover
+						color $specialRed
+					&:before
+						content ''
+						width 16px
+						height 16px
+						border-radius 50%
+						background-color #CCC
+						display: block;
+						margin: 1rem auto;
+				&.office-tab--active
+					a
+						color $specialRed
+						&:before
+							content ''
+							width 16px
+							height 16px
+							border-radius 50%
+							background-color $specialRed
+							display: block;
+					
 		.social
 			display: flex;
 			flex-flow: column wrap;
@@ -43,42 +87,42 @@
 			width: 100%;
 			justify-content: center;
 			text-align: center;
+			margin 15rem auto 12rem
 			.slogan 
-				font-weight: 400;
-				line-height: 120%;
+				font-weight: 900;
+				line-height: 90%;
+				text-transform: uppercase;
 			ul.links
 				display flex 
 				padding 0
 				width 100%
 				flex-flow row wrap
 				justify-content: center;
+				margin: 6rem auto;
 				li
-					margin 0 auto
-							
-					
-		ul.office-tab
-			margin 2rem auto
-			padding 0
-			display flex
-			flex-flow row wrap
-			li
-				flex 1 0 auto
-				white-space nowrap
-				margin 1rem
+					min-width: 200px;
+					a
+						text_underscore(#DDD, #232323)
+						font-size: 25px !important
+						font-weight: 600;
+	
 		ul.forces
-			margin 2rem auto
+			margin 1rem auto
 			padding 0
 			display flex
 			flex-flow row wrap
 			li
 				flex 1 0 25%
+				line-height: 230%;
+				font-size: 90%;
 				@media screen and (max-width: $ipad)
 					flex 1 0 50%
 				@media screen and (max-width: 400px)
 					flex 1 0 100%
 
 				.force-name
-					font-weight 700
-					margin 1rem 0
+					margin: 1rem 0 1.6rem;
+					font-size: 150%;
+					font-weight: 600;
 				.force-address,.force-tel,.force-fax
 					font-weight 300

@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function() {
 
 	// toggle hamburger
 	let Hamburger = false;
@@ -13,66 +13,82 @@ $(document).ready(function() {
 			$('section.header').addClass('mobile-menu-active');
 
 		}
-	})
+	});
 
 	// if index page
 	if ($('section.hero')[0]) {
 		$('section.header').addClass('white_header');
-	}
-
-	// appear element in the view
-	function isScrolledIntoView(elem) {
-		($(elem).length == 0)? false:true;
-		var viewTop = $(window).scrollTop();
-		var viewBottom = viewTop + $(window).height();
-		var elemTop = $(elem).offset().top;
-		var elemBottom = elemTop + $(elem).height();
-		return ((elemBottom <= viewBottom) && (elemTop >= viewTop))
-	}
-
-	function addAppear(){
-		$('.slide_up_text').each(function (i,el) {
-			(isScrolledIntoView(el)) && $(this).addClass('slide_up_text--active') // toggle: || $(this).removeClass('slide_up_text--active');
-		});
-	}
-	addAppear();
+	};
 
 	// toggle location
-	let ChooseWindowVis = false;
-	let languageTab = $('.language .name a');
+	$('.language .name a').each(function(i,el) { 
+		$(el).click(function(){ // click on name
+			$('.language').hide();
+			$('#choose .regions ul').removeClass('slide_up_text--active');
+			$('.regions ul').hide();
+			$(`.regions ul:nth-child(${i+1})`).show(); // show closest region list w animation
+			appearModule.addToAllClasses();
+		})
+	});
 
-	$('.location_toggle, .regions a').click(function() {
+	let ChooseWindowVis = true;
+	$('.location_toggle').click(function() {
 		$('.regions ul').hide();
-		if (ChooseWindowVis) {
-			ChooseWindowVis =!ChooseWindowVis;
-			$('#choose').removeClass('is-active');
+		if (!ChooseWindowVis) {
+			$('#choose').removeClass('choose--active');
 			$('#choose .slide_up_text--active').removeClass('slide_up_text--active');
 			$('.language').show()
+			ChooseWindowVis =!ChooseWindowVis;
 		}
 		else {
+			$('#choose').addClass('choose--active');
+			appearModule.addToAllClasses();
 			ChooseWindowVis =!ChooseWindowVis;
-			$('#choose').addClass('is-active');
-			addAppear();
 		}
 	});
 
-	languageTab.each(function(i,el) { 
-		$(el).click(function(){ // click on name
-			$('.language').hide();
-			$(`.regions ul`).removeClass('slide_up_text--active').hide();
-			let activeRegion = $(`.regions ul:nth-child(${i+1})`);
-			activeRegion.show(); // show closest region list w animation
-			addAppear();
-		})
-	})
+	const appearModule = {
+		addToAllClasses: function(){
+			$('.slide_up_text').each(function (i,el) {
+				(appearModule.isScrolledIntoView(el)) && $(this).addClass('slide_up_text--active') // toggle: || $(this).removeClass('slide_up_text--active');
+			})
+		},
+		isScrolledIntoView: function(elem) {
+			($(elem).length == 0)? false:true;
+			var viewTop = $(window).scrollTop();
+			var viewBottom = viewTop + $(window).height();
+			var elemTop = $(elem).offset().top;
+			var elemBottom = elemTop + $(elem).height();
+			return ((elemBottom <= viewBottom) && (elemTop >= viewTop))
+		}
+	};
 
-	$(window).on('DOMContentLoaded load resize scroll', addAppear); // animation initial by scroll
+	//start animation if events...
+	$(window).on('resize scroll focus click mousemove', appearModule.addToAllClasses); 
 
 	// FAQ toggle module
-	let faq_header = $('ul.faq header');
-	faq_header.each(function(i,el){
+	let faq_Header = $('ul.faq header');
+	faq_Header.each(function(i,el){
 		$(el).click(function(){ 
 			$(el).toggleClass('active');
 		})
-	})
+	});
+
+
+	// CONTACT toggle tabs module
+	let address_Header = $('ul.office-tab li');
+	address_Header.each(function(i,el){
+		$('.office address').hide();
+		$('.office address:nth-child(1)').show();
+		address_Header.first()
+		$('ul.office-tab li:nth-child(1)').addClass('office-tab--active');
+
+
+		$(el).click(function(){ 
+			$('.office-tab--active').removeClass('office-tab--active');
+			$('.office address').hide();
+			$(`ul.office-tab li:nth-child(${i+1})`).addClass('office-tab--active');
+			$(`.office address:nth-child(${i+1})`).show();
+		})
+	});
 });
