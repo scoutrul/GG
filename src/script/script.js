@@ -63,8 +63,13 @@ $(function() {
 		}
 	};
 
-	//start animation if events...
-	$(window).on('resize scroll focus click mousemove', appearModule.addToAllClasses); 
+	// if window is visible: do appear, else - wait for user action
+	window.onload = function() {
+		(document.visibilityState === 'visible') && setTimeout(appearModule.addToAllClasses, 1000)
+	};
+	$(window).on('focus resize scroll click mousemove keydown', appearModule.addToAllClasses )
+
+
 
 	// FAQ toggle module
 	let faq_Header = $('ul.faq header');
