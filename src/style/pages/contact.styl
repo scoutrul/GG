@@ -1,6 +1,8 @@
 section.contact
 	.container
 		margin 17.7rem auto 8rem
+		@media screen and (max-width: $ipad)
+			margin 9.7rem auto 8rem
 		.office
 			display: flex;
 			flex-flow: column wrap;
@@ -8,6 +10,11 @@ section.contact
 			width: 100%;
 			address
 				margin 2rem 0
+				width 100%
+				.title
+					text-align center
+					margin: 2rem 0;
+					line-height: 100%;
 				.hide
 					display none
 				.adr
@@ -59,6 +66,9 @@ section.contact
 				margin: 1.6rem;
 				cursor: pointer;
 				text-align: center;
+				@media screen and (max-width: $ipad)
+					margin: .6rem;
+					
 				a
 					font-size: 16px;
 					transition: $transition 
@@ -95,15 +105,19 @@ section.contact
 				font-weight: 900;
 				line-height: 90%;
 				text-transform: uppercase;
+				margin: 6rem auto;
 			ul.links
 				display flex 
 				padding 0
 				width 100%
 				flex-flow row wrap
 				justify-content: center;
-				margin: 6rem auto;
+				margin: 3rem auto;
 				li
 					min-width: 200px;
+					@media screen and (max-width: $ipad)
+						margin auto
+					
 					a
 						text_underscore(#DDD, #232323)
 						font-size: 25px !important
