@@ -7,7 +7,6 @@
 	max-width: 15rem;
 	width: 100%;
 	padding 0 2rem
-	background-color $specialRed
 	transition $transition
 	justify-content: flex-start
 	span
@@ -40,8 +39,26 @@
 		background-color $darkhover
 		max-width: 16rem;
 		span
-			color $white !important
-
+			color $white
+			
+	&.red
+		background-color $specialRed
+	&.grey
+		background-color $lightgrey2
+		span
+			&:hover
+				color $white !important
+	&.white
+		background-color $white
+		span
+			color $specialRed
+			&:before,&:after
+				display none
+			&:hover
+				color $specialRed
+		&:hover
+			background-color $white !important
+		
 	&.right
 		span
 			&:after
@@ -54,8 +71,7 @@
 			span
 				&:after
 					margin 0 0rem 0 3rem
-	&.left.center
-		background-color #e5e5e5
+	&.left
 		span
 			color #1b1b1b
 			&:after
