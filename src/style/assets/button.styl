@@ -3,20 +3,9 @@ $button_max = 16rem
 $button_inner = 15rem
 $margin_to_right = 0 0 0 auto
 $margin_to_left = 0 auto 0 0
+$button_font_size = 18px
 
 button(button_color, button_position, text_color = $white)
-	&:hover
-		cursor pointer
-		.button_inner
-			background-color $darkhover
-			max-width: $button_max
-			.arrows
-				if text_color is black
-					&:after, &:before
-						filter: brightness(10)
-			.message
-				if text_color is black
-					color: $white;
 	.button_inner
 		display: flex;
 		justify-content: center;
@@ -31,6 +20,16 @@ button(button_color, button_position, text_color = $white)
 		padding 0 2rem
 		transition $transition
 		background-color button_color
+		&:hover
+			background-color $darkhover
+			max-width: $button_max
+			.arrows
+				if text_color is black
+					&:after, &:before
+						filter: brightness(10)
+			.message
+				if text_color is black
+					color: $white;
 		.message
 			transition $transition
 			white-space: nowrap;
@@ -38,11 +37,11 @@ button(button_color, button_position, text_color = $white)
 				color: $darkgrey
 			color text_color
 			font-weight: 400;
-			font-size: 18px;
+			font-size: $button_font_size
 			position: absolute;
 			width: 240px;
 			left: calc('50% - 120px');
-			right: 0
+			padding 0
 			text-align: center;
 			if text_color is white
 				color: $white;
@@ -77,9 +76,12 @@ button(button_color, button_position, text_color = $white)
 				background-image: url(../images/icon_arrow_white_left.svg);
 				if text_color is black
 					background-image: url(../images/icon_arrow_black_left.svg);
+					
 	if button_position is left
 		justify-content: flex-end;
 		.button_inner
+			.message
+				padding-left: 1rem;
 			.arrows
 				&:before
 					opacity 1
@@ -89,9 +91,12 @@ button(button_color, button_position, text_color = $white)
 			.button_inner
 				.message
 					left: calc('50% - 120px + 0.5rem');
+						
 	if button_position is right
 		justify-content: flex-start;
 		.button_inner
+			.message
+				padding-right: 1rem;
 			.arrows
 				&:before
 					opacity 0
@@ -104,6 +109,7 @@ button(button_color, button_position, text_color = $white)
 								
 
 .button
+	cursor pointer
 	width $button_max
 	display flex
 	justify-content: center;
@@ -127,7 +133,11 @@ button(button_color, button_position, text_color = $white)
 		button($lightgrey2, center, black)
 		
 	&.blue.center
-		button(#00F, center, white)
-		
+		button(#0077cb, center, white)
+	
 	&.green.right
-		button(#0F0, right, white)
+		button(#00cba6, right, white)
+		
+	.message
+		color $specialRed
+		font-size: $button_font_size

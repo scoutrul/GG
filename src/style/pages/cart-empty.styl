@@ -18,6 +18,7 @@ section.in-cart
 			.link_under
 				text_underscore($darkgrey2, darkgrey2)
 		.inner
+			width: 100%;
 			max-width: 940px;
 			margin: auto;
 			.product_count
@@ -27,6 +28,7 @@ section.in-cart
 				margin-bottom: 3rem;
 			.product
 				display flex 
+				width 100%
 				flex-flow column nowrap
 				header
 					display flex 
@@ -35,23 +37,30 @@ section.in-cart
 						margin 0 auto 0 0
 						text_underscore(#DDD, #232323)
 					.edit, .delete
-						margin: 0 0 0 2rem;
-						width: 25px;
-						height: 25px;
-						cursor: pointer;
-						background-repeat: no-repeat;
+						span
+							margin: 0 0 0 2rem;
+							width: 30px;
+							height: 30px;
+							cursor: pointer;
+							background-repeat: no-repeat;
 					.edit
-						background-image: url(../images/icon_edit.svg);
+						span
+							background-image: url(../images/icon_edit.svg);
 					.delete
-						background-image: url(../images/icon_delete.svg);
+						span
+							background-image: url(../images/icon_delete.svg);
 				main
+					max-height 0
+					transition $transition
 					.description
+						line-height 200%
 					ul.items
 						padding: 0;
 						li
 							display flex
-							// .header
-							// .name
+				&.active
+					main
+						max-height 100%
 		.steps
 			display flex
 			width 100%

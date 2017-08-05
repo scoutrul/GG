@@ -79,6 +79,15 @@ $(function() {
 		})
 	});
 
+	// CART toggle module
+	let cart_Header = $('.in-cart header .title');
+	cart_Header.each(function(i,el){
+		$(el).click(function(){ 
+			$(el).parent().parent().toggleClass('active');
+		})
+	});
+
+
 	// CONTACT toggle tabs module
 	let address_Header = $('ul.office-tab li');
 	address_Header.each(function(i,el){
@@ -86,8 +95,6 @@ $(function() {
 		$('.office address:nth-child(1)').show();
 		address_Header.first()
 		$('ul.office-tab li:nth-child(1)').addClass('office-tab--active');
-
-
 		$(el).click(function(){ 
 			$('.office-tab--active').removeClass('office-tab--active');
 			$('.office address').hide();

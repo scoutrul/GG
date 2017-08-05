@@ -5,12 +5,16 @@
 		transform: translate(0, 150%)
 		transition $slide_up_text
 		transition-delay: 0s;
+		line-height: 120%;
+		& header
+			opacity 0
 		
 	&.slide_up_text--active
 		*
 			display block
 			transition $slide_up_text
 			transform: translate(0, 0%)
+			opacity 1
 		> li, > div
 			&:nth-child(1)
 				span
