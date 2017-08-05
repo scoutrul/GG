@@ -8,8 +8,8 @@ block content
 				.product
 					header
 						.title Garage door
-						.edit /
-						.delete X
+						.edit
+						.delete
 					main
 						.description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum beatae ratione blanditiis, necessitatibus nesciunt alias consequuntur dolor iste nulla officia.
 						ul.items
@@ -25,8 +25,8 @@ block content
 				.product.active
 					header
 						.title Alarms
-						.edit /
-						.delete X
+						.edit
+						.delete
 					main
 						.description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum beatae ratione blanditiis, necessitatibus nesciunt alias consequuntur dolor iste nulla officia.
 						ul.items
@@ -42,8 +42,8 @@ block content
 				.product
 					header
 						.title Personal protection
-						.edit /
-						.delete X
+						.edit
+						.delete
 					main
 						.description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum beatae ratione blanditiis, necessitatibus nesciunt alias consequuntur dolor iste nulla officia.
 						ul.items
@@ -58,11 +58,14 @@ block content
 								.name some_file.pdf
 			.steps
 				.button.left.grey
-					span Back
-				.button.white
-					span Get free quote
+					.button_inner
+						.arrows
+						.message Back
+				.button Get free quote
 				.button.right.red
-					span Make order
+					.button_inner
+						.arrows
+						.message Make order
 
 		.container.is-empty
 			h3.title.slide_up_text 

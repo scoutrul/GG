@@ -23,6 +23,7 @@ var gulp      = require('gulp'),
   /* styles:compile */
   compile = function() {
     return gulp.src(src.styles)
+      .pipe(plugins.plumber())
       .pipe(sourcemaps.init())
       .pipe(plugins.plumber())
       .pipe(plugins.stylus({

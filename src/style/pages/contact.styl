@@ -76,22 +76,16 @@ section.contact
 						color $specialRed
 					&:before
 						content ''
-						width 16px
-						height 16px
-						border-radius 50%
-						background-color #CCC
+						width 20px
+						height 20px
 						display: block;
 						margin: 1rem auto;
 				&.office-tab--active
 					a
 						color $specialRed
 						&:before
-							content ''
-							width 16px
-							height 16px
-							border-radius 50%
-							background-color $specialRed
-							display: block;
+							background-image: url(../images/icon_pin.svg);
+							background-repeat: no-repeat;
 					
 		.social
 			display: flex;
@@ -117,12 +111,10 @@ section.contact
 					min-width: 200px;
 					@media screen and (max-width: $ipad)
 						margin auto
-					
 					a
 						text_underscore(#DDD, #232323)
 						font-size: 25px !important
 						font-weight: 600;
-	
 		ul.forces
 			margin 1rem auto
 			padding 0

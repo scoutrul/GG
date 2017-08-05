@@ -3,9 +3,6 @@
 	overflow hidden
 	visibility hidden
 	text-align: center;
-	
-	// position: fixed;
-	// top 200%
 	&.choose--active
 		visibility visible
 		display: flex;
@@ -37,15 +34,22 @@
 		ul
 			display: flex;
 			padding: 0;
-			flex-flow: row wrap;
 			justify-content: center;
 			width 100%
+			flex-flow: row wrap;
 			@media screen and (max-width: $ipad)
 				overflow auto
+			&.language
+				flex-flow: row nowrap;
+				@media screen and (max-width: $iphone6)
+					flex-flow: row wrap;
+				
+				
+				
 			li
 				margin: 1rem auto;
 				min-width: 300px;
-				@media all and (orientation: portrait)
+				@media all and (orientation: portrait) and (max-width $ipadPro)
 					width: 100%;
 				a
 					font-size: 260%;

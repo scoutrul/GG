@@ -13,11 +13,10 @@
 		height: 24px;
 		display: inline-block;
 		position: relative; 
-
-		.hamburger-inner {
+		.hamburger-inner 
 			display: block;
 			top: 50%;
-			margin-top: -2px; }
+			margin-top: -2px; 
 		.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
 			width: 37px;
 			height: 3px;
@@ -59,11 +58,11 @@
 		cursor pointer
 		.hamburger-inner
 			background-color $darkhover
-			&:before,&:after
+			&:before, &:after
 				background-color $darkhover	
 				
 	&:focus, &:hover:focus
 		.hamburger-inner
 			background-color $specialRed 
-			&:before,&:after
+			&:before, &:after
 				background-color $specialRed 

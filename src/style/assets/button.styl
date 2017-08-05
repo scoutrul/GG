@@ -1,84 +1,127 @@
-.button
-	display: flex;
-	align-items: center;
-	border-radius: 10rem;
-	min-height: 3.8rem;
-	line-height: 3.8rem;
-	min-width: 240px;
-	max-width: 15rem;
-	width: 100%;
-	padding 0 2rem
-	transition $transition
-	justify-content: flex-start
-	span
-		white-space: nowrap;
-		color: #fff;
-		font-weight: 400;
-		font-size: 18px;
-		display: flex;
-		align-items: center;
-		align-self: center;
-		width: 100%;
-		transition $transition
-		&:after,&:before
-			content ''
-			display block
-			width: 15px;
-			height: 15px;
-			margin auto
-			background-repeat: no-repeat;
-			transition $transition
-		&:after	
-			background-image: url(../images/icon_arrow.svg);
-			background-position: 100%;
-		&:before
-			// transform: rotate(180deg)
-			background-image: url(../images/icon_arrow_black.svg);
-			background-position: 0%;
+$button_min = 240px
+$button_max = 16rem
+$button_inner = 15rem
+$margin_to_right = 0 0 0 auto
+$margin_to_left = 0 auto 0 0
+
+button(button_color, button_position, text_color = $white)
 	&:hover
 		cursor pointer
-		background-color $darkhover
-		max-width: 16rem;
-		span
-			color $white
-			
-	&.red
-		background-color $specialRed
-	&.grey
-		background-color $lightgrey2
-		span
-			&:hover
-				color $white !important
-	&.white
-		background-color $white
-		span
-			color $specialRed
-			&:before,&:after
-				display none
-			&:hover
-				color $specialRed
-		&:hover
-			background-color $white !important
-		
-	&.right
-		span
-			&:after
-				opacity 1
-				margin 0 0 0 2rem
-			&:before
+		.button_inner
+			background-color $darkhover
+			max-width: $button_max
+			.arrows
+				if text_color is black
+					&:after, &:before
+						filter: brightness(10)
+			.message
+				if text_color is black
+					color: $white;
+	.button_inner
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 10rem;
+		min-height: 3.8rem;
+		line-height: 3.8rem;
+		if button_position = center
+			max-width: $button_max
+		max-width: $button_inner
+		width: 100%;
+		padding 0 2rem
+		transition $transition
+		background-color button_color
+		.message
+			transition $transition
+			white-space: nowrap;
+			if text_color is black
+				color: $darkgrey
+			color text_color
+			font-weight: 400;
+			font-size: 18px;
+			position: absolute;
+			width: 240px;
+			left: calc('50% - 120px');
+			right: 0
+			text-align: center;
+			if text_color is white
+				color: $white;
+		.arrows
+			display: flex;
+			align-items: center;
+			width: 100%;
+			height 100%;
+			transition $transition
+			position absolute
+			&:after, &:before
+				content ''
+				display block
+				width: 15px;
+				height: 15px;
+				margin auto
+				background-repeat: no-repeat;
+				transition $transition
 				opacity 0
-				display none
-		&:hover
-			span
+				position absolute
+			&:after	
+				right 2rem
+				background-position: 100%;
+				margin $margin_to_right
+				background-image: url(../images/icon_arrow_white_right.svg);
+				if text_color is black
+					background-image: url(../images/icon_arrow_black_right.svg);
+			&:before
+				left 2rem
+				background-position: 0%; 
+				margin $margin_to_left	
+				background-image: url(../images/icon_arrow_white_left.svg);
+				if text_color is black
+					background-image: url(../images/icon_arrow_black_left.svg);
+	if button_position is left
+		justify-content: flex-end;
+		.button_inner
+			.arrows
+				&:before
+					opacity 1
 				&:after
-					margin 0 0rem 0 3rem
-	&.left
-		span
-			color #1b1b1b
-			&:after
-				opacity 0
-	&:hover
-		background-color $darkhover !important
-		span
-			&:before
-				filter: brightness(10)
+					opacity 0
+		&:hover
+			.button_inner
+				.message
+					left: calc('50% - 120px + 0.5rem');
+	if button_position is right
+		justify-content: flex-start;
+		.button_inner
+			.arrows
+				&:before
+					opacity 0
+				&:after
+					opacity 1
+		&:hover
+			.button_inner
+				.message
+					left: calc('50% - 120px - 0.5rem');
+								
+
+.button
+	width $button_max
+	display flex
+	justify-content: center;
+	align-items center
+	&.red.right
+		button($specialRed, right, white)
+
+	&.red.left
+		button($specialRed, left, white)
+
+	&.red.center
+		button($specialRed, center, white)
+	
+	&.grey.right
+		button($lightgrey2, right, black)
+
+	&.grey.left
+		button($lightgrey2, left, black)
+	
+	&.grey.center
+		button($lightgrey2, center, black)
