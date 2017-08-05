@@ -37,15 +37,12 @@
 			justify-content: center;
 			width 100%
 			flex-flow: row wrap;
-			@media screen and (max-width: $ipad)
+			@media screen and (max-width: $iphone6)
 				overflow auto
-			&.language
-				flex-flow: row nowrap;
-				@media screen and (max-width: $iphone6)
-					flex-flow: row wrap;
-				
-				
-				
+				&.language
+					flex-flow: row nowrap;
+					@media screen and (max-width: $iphone6)
+						flex-flow: row wrap;
 			li
 				margin: 1rem auto;
 				min-width: 300px;
