@@ -65,16 +65,6 @@ text_underscore(border, color)
 			width 0%
 			background-color: $specialRed
 
-text_show_up()
-	max-height 0
-	opacity 0
-	transition $transition
-	overflow hidden
-	
-text_show_up_active()
-	max-height 100%
-	opacity 1
-	overflow visible
 
 accordion_items()
 	padding 0
@@ -82,12 +72,11 @@ accordion_items()
 	flex-flow: column nowrap;
 	margin: auto;
 	max-width: 940px;
+	width: 100%;
 	li
 		span 
 			header
 				text_underscore(#DDD, #232323)
-				&:after
-					margin 1.5rem auto
 				&.active
 					color: #DDD
 					&:hover
@@ -96,10 +85,17 @@ accordion_items()
 						display block
 						margin: 0;
 						margin: 1rem 0 2rem 0;
-						text_show_up_active()
+						max-height 100%
+						@media screen and (max-width: $iphoneH)
+							max-height: initial;
+						opacity 1
+						overflow visible
 			main
 				text-align left
 				font-size: 1.2rem
 				margin 0
 				line-height: 200%;
-				text_show_up()
+				max-height 0
+				opacity 0
+				transition $transition
+				overflow hidden
