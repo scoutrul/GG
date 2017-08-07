@@ -71,19 +71,11 @@ $(function() {
 
 
 
-	// FAQ toggle module
-	let faq_Header = $('ul.faq header');
-	faq_Header.each(function(i,el){
+	// accoirdion toggle module (HELP, CART)
+	let accoirdion_toggle = $('.accordion_items header');
+	accoirdion_toggle.each(function(i,el){
 		$(el).click(function(){ 
 			$(el).toggleClass('active');
-		})
-	});
-
-	// CART toggle module
-	let cart_Header = $('.in-cart header .title');
-	cart_Header.each(function(i,el){
-		$(el).click(function(){ 
-			$(el).parent().parent().toggleClass('active');
 		})
 	});
 

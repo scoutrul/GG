@@ -1,35 +1,5 @@
 section.help
 	.container
-		ul.faq
+		ul.faq.accordion_items
 			text-align center
-			padding 0
-			display: flex;
-			flex-flow: column nowrap;
-			margin: auto;
-			max-width: 930px;
-			li
-				span
-					header
-						text_underscore(#DDD, #232323)
-						&:after
-							margin 1.5rem auto
-						&.active
-							color: #DDD
-							&:hover
-								color $specialRed
-							& + main
-								display block
-								opacity 1
-								margin: 0;
-								max-height 100%
-								overflow visible
-								margin: 1rem 0 2rem 0;
-					main
-						text-align left
-						max-height 1rem
-						overflow hidden
-						font-size: 1.2rem
-						margin 0
-						opacity 0
-						transition $transition
-						line-height: 200%;
+			accordion_items()

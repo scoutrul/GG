@@ -22,7 +22,7 @@ $lightgrey2 = #e5e5e5
 $darkbg = #121212
 $footerbg = #1b1b1b
 $transition = .4s ease
-$slide_up_text = .40s cubic-bezier(0, 0.98, 0.94, 1)
+$slide_up_text = .4s cubic-bezier(0, 0.98, 0.94, 1)
 $iphone = 320px
 $iphoneH = $iphone * 1.5
 $iphone5 = 568px
@@ -49,7 +49,6 @@ text_underscore(border, color)
 		font-size: 1.5rem
 	@media screen and (max-width: $iphone)
 		font-size: 1rem
-	
 	&:after
 		content: "";
 		display: block; 
@@ -65,3 +64,42 @@ text_underscore(border, color)
 		&:after
 			width 0%
 			background-color: $specialRed
+
+text_show_up()
+	max-height 0
+	opacity 0
+	transition $transition
+	overflow hidden
+	
+text_show_up_active()
+	max-height 100%
+	opacity 1
+	overflow visible
+
+accordion_items()
+	padding 0
+	display: flex;
+	flex-flow: column nowrap;
+	margin: auto;
+	max-width: 940px;
+	li
+		span 
+			header
+				text_underscore(#DDD, #232323)
+				&:after
+					margin 1.5rem auto
+				&.active
+					color: #DDD
+					&:hover
+						color $specialRed
+					& + main
+						display block
+						margin: 0;
+						margin: 1rem 0 2rem 0;
+						text_show_up_active()
+			main
+				text-align left
+				font-size: 1.2rem
+				margin 0
+				line-height: 200%;
+				text_show_up()
