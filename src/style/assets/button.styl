@@ -13,9 +13,10 @@ button(button_color, button_position, text_color = $white)
 		border-radius: 10rem;
 		min-height: 3.8rem;
 		line-height: 3.8rem;
-		if button_position = center
+		if button_position = !center
 			max-width: $button_max
-		max-width: $button_inner
+		else
+			max-width: $button_inner
 		width: 100%;
 		padding 0 2rem
 		transition $transition
@@ -35,7 +36,8 @@ button(button_color, button_position, text_color = $white)
 			white-space: nowrap;
 			if text_color is black
 				color: $darkgrey
-			color text_color
+			else
+				color text_color
 			font-weight: 400;
 			font-size: $button_font_size
 			position: absolute;
@@ -45,11 +47,13 @@ button(button_color, button_position, text_color = $white)
 			text-align: center;
 			if text_color is white
 				color: $white;
+			@media screen and (max-width: $iphoneH)
+				display none
 		.arrows
 			display: flex;
 			align-items: center;
 			width: 100%;
-			height 100%;
+			height 15px
 			transition $transition
 			position absolute
 			&:after, &:before
@@ -81,31 +85,31 @@ button(button_color, button_position, text_color = $white)
 		justify-content: flex-end;
 		.button_inner
 			.message
-				padding-left: 1rem;
+				padding-left: .5rem;
 			.arrows
 				&:before
 					opacity 1
 				&:after
 					opacity 0
-		&:hover
-			.button_inner
+			&:hover
 				.message
-					left: calc('50% - 120px + 0.5rem');
+					left: calc('50% - 120px + .5rem');
+					padding-left: .5rem;
 						
 	if button_position is right
 		justify-content: flex-start;
 		.button_inner
 			.message
-				padding-right: 1rem;
+				padding-right: .5rem;
 			.arrows
 				&:before
 					opacity 0
 				&:after
 					opacity 1
-		&:hover
-			.button_inner
+			&:hover
 				.message
-					left: calc('50% - 120px - 0.5rem');
+					left: calc('50% - 120px - .5rem');
+						
 								
 
 .button
@@ -141,3 +145,6 @@ button(button_color, button_position, text_color = $white)
 	.message
 		color $specialRed
 		font-size: $button_font_size
+	&.blank
+		.message
+			text-align center

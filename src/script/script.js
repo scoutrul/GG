@@ -1,5 +1,7 @@
 $(function() {
 
+//////////////////////////////////////////////////////////////////////////////////
+
 	// toggle hamburger
 	let Hamburger = false;
 	$('#hamburger').click(function() {
@@ -15,10 +17,14 @@ $(function() {
 		}
 	});
 
+//////////////////////////////////////////////////////////////////////////////////
+
 	// if index page
 	if ($('section.hero')[0]) {
 		$('section.header').addClass('white_header');
 	};
+
+//////////////////////////////////////////////////////////////////////////////////
 
 	// toggle location
 	$('.language .name a').each(function(i,el) { 
@@ -31,10 +37,10 @@ $(function() {
 		})
 	});
 
-	let ChooseWindowVis = true;
+	let ChooseWindowVis = false;
 	$('.location_toggle').click(function() {
 		$('.regions ul').hide();
-		if (!ChooseWindowVis) {
+		if (ChooseWindowVis) {
 			$('#choose').removeClass('choose--active');
 			$('#choose .slide_up_text--active').removeClass('slide_up_text--active');
 			$('.language').show()
@@ -46,6 +52,8 @@ $(function() {
 			ChooseWindowVis =!ChooseWindowVis;
 		}
 	});
+
+//////////////////////////////////////////////////////////////////////////////////
 
 	const appearModule = {
 		addToAllClasses: function(){
@@ -67,9 +75,9 @@ $(function() {
 	window.onload = function() {
 		(document.visibilityState === 'visible') && setTimeout(appearModule.addToAllClasses, 1000)
 	};
-	$(window).on('focus resize scroll click mousemove keydown', appearModule.addToAllClasses )
+	$(window).on('focus resize scroll click mousemove keydown', appearModule.addToAllClasses ) // init
 
-
+//////////////////////////////////////////////////////////////////////////////////
 
 	// accoirdion toggle module (HELP, CART)
 	let accoirdion_toggle = $('.accordion_items header');
@@ -79,6 +87,7 @@ $(function() {
 		})
 	});
 
+//////////////////////////////////////////////////////////////////////////////////
 
 	// CONTACT toggle tabs module
 	let address_Header = $('ul.office-tab li');
@@ -95,5 +104,6 @@ $(function() {
 		})
 	});
 
+//////////////////////////////////////////////////////////////////////////////////
 
 });
