@@ -3,8 +3,8 @@
 	outline: 0 
 	z-index: 100;
 	position: fixed;
-	right: 1rem;
-	top: 2.9rem;
+	right: 15px;
+	top: 15px;
 	@media screen and (min-width: $desktop)
 		display none 
 
@@ -42,11 +42,7 @@
 			cursor pointer
 			.hamburger-inner,.hamburger-inner:before,.hamburger-inner:after
 				background-color $darkhover
-	&:focus
-		.hamburger-box 
-			&:active
-				.hamburger-inner,.hamburger-inner:before,.hamburger-inner:after
-					background-color $specialRed
+			
 	&.is-active
 		.hamburger-inner:before,.hamburger-inner:after 
 			opacity: 0;

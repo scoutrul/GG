@@ -1,19 +1,10 @@
 section.content
 	display flex
 	min-height: 100%;
+	padding: 3rem 0;
 	.container
-		margin 11rem auto 8rem
 		flex-flow: column wrap;
 		align-self: center
-		@media screen and (max-width: $ipadPro)
-			font-size 90%
-		@media screen and (max-width: $ipad)
-			font-size 80%
-		@media screen and (max-width: $iphone5)
-			font-size 70%
-			margin 8rem auto
-		@media screen and (max-width: $iphone)
-			font-size 60%
 	&.index-about
 		.container
 			height: 100%;
@@ -24,11 +15,12 @@ section.content
 			min-height 600px
 			margin auto
 			.title
-				margin: 0 0 4rem;
+				margin: 0 0 1.3rem;
 				font-weight: 900;
 				text-transform uppercase
-				word-spacing: .3rem;
 				line-height: 90%;
 				transition $transition
 			.link_under
-				text_underscore(#DDD, darkgrey2)
+				text_underscore(#DDD, $darkgrey2)
+				font-size 70%
+				

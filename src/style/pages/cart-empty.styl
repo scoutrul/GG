@@ -16,44 +16,46 @@ section.in-cart
 				transition $transition
 				text-align center
 			.link_under
-				text_underscore($darkgrey2, darkgrey2)
+				text_underscore($darkgrey2, $darkgrey2)
 
 		.product_count
 			color $lightgrey
+			font-size: 30%;
 			text-align center
-			font-size: 130%;
-			margin-bottom: 3rem;
+			font-weight: 400;
+			margin-bottom: 1rem;
 		.accordion_items
 			accordion_items()
 			.edit, .delete
 				position absolute
 				right 0
-				top 0
+				top .5rem
 				z-index 20
-				margin: 0 0 0 2rem;
-				width: 30px;
-				height: 30px;
+				margin: 0 0 0 1rem;
+				width: 0.4rem;
+				height: 0.4rem;
 				cursor: pointer;
 				background-repeat: no-repeat;
 			.edit
-				right 4rem
+				right 1rem
 				background-image: url(../images/icon_edit.svg);
 			.delete
 				background-image: url(../images/icon_delete.svg);
 			header
 			main
 				.description
-					margin -.5rem 0 1.5rem 
+					margin -.5rem 0 .5rem 
 			ul.items
 				padding 0
 				li
 					display flex
 					.header
 						font-size: 70%;
-						margin-right: 2rem;
+						margin-right: 1rem;
 		.steps
 			display flex
 			width 100%
-			margin: 3rem 0;
-			.button:first-child
+			margin: 1rem 0;
+			button:first-child
 				margin 0 auto 0 0
+				

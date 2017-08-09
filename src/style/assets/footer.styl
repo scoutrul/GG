@@ -1,96 +1,64 @@
 section.footer
 	background-color: $footerbg;
-	padding-top 7.5rem
-	padding-bottom 6rem
-	overflow: hidden;
-	@media screen and (max-width: $ipad)
-		padding-bottom 3rem
-		padding-top 3rem
+	padding-top 1.9rem
 	
 	.container
 		display flex 
-		@media screen and (max-width: $ipadPro)
-			flex-wrap wrap
-			justify-content: flex-start;
-		
+		@media screen and (max-width: $iphoneH)
+			flex-flow: row wrap;	
 		.footer-title
-			min-width: $iphone;
+			min-width: 7rem
 			max-width: 50%;
 			width: 100%;
-			flex: 1 0 20rem;
-			@media screen and (max-width: $ipadPro)
-				max-width 100%
-				margin-bottom 3rem
+			flex: 1 0 auto;
+			margin-bottom: 1rem;
 			.footer-slogan
 				font-weight: 900;
 				color: $white;
 				transition $transition
-				span
-					display block
-					font-size 4rem
-					transition $transition
-					
-				@media screen and (max-width: $ipadPro)
-					span
-						display inline-block
-						font-size 3rem
+
 		.footer-menu
 			display flex
 			flex: 1 0 auto;
-			@media screen and (max-width: $ipad)
-				min-width $iphoneH
-				justify-content: flex-start;
-				flex-wrap: wrap;
-			@media screen and (max-width: $iphoneH)
-				min-width auto
 			ul
 				flex: 1 0 auto;
 				padding 0
-				@media screen and (max-width: $ipad)
-					flex 0 1 auto
 				a
-					line-height: 200%;
+					line-height: 0.79rem;
 					font-weight: 600;
 					color: $white;
 					transition $transition
-					font-size 25px
-					min-width: 160px;
+					font-size: 40%;
+					min-width: 3rem;
 					display: inline-block;
 					&:hover
 						color $specialRed
 						cursor pointer
-					@media screen and (max-width: $iphone)
-						font-size: 17px;
+	
 		.footer-copy
 			display flex
 			width: 100%;
 			align-items: center;
-			margin-top: 5rem;
+			margin .5rem 0 1.5rem 0
 			flex-flow row wrap
 			.copy
 				color #505050
-				font-size 18px
+				font-size 25%
 				max-width: 50%;
 				width: 100%;
-				min-width: $iphone;
-				flex: 1 1 20rem;
+				flex: 1 1 auto;
+				@media screen and (max-width: $iphoneH)
+					min-width: 250px;
+					margin-top: 1rem;
+					order: 1;
 			.footer-column
 				margin 0 auto 0 0 
 				flex: 1 0 50%;	
 				font-weight 600
 				&.footer-button
 					margin 0 auto 0 auto
-					flex: 1 1 20rem;
+					flex: 1 1 auto;
 					display: flex;	
-					@media screen and (max-width: $ipad)
-						flex: 1 0 100%;
-						margin: 0;
-			@media screen and (max-width: $ipad)
-				.copy
-					order 1
-					margin-top 3rem
-					min-width: 100%;
-			@media screen and (max-width: $iphone)
-				.copy
-					font-size: 13px;
+
+
 		

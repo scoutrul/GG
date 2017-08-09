@@ -4,19 +4,19 @@ section.hero
 		flex-direction column
 		max-height: 1200px;
 		height 100%
-		// padding-bottom: 5rem;
 		@media screen and (min-height $desktop) and (min-width: $ipad)
-			    max-height: $desktop;
+			max-height: $desktop;
 		@media screen and (max-width: $iphone6)
 			height auto
+			padding: 2rem 15px 1rem;
 		@media screen and (max-width: $iphoneH)
 			min-height: 480px;
 		
 		&:after
 			content: '';
 			position: absolute;
-			top: 2rem;
-			right: -8rem;
+			top: 0.5rem;
+			right: -2rem;
 			background: url($goal01) no-repeat;
 			background-size: contain;
 			background-position: 100% 50%;
@@ -60,6 +60,9 @@ section.hero
 				text-transform uppercase
 				margin: 1rem 0;
 				transition $transition
-				padding-top: 5rem;
+				@media screen and (max-width: $iphone5)
+					line-height: 1.4rem;
+					span
+						font-size: 70%;
 			.button
 				margin: 3rem 0 2rem;

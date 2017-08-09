@@ -1,9 +1,12 @@
-$button_min = 240px
-$button_max = 16rem
-$button_inner = 15rem
+$button_max = 4rem
+$button_inner = 3.7rem
+
+$button_ratio = $button_max - $button_inner
+$button_ratio_half = $button_ratio / 2
+
 $margin_to_right = 0 0 0 auto
 $margin_to_left = 0 auto 0 0
-$button_font_size = 18px
+$button_font_size = 27%
 
 $toleft(value)
 	&.red
@@ -21,28 +24,30 @@ button(button_color = transparent, button_position = center, text_color = $white
 		justify-content: center;
 		align-items: center;
 		border-radius: 10rem;
-		min-height: 3.8rem;
-		line-height: 3.8rem;
+		min-height: .9rem;
+		line-height: .9rem;
 		if button_position = !center
 			max-width: $button_max
 		else
 			max-width: $button_inner
 		width: 100%;
-		padding 0 2rem
 		transition $transition
 		background-color button_color
 		&:hover
 			background-color $darkhover
 			max-width: $button_max
 			.arrows
-				filter: brightness(10)
+
 				if text_color is dark
 					&:after, &:before
-						filter: darkness(10)
+						filter: brightness(10)
 			.message
 				if text_color is dark
 					color: $white;
 		.message
+			position: absolute;
+			left:0
+			top 0
 			transition $transition
 			white-space: nowrap;
 			if text_color is dark
@@ -51,87 +56,72 @@ button(button_color = transparent, button_position = center, text_color = $white
 				color text_color
 			font-weight: 400;
 			font-size: $button_font_size
-			position: absolute;
-			width: 240px;
-			left: calc('50% - 120px');
+			width: 100%;
+			height 100%
 			padding 0
 			text-align: center;
 			if text_color is white
 				color: $white;
-			@media screen and (max-width: $iphone5)
-				display none
+
 		.arrows
 			display: flex;
 			align-items: center;
 			width: 100%;
-			height 15px
+			height 100%
 			transition $transition
 			position absolute
 			left 0
-			top calc('50% - 7.5px')
+			top 0
 			&:after, &:before
 				content ''
 				display block
-				width: 15px;
-				height: 15px;
+				width: 0.2rem;
+				height: 0.2rem;
 				margin auto
 				background-repeat: no-repeat;
 				transition $transition
 				opacity 0
 				position absolute
+			&:before
+				left .4rem
+				background-position: 0%; 
+				margin $margin_to_left	
+				background-image: url(../images/icon_arrow_white_left.svg);
+				if text_color is dark
+					background-image: url(../images/icon_arrow_black_left.svg);
 			&:after	
-				right 2rem
+				right .4rem
 				background-position: 100%;
 				margin $margin_to_right
 				background-image: url(../images/icon_arrow_white_right.svg);
 				if text_color is dark
 					background-image: url(../images/icon_arrow_black_right.svg);
-				@media screen and (max-width: $iphone5)
-					right: calc('50% - 7.5px')
-			&:before
-				left 2rem
-				background-position: 0%; 
-				margin $margin_to_left	
-				background-image: url(../images/icon_arrow_black_left.svg);
-				if text_color is dark
-					background-image: url(../images/icon_arrow_black_left.svg);
-				@media screen and (max-width: $iphone5)
-					left: calc('50% - 7.5px')
 					
 	if button_position is left
 		justify-content: flex-end;
 		.button_inner
-			.message
-				padding-left: .5rem;
 			.arrows
 				&:before
 					opacity 1
 				&:after
 					opacity 0
-		&:hover
-			.button_inner
+			&:hover
 				.message
-					left: calc('50% - 120px + .5rem');
-					padding-left: .5rem;
+					left: $button_ratio_half;
 						
 	if button_position is right
 		justify-content: flex-start;
 		.button_inner
-			.message
-				padding-right: .5rem;
 			.arrows
 				&:before
 					opacity 0
 				&:after
 					opacity 1
-		&:hover
-			.button_inner
+			&:hover
 				.message
-					left: calc('50% - 120px - .5rem');
-						
-								
-
-.button
+					left: - $button_ratio_half;
+//body
+button
 	cursor pointer
 	width $button_max
 	display flex
@@ -149,6 +139,4 @@ button(button_color = transparent, button_position = center, text_color = $white
 		$toleft(right)
 	&.center
 		$toleft(center)
-		
-
 		

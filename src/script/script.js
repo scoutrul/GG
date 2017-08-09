@@ -8,11 +8,15 @@ $(function() {
 		if (Hamburger) {
 			Hamburger = !Hamburger;
 			$(this).removeClass('is-active');
+			$(this).blur();
 			$('section.header').removeClass('mobile-menu-active')
 		} else {
 			Hamburger = !Hamburger;
 			$(this).addClass('is-active');
+			$(this).blur();
 			$('section.header').addClass('mobile-menu-active');
+			$('section.header .slide_up_text--active').removeClass('slide_up_text--active');
+			appearModule.addToAllClasses
 
 		}
 	});
@@ -30,7 +34,7 @@ $(function() {
 	$('.language .name a').each(function(i,el) { 
 		$(el).click(function(){ // click on name
 			$('.language').hide();
-			$('#choose .regions ul').removeClass('slide_up_text--active');
+			$('#choose .slide_up_text--active').removeClass('slide_up_text--active');
 			$('.regions ul').hide();
 			$(`.regions ul:nth-child(${i+1})`).show(); // show closest region list w animation
 			appearModule.addToAllClasses();
@@ -92,15 +96,15 @@ $(function() {
 	// CONTACT toggle tabs module
 	let address_Header = $('ul.office-tab li');
 	address_Header.each(function(i,el){
-		$('.office address').hide();
-		$('.office address:nth-child(1)').show();
+		$('#offices address').hide();
+		$('#offices address:nth-child(1)').show();
 		address_Header.first()
 		$('ul.office-tab li:nth-child(1)').addClass('office-tab--active');
 		$(el).click(function(){ 
 			$('.office-tab--active').removeClass('office-tab--active');
-			$('.office address').hide();
+			$('#offices address').hide();
 			$(`ul.office-tab li:nth-child(${i+1})`).addClass('office-tab--active');
-			$(`.office address:nth-child(${i+1})`).show();
+			$(`#offices address:nth-child(${i+1})`).show();
 		})
 	});
 

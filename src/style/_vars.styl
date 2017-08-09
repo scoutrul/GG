@@ -1,6 +1,6 @@
-$min-font = 25px
+$min-font = 30px
 $max-font = 65px
-$min-width = $iphone5
+$min-width = 200px
 $max-width = 1200px
 
 $mainfont = 'Roboto', 'sans-serif'
@@ -36,25 +36,16 @@ $goal03 = '../images/index_back.png'
 
 text_underscore(border, color)
 	display: inline-block;
-	padding: 0.5rem 0;
 	transition $transition
 	color color
-	font-size: 2.8rem
-	padding 1rem 0
-	@media screen and (max-width: $ipadPro)
-		font-size: 2.5rem
-	@media screen and (max-width: $ipad)
-		font-size: 2rem
-	@media screen and (max-width: $iphone5)
-		font-size: 1.5rem
-	@media screen and (max-width: $iphone)
-		font-size: 1rem
+	font-weight: 400;
+	font-size: 70%;
 	&:after
 		content: "";
 		display: block; 
 		width: 100%
-		max-width: calc('100% - 0.22rem');
-		margin:1rem auto
+		max-width: calc('100% - 0.01rem');
+		margin:.2rem auto
 		height: 1px;
 		background-color: border
 		transition .8s ease
@@ -77,6 +68,7 @@ accordion_items()
 		span 
 			header
 				text_underscore(#DDD, #232323)
+				margin: 0.3rem 0;
 				&.active
 					color: #DDD
 					&:hover
@@ -84,7 +76,7 @@ accordion_items()
 					& + main
 						display block
 						margin: 0;
-						margin: 1rem 0 2rem 0;
+						margin: .5rem 0
 						max-height 100%
 						@media screen and (max-width: $iphoneH)
 							max-height: initial;
@@ -92,7 +84,7 @@ accordion_items()
 						overflow visible
 			main
 				text-align left
-				font-size: 1.2rem
+				font-size: 30%;
 				margin 0
 				line-height: 200%;
 				max-height 0

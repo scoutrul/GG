@@ -21,12 +21,10 @@
 		transition 0.2s cubic-bezier(1, 0.01, 0.85, 0.99)
 		background-color: $white
 		.title
-			margin: 35vh auto 2rem auto;
 			color: $lightgrey2;
 			font-weight: 500;
-			font-size: 130%;
-			@media screen and (max-width: $ipad)
-				margin 1rem auto auto		
+			font-size: 30%;
+	
 		.button
 			margin: auto auto 21vh
 			@media screen and (max-width: $ipad)
@@ -37,27 +35,29 @@
 			justify-content: center;
 			width 100%
 			flex-flow: row wrap;
+			margin 2rem auto
 			@media screen and (max-width: $iphone6)
 				overflow auto
+				margin 0
 				&.language
 					flex-flow: row nowrap;
 					@media screen and (max-width: $iphone6)
 						flex-flow: row wrap;
 			li
 				margin: 1rem auto;
+				@media screen and (max-width: $iphone6)
+					margin: .5rem auto;
 				min-width: 300px;
 				@media all and (orientation: portrait) and (max-width $ipadPro)
 					width: 100%;
 				a
-					font-size: 260%;
+					font-size: 70%;
 					font-weight: 600;
 					line-height: 110%;
 					margin: auto;
 					transition $transition
 					&:hover
 						color $specialRed
-					@media screen and (max-height $ipad)
-						font-size: 180%;
 			&.language 
 				li
 					margin 2rem
