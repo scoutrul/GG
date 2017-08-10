@@ -8,14 +8,12 @@ $(function() {
 		if (Hamburger) {
 			Hamburger = !Hamburger;
 			$(this).removeClass('is-active');
-			$(this).blur();
-			$('section.header').removeClass('mobile-menu-active')
+			$('.mobile_menu').removeClass('mobile_menu-active')
 		} else {
 			Hamburger = !Hamburger;
 			$(this).addClass('is-active');
-			$(this).blur();
-			$('section.header').addClass('mobile-menu-active');
-			$('section.header .slide_up_text--active').removeClass('slide_up_text--active');
+			$('.mobile_menu').addClass('mobile_menu-active');
+			$('.mobile_menu .slide_up_text--active').removeClass('slide_up_text--active');
 			appearModule.addToAllClasses
 
 		}

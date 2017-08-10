@@ -24,11 +24,14 @@
 			color: $lightgrey2;
 			font-weight: 500;
 			font-size: 30%;
+			margin auto
 	
-		.button
-			margin: auto auto 21vh
-			@media screen and (max-width: $ipad)
-				margin auto auto 1rem
+		button
+			margin: auto 
+		.regions
+			align-items: center;
+			display: flex;
+			margin auto
 		ul
 			display: flex;
 			padding: 0;
@@ -46,7 +49,7 @@
 			li
 				margin: 1rem auto;
 				@media screen and (max-width: $iphone6)
-					margin: .5rem auto;
+					margin: .1rem auto;
 				min-width: 300px;
 				@media all and (orientation: portrait) and (max-width $ipadPro)
 					width: 100%;
@@ -61,6 +64,8 @@
 			&.language 
 				li
 					margin 2rem
+					@media screen and (max-width: $iphone6)
+						margin .1rem
 					display: flex;
 					flex-flow: column wrap;
 					align-items: center;
