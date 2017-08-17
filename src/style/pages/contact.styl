@@ -73,9 +73,12 @@ section.contact
 				.call
 					flex-flow row nowrap
 					white-space: nowrap;
+					flex: 1 0 150px;
+					@media screen and (max-width: $iphone5)
+						flex-flow column wrap
 					.fax,.tel
 						display inline-block
-						margin: 0 auto;
+						margin: 0 1rem;
 						padding 0
 				.info
 					margin: 1rem 0;
@@ -99,8 +102,11 @@ section.contact
 				flex-flow row wrap
 				justify-content: center;
 				li
-					min-width: 200px;
+					flex: 1 0 150px;
+					margin: 0.4rem 0;
 					font-size: 55%;
+					@media screen and (max-width: $iphone6)
+						font-size: 75%;
 					a
 						text_underscore(#DDD, #232323)
 						font-weight: 600;
