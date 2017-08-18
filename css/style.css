@@ -3126,7 +3126,8 @@ html body #app section.hero .container .screener .title .takecontrol {
   font-size: 60%;
 }
 @media screen and (max-width: 320px) {
-  html body #app section.hero .container .screener .title {
+  html body #app section.hero .container .screener {
+    font-size: 90%;
     line-height: 100%;
   }
 }
