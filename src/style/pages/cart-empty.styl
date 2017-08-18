@@ -7,14 +7,8 @@ section.in-cart
 		flex-flow column nowrap
 		&.is-empty
 			.title
+				title_light()
 				color $lightgrey2
-				margin: 0 0 4rem;
-				font-weight: 900;
-				text-transform uppercase
-				word-spacing: .3rem;
-				line-height: 90%;
-				transition $transition
-				text-align center
 			.link_under
 				text_underscore($darkgrey2, $darkgrey2)
 
@@ -23,7 +17,7 @@ section.in-cart
 			font-size: 30%;
 			text-align center
 			font-weight: 400;
-			margin-bottom: 1rem;
+			margin 1rem;
 		.accordion_items
 			accordion_items()
 			@media screen and (max-width: $desktop)

@@ -15,6 +15,7 @@ $specialRed = #ff002e
 $white = #FFF
 $darkgrey = #242424
 $darkgrey2 = #545454
+$darkgrey3 = #757575
 $darkhover = #2d2d2d
 $overpadding = 15px
 $specialGrey = #adafaf
@@ -73,7 +74,7 @@ accordion_items()
 					color: $specialGrey
 					&:hover
 						color $specialRed
-					& + main
+					& ~ main
 						display block
 						margin: 0;
 						margin: .5rem 0
@@ -82,6 +83,13 @@ accordion_items()
 							max-height: initial;
 						opacity 1
 						overflow visible
+			.add
+				display inline
+				color $specialRed
+				font-size: 70%;
+				margin: 0 0.8rem;
+				&.null
+					color $specialGrey
 			main
 				text-align left
 				font-size: 30%;
@@ -98,3 +106,10 @@ steps_buttons()
 	margin: 1rem 0;
 	button:first-child
 		margin 0 auto 0 0
+		
+title_light()
+	margin: 0 0 1.3rem;
+	font-weight: 300;
+	line-height: 115%;
+	transition $transition
+	font-size: 140%;
