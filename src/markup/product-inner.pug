@@ -31,11 +31,11 @@ block content
 
 			.steps_buttons
 				button.left.grey
-					.button_inner
+					.button_inner(onclick="window.history.go(-1); return false;")
 						.arrows
 						.message Back
 
 				button.right.red
-					.button_inner
+					a.button_inner(href="cart.html")
 						.arrows
 						.message Add to cart

@@ -75,7 +75,7 @@ $(function() {
 
     // if window is visible: do appear, else - wait for user action
     window.onload = function() {
-        (document.visibilityState === 'visible') && setTimeout(appearModule.addToAllClasses, 1000);
+        (document.visibilityState === 'visible') && setTimeout(appearModule.addToAllClasses, 500);
     };
     $(window).on('focus resize scroll click mousemove keydown', appearModule.addToAllClasses); // init
 
