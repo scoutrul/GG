@@ -2059,12 +2059,12 @@ html {
 }
 @media screen and (max-width: 375px) {
   html {
-    font-size: 38px;
+    font-size: 52px;
   }
 }
 @media screen and (max-width: 320px) {
   html {
-    font-size: 32px;
+    font-size: 46px;
   }
 }
 html body #app {
@@ -2477,11 +2477,13 @@ html body #app section.content.index-about .container .title {
 @media screen and (max-width: 375px) {
   html body #app section.content.index-about .container .title {
     font-size: 100%;
+    line-height: 100%;
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 320px) {
   html body #app section.content.index-about .container .title {
-    font-size: 70%;
+    font-size: 90%;
+    line-height: 100%;
   }
 }
 html body #app section.content.index-about .container .link_under {
@@ -3121,6 +3123,11 @@ html body #app section.hero .container .screener .title {
 html body #app section.hero .container .screener .title .takecontrol {
   color: #ff002e;
   font-size: 60%;
+}
+@media screen and (max-width: 320px) {
+  html body #app section.hero .container .screener .title {
+    line-height: 100%;
+  }
 }
 html body #app section.hero .container .screener button {
   margin: 1rem auto auto;
