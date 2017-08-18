@@ -16,6 +16,12 @@ section.content
 			margin auto
 			.title
 				title_light()
+				@media screen and (max-width: $iphone6H)
+					font-size 100%
+					line-height 100%
+				@media screen and (max-width: $iphone)
+					font-size 90%
+					line-height 100%
 			.link_under
 				text_underscore(#DDD, $darkgrey2)
 				font-size 70%
