@@ -26,6 +26,8 @@ section.in-cart
 			margin-bottom: 1rem;
 		.accordion_items
 			accordion_items()
+			@media screen and (max-width: $desktop)
+				margin 2rem auto
 			.edit, .delete
 				position absolute
 				right 0
@@ -52,6 +54,10 @@ section.in-cart
 					.header
 						font-size: 70%;
 						margin-right: 1rem;
+		
+		button.blank
+			margin: 1rem 0 0;
+			font-size: 130%;
+		
 		.steps_buttons
 			steps_buttons()
-				

@@ -1,27 +1,24 @@
 section.header
 	position: absolute;
-	@media screen and (max-width: $desktop)
-		top $overpadding
-	top: 0.7rem;
 	z-index: 10;
-	font-weight 600
 	color $darkgrey
-	&.white_header
-		color $white
+	color $white
+	background-color: #121212;
 	.container
 		display flex
 		justify-content space-between
 		flex-flow row nowrap
 		align-items center
 		justify-content center
-		
+		padding: 35px 15px;
+		@media screen and (max-width: $desktop)
+			padding: 15px;
 		.column
 			display flex
 			flex: 1 0 auto;
 			align-self: center;
 			flex-flow row nowrap
 			font-size 31%
-			font-weight 400
 			
 			&.serv
 				flex: 0 0 210px;
@@ -33,6 +30,11 @@ section.header
 					img
 						width 67px
 						height 67px
+						@media screen and (max-width: $desktop)
+							width 50px
+							height 50px
+							
+					
 				.location
 					display: flex;
 					text-align: center;

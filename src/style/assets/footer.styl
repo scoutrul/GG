@@ -1,6 +1,6 @@
 section.footer
 	background-color: $footerbg;
-	padding-top 1.9rem
+	padding: 1.9rem 0;
 	
 	.container
 		display flex 
@@ -13,10 +13,10 @@ section.footer
 			flex: 1 0 auto;
 			margin-bottom: 1rem;
 			.footer-slogan
-				font-weight: 900;
-				color: $white;
+				color: $specialRed;
 				transition $transition
-
+				font-size: 60%;
+				font-weight 300
 		.footer-menu
 			display flex
 			flex: 1 0 auto;
@@ -25,7 +25,6 @@ section.footer
 				padding 0
 				a
 					line-height: 0.79rem;
-					font-weight: 600;
 					color: $white;
 					transition $transition
 					font-size: 40%;
@@ -34,12 +33,11 @@ section.footer
 					&:hover
 						color $specialRed
 						cursor pointer
-	
 		.footer-copy
 			display flex
 			width: 100%;
 			align-items: center;
-			margin .5rem 0 .5rem 0
+			margin 1.2rem 0 0 0
 			flex-flow row wrap
 			.copy
 				color #505050
@@ -50,7 +48,6 @@ section.footer
 			.footer-column
 				margin 0 auto 0 0 
 				flex: 1 0 50%;	
-				font-weight 600
 				&.footer-button
 					margin 0 auto 0 auto
 					flex: 1 1 auto;

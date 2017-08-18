@@ -3,7 +3,7 @@ $max-font = 65px
 $min-width = 320px
 $max-width = 1200px
 
-$mainfont = 'Roboto', 'sans-serif'
+$mainfont = 'Work Sans', 'sans-serif'
 $line-height-ratio = $golden
 $heading-ratio = $golden
 $body-font = $mainfont
@@ -11,16 +11,17 @@ $body-font-weight = 300
 $body-color = #1d1e1e
 $heading-font = $mainfont
 $vertical-rhythm = true
-$specialRed = #cb1d00
+$specialRed = #ff002e
 $white = #FFF
 $darkgrey = #242424
 $darkgrey2 = #545454
 $darkhover = #2d2d2d
 $overpadding = 15px
+$specialGrey = #adafaf
 $lightgrey = #d3d3d3
 $lightgrey2 = #e5e5e5
 $darkbg = #121212
-$footerbg = #1b1b1b
+$footerbg = $darkbg
 $transition = .4s ease
 $slide_up_text = .4s cubic-bezier(0, 0.98, 0.94, 1)
 $iphone = 320px
@@ -38,7 +39,6 @@ text_underscore(border, color)
 	display: inline-block;
 	transition $transition
 	color color
-	font-weight: 400;
 	font-size: 70%;
 	&:after
 		content: "";
@@ -47,14 +47,14 @@ text_underscore(border, color)
 		max-width: calc('100% - 0.01rem');
 		margin:.2rem auto
 		height: 1px;
-		background-color: border
+		background-color: $specialRed
 		transition .8s ease
 	&:hover
 		cursor pointer
 		color $specialRed
 		&:after
 			width 0%
-			background-color: $specialRed
+			background-color: border
 
 
 accordion_items()
@@ -67,10 +67,10 @@ accordion_items()
 	li
 		span 
 			header
-				text_underscore(#DDD, #232323)
+				text_underscore($specialGrey, #232323)
 				margin: 0.3rem 0;
 				&.active
-					color: #DDD
+					color: $specialGrey
 					&:hover
 						color $specialRed
 					& + main
