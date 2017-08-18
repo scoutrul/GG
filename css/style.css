@@ -1974,6 +1974,9 @@ button.center.green .button_inner .arrows:after {
 .hamburger.is-active .hamburger-inner:after {
   bottom: 0;
 }
+.slide_up_text {
+  max-height: 150px;
+}
 .slide_up_text li,
 .slide_up_text div,
 .slide_up_text span {
@@ -1990,6 +1993,9 @@ button.center.green .button_inner .arrows:after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
   opacity: 0;
+}
+.slide_up_text.slide_up_text--active {
+  max-height: 100%;
 }
 .slide_up_text.slide_up_text--active * {
   display: block;
