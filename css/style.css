@@ -1986,6 +1986,7 @@ button.center.green .button_inner .arrows:after {
   transform: translate(0, 150%);
   transition: 0.4s cubic-bezier(0, 0.98, 0.94, 1);
   transition-delay: 0s;
+  line-height: 108%;
 }
 .slide_up_text li header,
 .slide_up_text div header,
