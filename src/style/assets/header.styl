@@ -1,16 +1,18 @@
 section.header
 	position: absolute;
 	z-index: 10;
-	color $darkgrey
 	color $white
-	background-color: #121212;
+	background-color: $headerBg
+	&.index_layer
+		background-color: transparent
+		
 	.container
 		display flex
 		justify-content space-between
 		flex-flow row nowrap
 		align-items center
 		justify-content center
-		padding: 35px 15px;
+		padding: 75px 15px;
 		@media screen and (max-width: $desktop)
 			padding: 15px;
 		.column
@@ -50,23 +52,30 @@ section.header
 					&:hover
 						span
 							color $specialRed
-			&.cart
+			&.feedback
 				justify-content: flex-end;
 				flex: 0 0 210px;
-				.cart_container
+				.feedback_container
 					text-align: center;
 					display: flex;
+					transition $transition
 					a.inner
 						display flex
 						align-items center
 						transition: $transition
+						span
+							letter-spacing: 0.05rem;
+							font-size: 80%;
+							text-transform: uppercase;
+							color: #adadad;
+							font-weight: 400;
 						img
 							width .3rem
 							height .3rem
 							margin: auto $overpadding;
 					&:hover
 						cursor pointer
-						a
+						a.inner span
 							color $specialRed			
 			&.menu
 				.top_menu
@@ -81,14 +90,19 @@ section.header
 						text-align: center;
 						transition $transition
 						a
+							letter-spacing: 0.05rem;
+							font-size: 80%;
+							text-transform: uppercase;
+							color: #adadad;
+							font-weight: 400;
 							&:hover
-								color $specialRed		
+								color $white		
 			@media screen and (max-width: $desktop)
 				&.serv
 					flex 1
 					.location
 						display none
-				&.cart
+				&.feedback
 					display none
 				&.menu
 					display none

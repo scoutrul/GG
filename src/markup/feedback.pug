@@ -1,0 +1,62 @@
+extends assets/layout.pug
+block content
+	section.content.feedback
+		.container
+			.feedback_form
+				.title.slide_up_text 
+					div
+						span Fill your info &
+					div
+						span get free quote now
+
+				form#feedback(autocomplete="off", name="feedback")
+					.field
+						input(id="full_name" type="text")
+						label(for="full_name") 
+							span Full Name
+					.field
+						input(id="e_mail" type="email")
+						label(for="e_mail") 
+							span E-mail address
+					.field
+						input(id="phone_number" type="email")
+						label(for="phone_number") 
+							span Phone number
+					.field
+						input(id="street_address" type="email")
+						label(for="street_address") 
+							span Street Address
+					.field
+						input(id="street_address2" type="email")
+						label(for="street_address2") 
+							span Street Address2
+					.thin
+						.field
+							input(id="city" type="email")
+							label(for="city") 
+								span City
+						.field(style="margin: 0 0.5rem")
+							input(id="state" type="email")
+							label(for="state") 
+								span State
+						.field
+							input(id="zip" type="email")
+							label(for="zip") 
+								span ZIP Code
+				button.center.red#feedback_submit
+					.button_inner
+						.arrows
+						.message Get quotes
+
+			.feedback_send
+				.title.slide_up_text 
+					div
+						span Quote has been sent!
+						span.title2 Check your inbox for mote information.
+
+				button.center.red
+					a.button_inner(href="products.html")
+						.arrows
+						.message View Products
+
+

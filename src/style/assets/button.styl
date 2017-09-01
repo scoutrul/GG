@@ -8,15 +8,6 @@ $margin_to_right = 0 0 0 auto
 $margin_to_left = 0 auto 0 0
 $button_font_size = 27%
 
-$toleft(value)
-	&.red
-		button($specialRed,value,)
-	&.blue
-		button(#0077cb,value,)
-	&.grey
-		button($lightgrey2,value, dark)
-	&.green
-		button(#00cba6,value,)
 
 button(button_color = transparent, button_position = center, text_color = $white)
 	.button_inner
@@ -87,7 +78,7 @@ button(button_color = transparent, button_position = center, text_color = $white
 				left .4rem
 				background-position: 0%; 
 				margin $margin_to_left	
-				background-image: url(../images/icon_arrow_white_left.svg);
+				// background-image: url(../images/icon_arrow_white_left.svg); //TD ADD this icon
 				if text_color is dark
 					background-image: url(../images/icon_arrow_black_left.svg);
 			&:after	
@@ -120,7 +111,18 @@ button(button_color = transparent, button_position = center, text_color = $white
 					opacity 1
 			&:hover
 				.message
-					left: - $button_ratio_half;
+					left: - $button_ratio_half
+					
+$align(value)
+	&.red
+		button($specialRed,value,)
+	&.blue
+		button(#0077cb,value,)
+	&.grey
+		button($lightgrey2,value, dark)
+	&.green
+		button(#00cba6,value,)
+		
 //body
 button
 	cursor pointer
@@ -137,9 +139,10 @@ button
 		.message
 			text-align center
 	&.left
-		$toleft(left)
+		$align(left)
 	&.right
-		$toleft(right)
+		$align(right)
 	&.center
-		$toleft(center)
+		$align(center)
+		margin auto
 		

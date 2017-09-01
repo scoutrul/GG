@@ -24,7 +24,7 @@ $(function() {
 
     // if index page
     if ($('section.hero')[0]) {
-        $('section.header').addClass('white_header');
+        $('section.header').addClass('index_layer');
     };
 
     //////////////////////////////////////////////////////////////////////////////////
@@ -91,7 +91,7 @@ $(function() {
         $(el).siblings('.delete').click(function() {
             $(el).parents('.product').hide('slow');
 
-            setTimeout(function() {
+            setTimeout(function() { // demo for empty cart
                 $(el).parents('.product').remove();
                 //temp
 	            $('.is-empty').show();
@@ -121,4 +121,22 @@ $(function() {
 
     //////////////////////////////////////////////////////////////////////////////////
 
+
+    // feedback form ui
+    let feddback_form = $('form#feedback');
+    feddback_form.find('input').change(function(){
+        let title = $(this).siblings('label').find('span');
+        ($(this).val())? title.hide():title.show();
+    })
+
+    let feedback_submit = $('#feedback_submit');
+    let feddback_form_send = $('.feedback_send');
+    let feddback_form_container = $('.feedback_form');
+    feddback_form_send.hide();
+
+    feedback_submit.click(function(){
+        feddback_form_container.hide();
+        feddback_form_send.show();
+        $("html, body").animate({ scrollTop: $('.content.feedback').offset().top }, 1000);
+    })
 });
