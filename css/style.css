@@ -870,7 +870,6 @@ button.left.red .button_inner .arrows:before {
   left: 0.4rem;
   background-position: 0%;
   margin: 0 auto 0 0;
-  background-image: url("../images/icon_arrow_white_left.svg");
 }
 button.left.red .button_inner .arrows:after {
   right: 0.4rem;
@@ -965,7 +964,6 @@ button.left.blue .button_inner .arrows:before {
   left: 0.4rem;
   background-position: 0%;
   margin: 0 auto 0 0;
-  background-image: url("../images/icon_arrow_white_left.svg");
 }
 button.left.blue .button_inner .arrows:after {
   right: 0.4rem;
@@ -1067,7 +1065,6 @@ button.left.grey .button_inner .arrows:before {
   left: 0.4rem;
   background-position: 0%;
   margin: 0 auto 0 0;
-  background-image: url("../images/icon_arrow_white_left.svg");
   background-image: url("../images/icon_arrow_black_left.svg");
 }
 button.left.grey .button_inner .arrows:after {
@@ -1164,7 +1161,6 @@ button.left.green .button_inner .arrows:before {
   left: 0.4rem;
   background-position: 0%;
   margin: 0 auto 0 0;
-  background-image: url("../images/icon_arrow_white_left.svg");
 }
 button.left.green .button_inner .arrows:after {
   right: 0.4rem;
@@ -1259,7 +1255,6 @@ button.right.red .button_inner .arrows:before {
   left: 0.4rem;
   background-position: 0%;
   margin: 0 auto 0 0;
-  background-image: url("../images/icon_arrow_white_left.svg");
 }
 button.right.red .button_inner .arrows:after {
   right: 0.4rem;
@@ -1354,7 +1349,6 @@ button.right.blue .button_inner .arrows:before {
   left: 0.4rem;
   background-position: 0%;
   margin: 0 auto 0 0;
-  background-image: url("../images/icon_arrow_white_left.svg");
 }
 button.right.blue .button_inner .arrows:after {
   right: 0.4rem;
@@ -1456,7 +1450,6 @@ button.right.grey .button_inner .arrows:before {
   left: 0.4rem;
   background-position: 0%;
   margin: 0 auto 0 0;
-  background-image: url("../images/icon_arrow_white_left.svg");
   background-image: url("../images/icon_arrow_black_left.svg");
 }
 button.right.grey .button_inner .arrows:after {
@@ -1553,7 +1546,6 @@ button.right.green .button_inner .arrows:before {
   left: 0.4rem;
   background-position: 0%;
   margin: 0 auto 0 0;
-  background-image: url("../images/icon_arrow_white_left.svg");
 }
 button.right.green .button_inner .arrows:after {
   right: 0.4rem;
@@ -1574,6 +1566,9 @@ button.right.green .button_inner .arrows:after {
 }
 button.right.green .button_inner:hover .message {
   left: -0.15rem;
+}
+button.center {
+  margin: auto;
 }
 button.center.red .button_inner {
   display: -webkit-flex;
@@ -1643,7 +1638,6 @@ button.center.red .button_inner .arrows:before {
   left: 0.4rem;
   background-position: 0%;
   margin: 0 auto 0 0;
-  background-image: url("../images/icon_arrow_white_left.svg");
 }
 button.center.red .button_inner .arrows:after {
   right: 0.4rem;
@@ -1719,7 +1713,6 @@ button.center.blue .button_inner .arrows:before {
   left: 0.4rem;
   background-position: 0%;
   margin: 0 auto 0 0;
-  background-image: url("../images/icon_arrow_white_left.svg");
 }
 button.center.blue .button_inner .arrows:after {
   right: 0.4rem;
@@ -1802,7 +1795,6 @@ button.center.grey .button_inner .arrows:before {
   left: 0.4rem;
   background-position: 0%;
   margin: 0 auto 0 0;
-  background-image: url("../images/icon_arrow_white_left.svg");
   background-image: url("../images/icon_arrow_black_left.svg");
 }
 button.center.grey .button_inner .arrows:after {
@@ -1880,7 +1872,6 @@ button.center.green .button_inner .arrows:before {
   left: 0.4rem;
   background-position: 0%;
   margin: 0 auto 0 0;
-  background-image: url("../images/icon_arrow_white_left.svg");
 }
 button.center.green .button_inner .arrows:after {
   right: 0.4rem;
@@ -1986,7 +1977,7 @@ button.center.green .button_inner .arrows:after {
   transform: translate(0, 150%);
   transition: 0.4s cubic-bezier(0, 0.98, 0.94, 1);
   transition-delay: 0s;
-  line-height: 108%;
+  line-height: 113%;
 }
 .slide_up_text li header,
 .slide_up_text div header,
@@ -2167,7 +2158,7 @@ html body #app section.mobile_menu .container .mobile_menu_list li {
   font-weight: 700;
   line-height: 120%;
 }
-html body #app section.mobile_menu .container .mobile_menu_cart {
+html body #app section.mobile_menu .container .mobile_menu_feedback {
   padding: 0;
   -webkit-flex: 1 1 100%;
   flex: 1 1 100%;
@@ -2175,30 +2166,27 @@ html body #app section.mobile_menu .container .mobile_menu_cart {
   -ms-order: 2;
   order: 2;
 }
-html body #app section.mobile_menu .container .mobile_menu_cart li.cart_container {
+html body #app section.mobile_menu .container .mobile_menu_feedback li.feedback_container {
   font-weight: 700;
   line-height: 120%;
   text-align: center;
   display: -webkit-flex;
   display: flex;
 }
-html body #app section.mobile_menu .container .mobile_menu_cart li.cart_container .inner {
+html body #app section.mobile_menu .container .mobile_menu_feedback li.feedback_container .inner {
   display: -webkit-flex;
   display: flex;
   -webkit-align-items: center;
   -ms-align-items: center;
   align-items: center;
 }
-html body #app section.mobile_menu .container .mobile_menu_cart li.cart_container .inner img {
+html body #app section.mobile_menu .container .mobile_menu_feedback li.feedback_container .inner img {
   width: 0.7rem;
   height: 0.7rem;
   margin: auto 0.4rem auto 0;
 }
-html body #app section.mobile_menu .container .mobile_menu_cart li.cart_container:hover {
+html body #app section.mobile_menu .container .mobile_menu_feedback li.feedback_container:hover {
   cursor: pointer;
-}
-html body #app section.mobile_menu .container .mobile_menu_cart li.cart_container:hover a {
-  color: #ff002e;
 }
 html body #app section.mobile_menu .container .mobile_social_list {
   padding: 0;
@@ -2212,9 +2200,11 @@ html body #app section.mobile_menu .container .mobile_social_list li {
 html body #app section.header {
   position: absolute;
   z-index: 10;
-  color: #242424;
   color: #fff;
-  background-color: #121212;
+  background-color: #1b1b1b;
+}
+html body #app section.header.index_layer {
+  background-color: transparent;
 }
 html body #app section.header .container {
   display: -webkit-flex;
@@ -2230,7 +2220,7 @@ html body #app section.header .container {
   -webkit-justify-content: center;
   -ms-justify-content: center;
   justify-content: center;
-  padding: 35px 15px;
+  padding: 75px 15px;
 }
 @media screen and (max-width: 1200px) {
   html body #app section.header .container {
@@ -2296,19 +2286,20 @@ html body #app section.header .container .column.serv .location span {
 html body #app section.header .container .column.serv .location:hover span {
   color: #ff002e;
 }
-html body #app section.header .container .column.cart {
+html body #app section.header .container .column.feedback {
   -webkit-justify-content: flex-end;
   -ms-justify-content: flex-end;
   justify-content: flex-end;
   -webkit-flex: 0 0 210px;
   flex: 0 0 210px;
 }
-html body #app section.header .container .column.cart .cart_container {
+html body #app section.header .container .column.feedback .feedback_container {
   text-align: center;
   display: -webkit-flex;
   display: flex;
+  transition: 0.4s ease;
 }
-html body #app section.header .container .column.cart .cart_container a.inner {
+html body #app section.header .container .column.feedback .feedback_container a.inner {
   display: -webkit-flex;
   display: flex;
   -webkit-align-items: center;
@@ -2316,15 +2307,22 @@ html body #app section.header .container .column.cart .cart_container a.inner {
   align-items: center;
   transition: 0.4s ease;
 }
-html body #app section.header .container .column.cart .cart_container a.inner img {
+html body #app section.header .container .column.feedback .feedback_container a.inner span {
+  letter-spacing: 0.05rem;
+  font-size: 80%;
+  text-transform: uppercase;
+  color: #adadad;
+  font-weight: 400;
+}
+html body #app section.header .container .column.feedback .feedback_container a.inner img {
   width: 0.3rem;
   height: 0.3rem;
   margin: auto 15px;
 }
-html body #app section.header .container .column.cart .cart_container:hover {
+html body #app section.header .container .column.feedback .feedback_container:hover {
   cursor: pointer;
 }
-html body #app section.header .container .column.cart .cart_container:hover a {
+html body #app section.header .container .column.feedback .feedback_container:hover a.inner span {
   color: #ff002e;
 }
 html body #app section.header .container .column.menu .top_menu {
@@ -2343,8 +2341,15 @@ html body #app section.header .container .column.menu .top_menu li {
   text-align: center;
   transition: 0.4s ease;
 }
+html body #app section.header .container .column.menu .top_menu li a {
+  letter-spacing: 0.05rem;
+  font-size: 80%;
+  text-transform: uppercase;
+  color: #adadad;
+  font-weight: 400;
+}
 html body #app section.header .container .column.menu .top_menu li a:hover {
-  color: #ff002e;
+  color: #fff;
 }
 @media screen and (max-width: 1200px) {
   html body #app section.header .container .column.serv {
@@ -2354,7 +2359,7 @@ html body #app section.header .container .column.menu .top_menu li a:hover {
   html body #app section.header .container .column.serv .location {
     display: none;
   }
-  html body #app section.header .container .column.cart {
+  html body #app section.header .container .column.feedback {
     display: none;
   }
   html body #app section.header .container .column.menu {
@@ -2445,7 +2450,7 @@ html body #app section.content {
   display: -webkit-flex;
   display: flex;
   min-height: 100%;
-  padding: 3rem 0;
+  padding: 5rem 0 3rem 0;
 }
 html body #app section.content .container {
   -webkit-flex-flow: column wrap;
@@ -2669,7 +2674,7 @@ html body #app section.in-cart .container .accordion_items .edit {
   background-image: url("../images/icon_edit.svg");
 }
 html body #app section.in-cart .container .accordion_items .delete {
-  background-image: url("../images/icon_delete.svg");
+  background-image: url("../images/icon_close.svg");
 }
 html body #app section.in-cart .container .accordion_items header .description,
 html body #app section.in-cart .container .accordion_items main .description {
@@ -2968,6 +2973,84 @@ html body #app section.contact .container ul.forces li span .force-fax {
   font-weight: 400;
   font-size: 60%;
   line-height: 200%;
+}
+html body #app section.feedback .container {
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+html body #app section.feedback .container .title {
+  font-size: 150%;
+  text-align: center;
+  padding: 1rem 0;
+}
+html body #app section.feedback .container form {
+  width: 100%;
+  max-width: 940px;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+html body #app section.feedback .container form .thin {
+  display: -webkit-flex;
+  display: flex;
+}
+html body #app section.feedback .container form .thin .field {
+  -webkit-flex: 1 1 33%;
+  flex: 1 1 33%;
+  font-size: 70%;
+}
+html body #app section.feedback .container form .field label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 42%;
+  font-weight: 400;
+  color: #bcbcbc;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  transition: 0.4s ease;
+  border-bottom: 2px solid rgba(27,27,27,0.15);
+}
+html body #app section.feedback .container form .field input {
+  width: 60%;
+  margin: auto;
+  text-align: center;
+  font-size: 42%;
+  font-weight: 400;
+  transition: 0.4s ease;
+  height: 1.5rem;
+  padding: 0.9rem 0;
+  caret-color: #ff002e;
+  z-index: 10;
+}
+html body #app section.feedback .container form .field input:hover {
+  cursor: text;
+}
+html body #app section.feedback .container form .field input:focus ~ label {
+  font-size: 25%;
+  -webkit-justify-content: left;
+  -ms-justify-content: left;
+  justify-content: left;
+  color: #1b1b1b;
+  border-bottom: 2px solid #1b1b1b;
+}
+html body #app section.feedback .container .feedback_send .title {
+  font-size: 100%;
+}
+html body #app section.feedback .container .feedback_send .title2 {
+  font-size: 32%;
+  color: #ddd;
+  margin: 0.5rem 0;
 }
 html body #app section.help .container {
   margin: 2rem auto auto;
