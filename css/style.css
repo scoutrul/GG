@@ -3320,34 +3320,56 @@ html body #app section.content.product-inner .container .steps_buttons button:fi
   margin: 0 auto 0 0;
 }
 html body #app section.content.product ul.product-list {
-  padding: 0;
+  padding: 0.3rem;
+  margin-top: 1.5rem;
+  width: 100%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
 }
 html body #app section.content.product ul.product-list li {
   margin: 0.3rem 0;
-}
-html body #app section.content.product ul.product-list li a {
-  display: inline-block;
+  height: 4.4rem;
+  width: 50%;
+  background-color: #f7f7f7;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: flex-end;
+  -ms-align-items: flex-end;
+  align-items: flex-end;
+  padding: 0 0.5rem;
+  overflow: visible;
+  background-image: url("http://bushwalk.npansw.org.au/wp-content/uploads/2017/02/placeholder-1024x683.png");
+  background-size: 100%;
+  background-position: center;
   transition: 0.4s ease;
-  color: #545454;
+}
+html body #app section.content.product ul.product-list li span {
+  bottom: -0.3rem;
   font-size: 70%;
 }
-html body #app section.content.product ul.product-list li a:after {
-  content: "";
-  display: block;
-  width: 100%;
-  max-width: calc(100% - 0.01rem);
-  margin: 0.2rem auto;
-  height: 1px;
-  background-color: #ff002e;
-  transition: 0.8s ease;
+html body #app section.content.product ul.product-list li:nth-child(2n) {
+  margin: 1rem -1rem -1rem 0.6rem;
 }
-html body #app section.content.product ul.product-list li a:hover {
+html body #app section.content.product ul.product-list li:hover {
+  background-size: 120%;
+}
+html body #app section.content.product #productsSwitcher {
+  display: -webkit-flex;
+  display: flex;
+  margin: auto;
+  font-size: 70%;
+  padding: 0;
+}
+html body #app section.content.product #productsSwitcher li {
+  border-bottom: 1px solid #adafaf;
+  padding: 0.3rem 1.2rem 0.3rem 1.2rem;
   cursor: pointer;
-  color: #ff002e;
 }
-html body #app section.content.product ul.product-list li a:hover:after {
-  width: 0%;
-  background-color: #545454;
+html body #app section.content.product #productsSwitcher li.active {
+  border-bottom: 3px solid #ff002e;
+  color: #ff002e;
 }
 
 /*# sourceMappingURL=style.css.map */
