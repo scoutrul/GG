@@ -134,9 +134,36 @@ $(function() {
     let feddback_form_container = $('.feedback_form');
     feddback_form_send.hide();
 
-    feedback_submit.click(function(){
+    feedback_submit.click(function(){ // was sending demo
         feddback_form_container.hide();
         feddback_form_send.show();
         $("html, body").animate({ scrollTop: $('.content.feedback').offset().top }, 1000);
     })
+
+    //////////////////////////////////////////////////////////////////////////////////
+
+    //products page
+    let switchHome = $('#switchHome');
+    let switchOffice = $('#switchOffice');
+    let homelist = $('#homelist');
+    let officelist = $('#officelist');
+    const hideProducts = function(){
+        $('.product-list').hide()
+    }; hideProducts()
+
+
+    switchHome.click(function(){
+        hideProducts();
+        $('.product .slide_up_text').removeClass('slide_up_text--active');
+        homelist.show();
+        $(this).toggleClass('active').siblings('.active').toggleClass('active');
+    })
+    switchOffice.click(function(){
+        hideProducts();
+        $('.product .slide_up_text').removeClass('slide_up_text--active');
+        officelist.show();
+        $(this).toggleClass('active').siblings('.active').toggleClass('active');
+    })
+
+
 });

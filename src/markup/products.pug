@@ -2,22 +2,61 @@ extends assets/layout.pug
 block content
 	section.content.product
 		.container
-			ul.product-list.slide_up_text
+			ul#productsSwitcher
+				li#switchHome Home
+				li#switchOffice Office
+
+			ul.product-list.slide_up_text#homelist
 				li
 					span
-						a(href="product-inner.html") Guardsman Group
+						a(href="product-inner.html") Remote Arm & Disarm
 				li
 					span
-						a(href="product-inner.html") Guardsman Alarms
+						a(href="product-inner.html") Access Control
 				li
 					span
-						a(href="product-inner.html") Guardsman Limited
+						a(href="product-inner.html") Vehicle Tracking
 				li
 					span
-						a(href="product-inner.html") Guardsman Armoured
+						a(href="product-inner.html") Burglary Momitoring
 				li
 					span
-						a(href="product-inner.html") Marksman
+						a(href="product-inner.html") Fire & Smoke Monitoring
 				li
 					span
-						a(href="product-inner.html") Guardsman Elite
+						a(href="product-inner.html") Garage Door
+				li
+					span
+						a(href="product-inner.html") Lights
+				li
+					span
+						a(href="product-inner.html") Manned Security
+
+			ul.product-list.slide_up_text#officelist
+				li
+					span
+						a(href="product-inner.html") Remote Arm & Disarm
+				li
+					span
+						a(href="product-inner.html") Access Control
+				li
+					span
+						a(href="product-inner.html") RFID
+				li
+					span
+						a(href="product-inner.html") Burglary Momitoring
+				li
+					span
+						a(href="product-inner.html") Fire & Smoke Monitoring
+				li
+					span
+						a(href="product-inner.html") Cash management
+				li
+					span
+						a(href="product-inner.html") Manned Security
+				li
+					span
+						a(href="product-inner.html") Close Protection
+				li
+					span
+						a(href="product-inner.html") Investigations

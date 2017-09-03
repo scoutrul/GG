@@ -1,7 +1,41 @@
 section.content.product
 	ul.product-list
-		padding 0
+		padding: 0.3rem;
+		margin-top: 1.5rem;
+		width: 100%;
+		display: flex;
+		flex-flow: row wrap;
 		li
 			margin: 0.3rem 0;
-			a
-				text_underscore($darkgrey2, $darkgrey2)
+			height: 4.4rem;
+			width: 50%;
+			background-color: $lightgrey3;
+			display: flex;
+			align-items: flex-end;
+			padding: 0 0.5rem;
+			overflow: visible;
+			background-image url('http://bushwalk.npansw.org.au/wp-content/uploads/2017/02/placeholder-1024x683.png')
+			background-size 100%
+			background-position: center;
+			transition $transition
+			span
+				bottom -.3rem
+				font-size 70%
+			&:nth-child(2n)
+				margin 1rem -1rem -1rem 0.6rem
+			&:hover
+				background-size 120%
+				
+				
+	#productsSwitcher
+		display: flex;
+		margin: auto;
+		font-size: 70%;
+		padding: 0;
+		li
+			border-bottom: 1px solid $specialGrey;
+			padding: 0.3rem 1.2rem 0.3rem 1.2rem;
+			cursor pointer
+			&.active
+				border-bottom: 3px solid $specialRed;
+				color $specialRed
