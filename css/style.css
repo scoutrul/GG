@@ -1975,7 +1975,9 @@ button.center.green .button_inner .arrows:after {
   display: block;
   -webkit-transform: translate(0, 150%);
   transform: translate(0, 150%);
-  transition: 0.4s cubic-bezier(0, 0.98, 0.94, 1);
+  transition: -webkit-transform 0.4s cubic-bezier(0, 0.98, 0.94, 1);
+  transition: transform 0.4s cubic-bezier(0, 0.98, 0.94, 1);
+  transition: transform 0.4s cubic-bezier(0, 0.98, 0.94, 1), -webkit-transform 0.4s cubic-bezier(0, 0.98, 0.94, 1);
   transition-delay: 0s;
   line-height: 113%;
 }
@@ -2158,6 +2160,9 @@ html body #app section.mobile_menu .container .mobile_menu_list li {
   font-weight: 700;
   line-height: 120%;
 }
+html body #app section.mobile_menu .container .mobile_menu_list li a:hover {
+  color: #ff002e;
+}
 html body #app section.mobile_menu .container .mobile_menu_feedback {
   padding: 0;
   -webkit-flex: 1 1 100%;
@@ -2185,17 +2190,9 @@ html body #app section.mobile_menu .container .mobile_menu_feedback li.feedback_
   height: 0.7rem;
   margin: auto 0.4rem auto 0;
 }
-html body #app section.mobile_menu .container .mobile_menu_feedback li.feedback_container:hover {
+html body #app section.mobile_menu .container .mobile_menu_feedback li.feedback_container .inner:hover span {
   cursor: pointer;
-}
-html body #app section.mobile_menu .container .mobile_social_list {
-  padding: 0;
-  margin: 1rem 0;
-  min-width: 150px;
-}
-html body #app section.mobile_menu .container .mobile_social_list li {
-  font-weight: 600;
-  line-height: 150%;
+  color: #ff002e;
 }
 html body #app section.header {
   position: absolute;
@@ -3215,6 +3212,7 @@ html body #app section.hero .container .screener .title {
 html body #app section.hero .container .screener .title .takecontrol {
   color: #ff002e;
   font-size: 60%;
+  margin-top: 0.7rem;
 }
 @media screen and (max-width: 320px) {
   html body #app section.hero .container .screener {
