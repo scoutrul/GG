@@ -3358,6 +3358,11 @@ html body #app section.content.product ul.product-list li {
   background-position: center;
   transition: background 3s ease-in;
 }
+@media screen and (max-width: 320px) {
+  html body #app section.content.product ul.product-list li {
+    margin: 0.5rem !important;
+  }
+}
 html body #app section.content.product ul.product-list li span {
   bottom: -0.3rem;
   font-size: 70%;
@@ -3384,6 +3389,11 @@ html body #app section.content.product #productsSwitcher li {
   border-bottom: 1px solid #adafaf;
   padding: 0.3rem 1.2rem 0.3rem 1.2rem;
   cursor: pointer;
+}
+@media screen and (max-width: 568px) {
+  html body #app section.content.product #productsSwitcher li {
+    padding: 0 0.3rem;
+  }
 }
 html body #app section.content.product #productsSwitcher li.active {
   border-bottom: 3px solid #ff002e;
