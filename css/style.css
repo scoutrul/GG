@@ -2305,9 +2305,7 @@ html body #app section.header .container .column.feedback .feedback_container a.
   transition: 0.4s ease;
 }
 html body #app section.header .container .column.feedback .feedback_container a.inner span {
-  letter-spacing: 0.05rem;
   font-size: 80%;
-  text-transform: uppercase;
   color: #adadad;
   font-weight: 400;
 }
@@ -2339,9 +2337,7 @@ html body #app section.header .container .column.menu .top_menu li {
   transition: 0.4s ease;
 }
 html body #app section.header .container .column.menu .top_menu li a {
-  letter-spacing: 0.05rem;
   font-size: 80%;
-  text-transform: uppercase;
   color: #adadad;
   font-weight: 400;
 }
@@ -2455,6 +2451,9 @@ html body #app section.content .container {
   -webkit-align-self: center;
   -ms-align-self: center;
   align-self: center;
+}
+html body #app section.content.index-about {
+  padding: 0;
 }
 html body #app section.content.index-about .container {
   height: 100%;
@@ -3338,6 +3337,7 @@ html body #app section.content.product ul.product-list li {
   margin: 0.3rem 0;
   height: 4.4rem;
   width: 50%;
+  min-width: 300px;
   background-color: #f7f7f7;
   display: -webkit-flex;
   display: flex;
