@@ -69,6 +69,10 @@ $(function() {
             var viewBottom = viewTop + $(window).height();
             var elemTop = $(elem).offset().top;
             var elemBottom = elemTop + $(elem).height();
+            if (window.innerWidth < 400) {
+                return true
+                // mobile width detect
+            }
             return ((elemBottom <= viewBottom) && (elemTop >= viewTop))
         }
     };
