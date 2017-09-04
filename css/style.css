@@ -2303,6 +2303,7 @@ html body #app section.header .container .column.feedback .feedback_container a.
   -ms-align-items: center;
   align-items: center;
   transition: 0.4s ease;
+  text-align: left;
 }
 html body #app section.header .container .column.feedback .feedback_container a.inner span {
   color: #adadad;
@@ -2723,6 +2724,11 @@ html body #app section.contact .container ul.office-tab li {
 @media screen and (max-width: 768px) {
   html body #app section.contact .container ul.office-tab li {
     margin: 0.6rem;
+  }
+}
+@media screen and (max-width: 568px) {
+  html body #app section.contact .container ul.office-tab li {
+    margin: 0.1rem;
   }
 }
 html body #app section.contact .container ul.office-tab li a {
@@ -3368,6 +3374,11 @@ html body #app section.content.product #productsSwitcher {
   margin: auto;
   font-size: 70%;
   padding: 0;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
 }
 html body #app section.content.product #productsSwitcher li {
   border-bottom: 1px solid #adafaf;
