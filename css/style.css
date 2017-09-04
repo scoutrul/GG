@@ -2184,6 +2184,7 @@ html body #app section.mobile_menu .container .mobile_menu_feedback li.feedback_
   -webkit-align-items: center;
   -ms-align-items: center;
   align-items: center;
+  text-align: left;
 }
 html body #app section.mobile_menu .container .mobile_menu_feedback li.feedback_container .inner img {
   width: 0.7rem;
@@ -2303,7 +2304,6 @@ html body #app section.header .container .column.feedback .feedback_container a.
   -ms-align-items: center;
   align-items: center;
   transition: 0.4s ease;
-  text-align: left;
 }
 html body #app section.header .container .column.feedback .feedback_container a.inner span {
   color: #adadad;
