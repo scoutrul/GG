@@ -3021,12 +3021,20 @@ html body #app section.feedback .container form .field label {
   transition: 0.4s ease;
   border-bottom: 2px solid rgba(27,27,27,0.15);
 }
+html body #app section.feedback .container form .field label.active {
+  font-size: 25%;
+  -webkit-justify-content: left;
+  -ms-justify-content: left;
+  justify-content: left;
+  color: #1b1b1b;
+  border-bottom: 2px solid #1b1b1b;
+}
 html body #app section.feedback .container form .field input {
   width: 60%;
   margin: auto;
   text-align: center;
   font-size: 42%;
-  font-weight: 400;
+  font-weight: 500;
   transition: 0.4s ease;
   height: 1.5rem;
   padding: 0.9rem 0;
@@ -3343,14 +3351,14 @@ html body #app section.content.product ul.product-list li {
   background-image: url("http://bushwalk.npansw.org.au/wp-content/uploads/2017/02/placeholder-1024x683.png");
   background-size: 100%;
   background-position: center;
-  transition: 0.4s ease;
+  transition: background 3s ease-in;
 }
 html body #app section.content.product ul.product-list li span {
   bottom: -0.3rem;
   font-size: 70%;
 }
 html body #app section.content.product ul.product-list li:nth-child(2n) {
-  margin: 1rem -1rem -1rem 0.6rem;
+  margin: 1rem -1.2rem 0.4rem 1.2rem;
 }
 html body #app section.content.product ul.product-list li:hover {
   background-size: 120%;
