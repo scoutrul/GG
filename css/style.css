@@ -2305,7 +2305,6 @@ html body #app section.header .container .column.feedback .feedback_container a.
   transition: 0.4s ease;
 }
 html body #app section.header .container .column.feedback .feedback_container a.inner span {
-  font-size: 80%;
   color: #adadad;
   font-weight: 400;
 }
@@ -2337,7 +2336,6 @@ html body #app section.header .container .column.menu .top_menu li {
   transition: 0.4s ease;
 }
 html body #app section.header .container .column.menu .top_menu li a {
-  font-size: 80%;
   color: #adadad;
   font-weight: 400;
 }
