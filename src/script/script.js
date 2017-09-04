@@ -122,11 +122,11 @@ $(function() {
     //////////////////////////////////////////////////////////////////////////////////
 
 
-    // feedback form ui
+    // feedback form 
     let feddback_form = $('form#feedback');
-    feddback_form.find('input').change(function(){
+    feddback_form.find('input').on('change click focus', function(){
         let title = $(this).siblings('label');
-        ($(this).val())? title.toggleClass('active'):title.toggleClass('active');
+        ($(this).val()) ? title.toggleClass('active') : title.removeClass('active');
     })
 
     let feedback_submit = $('#feedback_submit');
