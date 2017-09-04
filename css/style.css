@@ -3323,16 +3323,19 @@ html body #app section.content.product-inner .container .steps_buttons button:fi
   margin: 0 auto 0 0;
 }
 html body #app section.content.product ul.product-list {
-  padding: 0.3rem;
+  padding: 0.6rem;
   margin-top: 1.5rem;
   width: 100%;
   display: -webkit-flex;
   display: flex;
   -webkit-flex-flow: row wrap;
   flex-flow: row wrap;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
 }
 html body #app section.content.product ul.product-list li {
-  margin: 0.3rem 0;
+  margin: 0.3rem 0 0 -1.2rem;
   height: 4.4rem;
   width: 50%;
   min-width: 300px;
