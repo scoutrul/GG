@@ -8,6 +8,9 @@ section.content.product
 		justify-content: center;
 		li
 			margin: 0.3rem 0 0 -1.2rem;
+			@media screen and (max-width: $iphone)
+				margin: .5rem !important
+			
 			height: 4.4rem;
 			width: 50%;
 			min-width: 300px;
@@ -40,6 +43,8 @@ section.content.product
 			border-bottom: 1px solid $specialGrey;
 			padding: 0.3rem 1.2rem 0.3rem 1.2rem;
 			cursor pointer
+			@media screen and (max-width: $iphone5)
+				padding: 0 0.3rem;
 			&.active
 				border-bottom: 3px solid $specialRed;
 				color $specialRed
