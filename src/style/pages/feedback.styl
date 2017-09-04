@@ -29,13 +29,19 @@ section.feedback
 					align-items: center;
 					justify-content center
 					transition $transition
-					border-bottom: 2px solid rgba(27, 27, 27, 0.15);	
+					border-bottom: 2px solid rgba(27, 27, 27, 0.15);
+						
+					&.active
+						font-size 25%
+						justify-content left
+						color rgba(27, 27, 27, 1);
+						border-bottom: 2px solid rgba(27, 27, 27, 1);
 				input
 					width 60%
 					margin auto
 					text-align: center;
 					font-size 42%
-					font-weight 400
+					font-weight 500
 					transition $transition
 					height: 1.5rem;
 					padding: 0.9rem 0;

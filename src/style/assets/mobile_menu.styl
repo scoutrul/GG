@@ -46,6 +46,8 @@ section.mobile_menu
 			li
 				font-weight: 700;
 				line-height: 120%;
+				a:hover
+					color $specialRed
 		.mobile_menu_feedback
 			padding 0
 			flex: 1 1 100%;
@@ -63,14 +65,6 @@ section.mobile_menu
 						width: 0.7rem;
 						height: 0.7rem;
 						margin: auto 0.4rem auto 0;
-				&:hover
-					cursor pointer
-
-		.mobile_social_list
-			padding 0
-			margin 1rem 0
-			min-width: 150px;
-			li
-				font-weight: 600;
-				line-height: 150%;
-		
+					&:hover span
+						cursor pointer
+						color $specialRed

@@ -125,8 +125,8 @@ $(function() {
     // feedback form ui
     let feddback_form = $('form#feedback');
     feddback_form.find('input').change(function(){
-        let title = $(this).siblings('label').find('span');
-        ($(this).val())? title.hide():title.show();
+        let title = $(this).siblings('label');
+        ($(this).val())? title.toggleClass('active'):title.toggleClass('active');
     })
 
     let feedback_submit = $('#feedback_submit');
@@ -149,8 +149,10 @@ $(function() {
     let officelist = $('#officelist');
     const hideProducts = function(){
         $('.product-list').hide()
-    }; hideProducts()
-
+    }; 
+    hideProducts();
+    homelist.show();
+    switchHome.toggleClass('active');
 
     switchHome.click(function(){
         hideProducts();
