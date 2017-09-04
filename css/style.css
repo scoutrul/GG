@@ -2306,7 +2306,7 @@ html body #app section.header .container .column.feedback .feedback_container a.
 }
 html body #app section.header .container .column.feedback .feedback_container a.inner span {
   color: #adadad;
-  font-weight: 400;
+  font-weight: 500;
 }
 html body #app section.header .container .column.feedback .feedback_container a.inner img {
   width: 0.3rem;
@@ -2337,7 +2337,7 @@ html body #app section.header .container .column.menu .top_menu li {
 }
 html body #app section.header .container .column.menu .top_menu li a {
   color: #adadad;
-  font-weight: 400;
+  font-weight: 500;
 }
 html body #app section.header .container .column.menu .top_menu li a:hover {
   color: #fff;
