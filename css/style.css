@@ -2190,6 +2190,62 @@ html body #app section.mobile_menu .container .mobile_menu_feedback li.feedback_
   cursor: pointer;
   color: #ff002e;
 }
+html body #app .slide_up_mobileMenu {
+  max-height: 150px;
+}
+html body #app .slide_up_mobileMenu li,
+html body #app .slide_up_mobileMenu div,
+html body #app .slide_up_mobileMenu span {
+  overflow: hidden;
+  display: block;
+  -webkit-transform: translate(0, 150%);
+  transform: translate(0, 150%);
+  transition: -webkit-transform 0.4s cubic-bezier(0, 0.98, 0.94, 1);
+  transition: transform 0.4s cubic-bezier(0, 0.98, 0.94, 1);
+  transition: transform 0.4s cubic-bezier(0, 0.98, 0.94, 1), -webkit-transform 0.4s cubic-bezier(0, 0.98, 0.94, 1);
+  transition-delay: 0s;
+  line-height: 113%;
+}
+html body #app .slide_up_mobileMenu li header,
+html body #app .slide_up_mobileMenu div header,
+html body #app .slide_up_mobileMenu span header {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+html body #app .slide_up_mobileMenu.slide_up_mobileMenu--active {
+  max-height: initial;
+}
+html body #app .slide_up_mobileMenu.slide_up_mobileMenu--active * {
+  display: block;
+  transition: 0.4s cubic-bezier(0, 0.98, 0.94, 1);
+  -webkit-transform: translate(0, 0%);
+  transform: translate(0, 0%);
+  -ms-filter: none;
+  -webkit-filter: none;
+          filter: none;
+  opacity: 1;
+}
+html body #app .slide_up_mobileMenu.slide_up_mobileMenu--active > li:nth-child(1) span,
+html body #app .slide_up_mobileMenu.slide_up_mobileMenu--active > div:nth-child(1) span {
+  transition-delay: 0s;
+}
+html body #app .slide_up_mobileMenu.slide_up_mobileMenu--active > li:nth-child(2) span,
+html body #app .slide_up_mobileMenu.slide_up_mobileMenu--active > div:nth-child(2) span {
+  transition-delay: 0.1s;
+}
+html body #app .slide_up_mobileMenu.slide_up_mobileMenu--active > li:nth-child(3) span,
+html body #app .slide_up_mobileMenu.slide_up_mobileMenu--active > div:nth-child(3) span {
+  transition-delay: 0.2s;
+}
+html body #app .slide_up_mobileMenu.slide_up_mobileMenu--active > li:nth-child(4) span,
+html body #app .slide_up_mobileMenu.slide_up_mobileMenu--active > div:nth-child(4) span {
+  transition-delay: 0.3s;
+}
+html body #app .slide_up_mobileMenu.slide_up_mobileMenu--active > li:nth-child(5) span,
+html body #app .slide_up_mobileMenu.slide_up_mobileMenu--active > div:nth-child(5) span {
+  transition-delay: 0.4s;
+}
 html body #app section.header {
   position: absolute;
   z-index: 10;
