@@ -16,9 +16,10 @@ $(function() {
 
         } else {
             $(this).removeClass('is-active');
-            $('.mobile_menu-active .slide_up_text--active').removeClass('slide_up_text--active');
+
             $('.mobile_menu').removeClass('mobile_menu-active');
             Hamburger = !Hamburger;
+            setTimeout(()=>$('.mobile_menu-active .slide_up_text--active').removeClass('slide_up_text--active'),300)
 
         }
     });
