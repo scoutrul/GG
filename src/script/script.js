@@ -5,18 +5,21 @@ $(function() {
     // toggle hamburger
     let Hamburger = false;
     $('#hamburger').click(function() {
-        if (Hamburger) {
-            Hamburger = !Hamburger;
-            $(this).removeClass('is-active');
-            $('.mobile_menu').removeClass('mobile_menu-active');
-
-        } else {
-            Hamburger = !Hamburger;
+        if (!Hamburger) {
             $(this).addClass('is-active');
             $('.mobile_menu').addClass('mobile_menu-active');
             $('.mobile_menu .slide_up_text--active').removeClass('slide_up_text--active');
 
-            appearModule.addToAllClasses
+            Hamburger = !Hamburger;
+            setTimeout(()=>appearModule.addToAllClasses(),300)
+            
+
+        } else {
+            $(this).removeClass('is-active');
+            $('.mobile_menu-active .slide_up_text--active').removeClass('slide_up_text--active');
+            $('.mobile_menu').removeClass('mobile_menu-active');
+            Hamburger = !Hamburger;
+
         }
     });
 
@@ -81,7 +84,10 @@ $(function() {
     window.onload = function() {
         (document.visibilityState === 'visible') && setTimeout(appearModule.addToAllClasses, 500);
     };
-    $(window).on('focus resize scroll click mousemove keydown', appearModule.addToAllClasses); // init
+    let hasappear = false;
+    !hasappear && $(window).on('focus resize scroll click mousemove keydown', function(){
+    hasappear = true;
+    appearModule.addToAllClasses}); // init
 
     //////////////////////////////////////////////////////////////////////////////////
     $('.is-empty').hide(); //temp
