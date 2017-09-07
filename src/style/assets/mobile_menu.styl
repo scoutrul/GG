@@ -69,3 +69,43 @@ section.mobile_menu
 					&:hover span
 						cursor pointer
 						color $specialRed
+						
+.slide_up_mobileMenu // animation for text appear
+	max-height 150px
+	li, div, span
+		overflow hidden
+		display block
+		transform: translate(0, 150%)
+		transition transform $slide_up_text
+		transition-delay: 0s;
+		line-height: 113%;
+		& header
+			opacity 0
+		
+	&.slide_up_mobileMenu--active
+		max-height: initial;
+		*
+			display block
+			transition $slide_up_text
+			transform: translate(0, 0%)
+			opacity 1
+		> li, > div
+			&:nth-child(1)
+				span
+					transition-delay: 0s
+		> li, > div
+			&:nth-child(2)
+				span
+					transition-delay: 0.1s
+		> li, > div
+			&:nth-child(3)
+				span
+					transition-delay: 0.2s
+		> li, > div
+			&:nth-child(4)
+				span
+					transition-delay: 0.3s
+		> li, > div
+			&:nth-child(5)
+				span
+					transition-delay: 0.4s

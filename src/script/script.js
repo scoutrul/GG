@@ -1,25 +1,20 @@
 $(function() {
 
     //////////////////////////////////////////////////////////////////////////////////
-
     // toggle hamburger
     let Hamburger = false;
     $('#hamburger').click(function() {
         if (!Hamburger) {
             $(this).addClass('is-active');
             $('.mobile_menu').addClass('mobile_menu-active');
-            $('.mobile_menu .slide_up_text--active').removeClass('slide_up_text--active');
-
+            $('.mobile_menu .slide_up_mobileMenu').addClass('slide_up_mobileMenu--active');
             Hamburger = !Hamburger;
-            setTimeout(()=>appearModule.addToAllClasses(),300)
-            
 
         } else {
             $(this).removeClass('is-active');
-
             $('.mobile_menu').removeClass('mobile_menu-active');
             Hamburger = !Hamburger;
-            setTimeout(()=>$('.mobile_menu-active .slide_up_text--active').removeClass('slide_up_text--active'),300)
+            $('.mobile_menu .slide_up_mobileMenu').removeClass('slide_up_mobileMenu--active')
 
         }
     });
@@ -73,7 +68,7 @@ $(function() {
             var viewBottom = viewTop + $(window).height();
             var elemTop = $(elem).offset().top;
             var elemBottom = elemTop + $(elem).height();
-            if (window.innerWidth < 400) {
+            if (window.innerWidth < 420) {
                 return true
                 // mobile width detect
             }
@@ -85,13 +80,12 @@ $(function() {
     window.onload = function() {
         (document.visibilityState === 'visible') && setTimeout(appearModule.addToAllClasses, 500);
     };
-    let hasappear = false;
-    !hasappear && $(window).on('focus resize scroll click mousemove keydown', function(){
-    hasappear = true;
-    appearModule.addToAllClasses}); // init
+    $(window).on('focus resize scroll click mousemove keydown', 
+     appearModule.addToAllClasses   
+    ); // init
 
     //////////////////////////////////////////////////////////////////////////////////
-    $('.is-empty').hide(); //temp
+
 
     // accoirdion toggle module (HELP, CART)
     let accoirdion_toggle = $('.accordion_items header');
