@@ -69,6 +69,11 @@ section.mobile_menu
 					&:hover span
 						cursor pointer
 						color $specialRed
+					span 
+						white-space: pre;
+						&:nth-of-type(1)
+							@media screen and (max-width: $iphoneH)
+								display none
 						
 .slide_up_mobileMenu // animation for text appear
 	max-height 150px
