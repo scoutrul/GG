@@ -1,4 +1,4 @@
-var gulp  = require('gulp'),
+const gulp  = require('gulp'),
   gutil   = require('gulp-util'),
   keys    = require('./gulp-keys'),
   server  = require('./build-tasks/server'),
@@ -43,8 +43,6 @@ gulp.task(keys.watch_markup, markup.watch);
 */
 gulp.task(keys.images, images.compile);
 
-
-
 gulp.task(keys.deploy, [keys.compile], deploy.run);
 
 gulp.task(keys.lint, [
@@ -66,11 +64,7 @@ gulp.task(keys.watch, [
   keys.watch_scripts
 ]);
 
-var defaultTasks = ((gutil.env.deploy) ? true: false) ? [
-  keys.deploy
-]:[
-  keys.serve,
-  keys.watch
-];
+const defaultTasks = gutil.env.deploy ? [keys.deploy] :
+ [keys.serve, keys.watch];
 
 gulp.task('default', defaultTasks);

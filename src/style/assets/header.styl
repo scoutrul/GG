@@ -35,6 +35,15 @@ section.header
 						@media screen and (max-width: $desktop)
 							width 50px
 							height 50px
+					&:before {
+						content: ''; 
+						left: -16px; 
+						top: -80px; 
+						height: 160px; 
+						width: 100px; 
+						background: #121212; 
+						position: absolute;
+					}
 							
 					
 				.location
@@ -42,6 +51,7 @@ section.header
 					text-align: center;
 					align-items: center;
 					cursor pointer
+					visibility: hidden; 
 					img
 						margin: auto 10px;
 						width: .3rem;
@@ -65,7 +75,7 @@ section.header
 						transition: $transition
 
 						span
-							color: #adadad;
+							color: #1d1e1e;
 							font-weight: 500;
 						img
 							width .3rem
@@ -88,10 +98,10 @@ section.header
 						text-align: center;
 						transition $transition
 						a
-							color: #adadad;
+							color: #1d1e1e;
 							font-weight: 500;
 							&:hover
-								color $white		
+								color #ff002e		
 			@media screen and (max-width: $desktop)
 				&.serv
 					flex 1

@@ -11,7 +11,10 @@ section.footer
 			max-width: 50%;
 			width: 100%;
 			flex: 1 0 auto;
-			margin-bottom: 1rem;
+			min-height: 3.5rem; 
+			display: flex; 
+			flex-direction: column; 
+			justify-content: space-between; 
 			.footer-slogan
 				color: $specialRed;
 				transition $transition
@@ -23,16 +26,21 @@ section.footer
 			ul
 				flex: 1 0 auto;
 				padding 0
-				a
-					line-height: 0.79rem;
-					color: $white;
-					transition $transition
-					font-size: 40%;
-					min-width: 3rem;
-					display: inline-block;
-					&:hover
-						color $specialRed
-						cursor pointer
+				li 
+					max-height: 0.6rem;
+					display: -webkit-flex;
+					display: flex;
+					align-items: flex-end;
+					a
+						line-height: 0.79rem;
+						color: $white;
+						transition $transition
+						font-size: 40%;
+						min-width: 3rem;
+						display: inline-block;
+						&:hover
+							color $specialRed
+							cursor pointer
 		.footer-copy
 			display flex
 			width: 100%;
@@ -52,4 +60,16 @@ section.footer
 					display: flex;	
 
 
-		
+		.footer-partners 
+			font-size: 40%; 
+			color: #FFF; 
+
+			.footer-partners-links-header  
+				font-size: 60%; 
+
+			.footer-partners-links a 
+				font-size: 80%; 
+				text-decoration: underline; 
+				margin-right: 30px; 
+				margin-top: 30px; 
+				display: inline-block; 
